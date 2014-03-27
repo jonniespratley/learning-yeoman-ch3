@@ -1,15 +1,7 @@
 'use strict'
 
 angular.module('learningYeomanCh3App').factory "PostsService", ($resource, $http, $q, $route) ->
-    url = '/api/posts'
-    options = 
-      method: 'GET'
-      url: url
-      cache: true
-        
-        
     PostResource = $resource('/api/posts/:postId', {postId: '@_id'})
-   
     Service = 
       fetch: () ->
         delay = $q.defer()
@@ -21,12 +13,10 @@ angular.module('learningYeomanCh3App').factory "PostsService", ($resource, $http
         
       get: () ->
         delay = $q.defer()
-        
         id = $route.current.params.postId
-        PostResource.get({_id: id}).$promise
         console.log "fetch post #{id}"
-        
-     
+        PostResource.get({postId: id}).$promise.then((post) ->
+        	delay.resolve(post)
+        	console.log(post)
+        )
         delay.promise
-
-      

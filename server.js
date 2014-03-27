@@ -107,8 +107,7 @@ app.put('/api/posts/:id', function(request, response) {
 });
 
 //Delete 
-app.delete ('/api/posts/:id',
-function(request, response) {
+app.delete ('/api/posts/:id',function(request, response) {
 	console.log('Deleting post with id: ' + request.params.id);
 	return PostModel.findById(request.params.id, function(err, model) {
 		return model.remove(function(err) {
