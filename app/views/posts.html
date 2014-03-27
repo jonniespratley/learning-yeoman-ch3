@@ -10,9 +10,11 @@
 
 <div class="marketing">
 	<ul class="media-list">
-		<li ng-repeat="item in posts | filter:tag">
-			<post-item post="item"></post-item>
+		<li 
+				ng-repeat="post in posts | filter:tag" 
+				ng-include="'views/post-item.html'">
+				<!-- or -->
+				<!-- <post-item ng-model="post"></post-item> -->
 		</li>
 	</ul>
-
 </div>

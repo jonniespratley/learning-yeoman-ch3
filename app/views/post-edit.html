@@ -7,9 +7,7 @@
 
 </div>
 <div class="page-header">
-
-  <h1>New Post</h1>
-
+  <h1 ng-show="post._id">Edit Post</h1>
 </div>
 
 <div class="row">
@@ -39,7 +37,7 @@
           <input type="url" class="form-control" placeholder="Enter a URL" name="image" ng-model="post.image">
         </div>
       </div>
-      <!--div class="form-group">
+      <div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
 				<div class="pull-right">
 					<a href="#/posts/" class="btn btn-default cancel"> Cancel </a>
@@ -48,14 +46,14 @@
 					</button>
 				</div>
 				</div>
-			</div-->
+			</div>
     </form>
   </div>
   <div class="col-xs-5 col-sm-4">
     <aside class="well well-sm">
       <img 
         ng-src="{{post.image}}"
-        src="http://placehold.it/150x150&amp;text=Image" class="img-placeholder">
+        src="http://placehold.it/150x150&amp;text=Image" class="img-">
     </aside>
   </div>
 </div>

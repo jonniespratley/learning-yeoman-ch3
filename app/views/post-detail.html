@@ -1,41 +1,36 @@
 <div id="post-detail" class="content">
-  <ol class="breadcrumb">
-    <li>
-      <a href="#">Home</a>
-    </li>
-    <li>
-      <a href="#/posts">Posts</a>
-    </li>
-    <li class="active">
-      {{post.title}}
-    </li>
-  </ol>
+	<ol class="breadcrumb">
+		<li>
+			<a href="#">Home</a>
+		</li>
+		<li>
+			<a href="#/posts">Posts</a>
+		</li>
+		<li class="active">
+			{{post.title}}
+		</li>
+	</ol>
 
-  <div class="pull-right actions">
-    <div class="btn-">
-      <a ng-href="#/posts/{{post._id}}/edit" class="btn btn-default btn-m edit"> 
-			Edit
-		</a>
-      <a ng-href="#/posts/{{post._id}}/delete" class="btn btn-danger btn-m delete"> 
-			Delete
-		 </a>
-    </div>
-  </div>
-  <div class="page-header">
-    <h1>{{post.title}}</h1>
-  </div>
+	<div class="pull-right actions">
+		<div class="btn-grou">
+			<a ng-href="#/posts/{{post._id}}/edit" class="btn btn-default btn-m edit"> Edit </a>
+			<a ng-href="#/posts/{{post._id}}/delete" class="btn btn-danger btn-m delete"> Delete </a>
+		</div>
+	</div>
+	<div class="page-header">
+		<h1>{{post.title}}</h1>
+	</div>
 
-  <div class="row">
-    <div class="col-xs-7 col-sm-8">
-      {{post.body}}
-    </div>
-    <div class="col-xs-5 col-sm-4">
-      <aside class="well well-sm">
-        <img ng-src="{{post.image}}" src="http://placehold.it/150x150&amp;text=Image" class="img-placeholder">
-      </aside>
-    </div>
+	<div class="row">
+		<div class="col-xs-7 col-sm-8">
+			{{post.body}}
+		</div>
+		<div class="col-xs-5 col-sm-4">
+			<aside class="well well-sm">
+				<img ng-src="{{post.image}}" src="http://placehold.it/150x150&amp;text=Image" class="img-">
+			</aside>
+		</div>
 
-  </div>
-
+	</div>
 
 </div>
