@@ -1,9 +1,9 @@
 'use strict'
 
 angular.module('learningYeomanCh3App', [
-	'ngCookies',
-	'ngResource',
-	'ngSanitize',
+	'ngCookies'
+	'ngResource'
+	'ngSanitize'
 	'ngRoute'
 ])
 	.config ($routeProvider) ->
