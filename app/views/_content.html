@@ -1,0 +1,9 @@
+<article>
+    <div id="sidebar" 
+      ng-include="App.sidebar.url" 
+      ng-show="App.session.authorized"
+      class="col-xs-4 col-sm-3 col-md-2"></div>
+    <div class="view-animate-container">
+	    <section class="view-animate" ng-view></section>
+	  </div>
+</article>

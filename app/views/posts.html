@@ -1,0 +1,18 @@
+<ol class="breadcrumb">
+	<li>
+		<a href="#">Home</a>
+	</li>
+
+	<li class="active">
+		Posts
+	</li>
+</ol>
+
+<div class="marketing">
+	<ul class="media-list">
+		<li ng-repeat="item in posts | filter:tag">
+			<post-item post="item"></post-item>
+		</li>
+	</ul>
+
+</div>
