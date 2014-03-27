@@ -90,7 +90,7 @@ app.get('/api/posts/:id', function(request, response) {
 });
 
 //Update 
-app.put('/api/posts/:id', function(request, response) {
+app.post('/api/posts/:id', function(request, response) {
 	console.log('Updating post ' + request.body.title);
 	return PostModel.findById(request.params.id, function(err, model) {
 		model.title = request.body.title;
