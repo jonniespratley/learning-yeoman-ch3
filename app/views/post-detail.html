@@ -25,6 +25,8 @@
 		<div class="col-xs-7 col-sm-12">
 			
 			<article ng-bind-html="post.body | markdown"></article>
+			
+			
 			<markdown-editor ng-model="post.body" on-save="save()" >
 			
 			
