@@ -14,12 +14,12 @@
 	<div class="pull-right actions">
 		<div class="btn-group">
 				<a ng-click="edit(post)" class="btn btn-default btn-sm edit"> <i class="glyphicon glyphicon-pencil"></i> </a>
-				<a ng-click="destroy(post)" class="btn btn-danger btn-sm delete"> <i class="glyphicon glyphicon-remove"></i> </a>
+
 			</div>
 	</div>
-	<!-- <div class="page-header">
+	<div class="page-header">
 		<h1>{{post.title}}</h1>
-	</div> -->
+	</div>
 
 	<div class="row">
 		<div class="col-xs-7 col-sm-12">
@@ -27,7 +27,7 @@
 			<article ng-bind-html="post.body | markdown"></article>
 			
 			
-			<markdown-editor ng-model="post.body" on-save="save()" >
+			<!--markdown-editor ng-model="post.body" on-save="save()" -->
 			
 			
 		</div>

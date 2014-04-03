@@ -3,10 +3,7 @@ angular.module('learningYeomanCh3App').controller 'PostDetailCtrl', ($scope, $lo
 	$scope.name = 'PostDetail'
 	$scope.post = post
 	
-	#Show edit
+	#Handle showing the edit view
 	$scope.edit = () ->
 		console.log $scope.post
 		$location.path("/posts/#{$scope.post._id}/edit")
-	$scope.save = (data) ->
-		$scope.post.$save()
-		console.log(data)

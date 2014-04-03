@@ -57,7 +57,8 @@
       <div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
 				<div class="pull-right">
-					<a ng-click="cancel()" class="btn btn-default cancel"> Cancel </a>
+					<a class="btn btn-default cancel" ng-click="cancel()" > Cancel </a>
+                    <a  class="btn btn-danger delete" ng-click="remove()"> Delete</a>
 					<button class="btn btn-primary" type="submit" ng-click="save()">
 						Save
 					</button>
@@ -67,7 +68,7 @@
     </form>
   </div>
   <div class="col-xs-5 col-sm-4">
-    <aside class="well well-sm">
+    <aside class="well center">
       <img 
         ng-src="{{post.image}}"
         src="http://placehold.it/150x150&amp;text=Image" class="img-">

@@ -36,13 +36,8 @@ angular.module('learningYeomanCh3App', [
 				controller: 'PostEditCtrl'
 				resolve: 
 					post: (PostsService) ->
-						return PostsService.get()
-						
-			.when '/posts/new',
-				templateUrl: 'views/post-edit.html'
-				controller: 'PostEditCtrl'
-				resolve: 'Post'
-			
+						return PostsService.new()
+
 			.otherwise
 				redirectTo: '/'
 

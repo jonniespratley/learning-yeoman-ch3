@@ -11,5 +11,14 @@ angular.module('learningYeomanCh3App').controller 'PostEditCtrl', ($scope, $loca
 			console.log data
 			$location.path("/posts/#{$scope.post._id}")
 		)
+
+	#Handle canceling edit
 	$scope.cancel = () ->
 		$location.path("/posts/#{$scope.post._id}")
+
+	#Handle deleting a post
+	$scope.remove = () ->
+		$scope.post.$remove().then((data)->
+			$location.path("/posts")
+			console.log(data)
+		)
