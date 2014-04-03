@@ -24,19 +24,24 @@ angular.module('learningYeomanCh3App', [
 					posts: (PostsService) ->
 						return PostsService.fetch()
 			
-			.when '/posts/:postId',
+			.when '/posts/view/:postId*',
 				templateUrl: 'views/post-detail.html'
 				controller: 'PostDetailCtrl'
 				resolve: 
 					post: (PostsService) ->
 						return PostsService.get()
 			
-			.when '/posts/:postId/edit',
+			.when '/posts/edit/:postId',
 				templateUrl: 'views/post-edit.html'
 				controller: 'PostEditCtrl'
-				resolve: 
+				resolve:
 					post: (PostsService) ->
-						return PostsService.new()
+						return PostsService.get()
+
+			.when '/posts/new',
+				templateUrl: 'views/post-edit.html'
+				controller: 'PostNewCtrl'
+
 
 			.otherwise
 				redirectTo: '/'
@@ -48,6 +53,8 @@ angular.module('learningYeomanCh3App').controller 'AppCtrl', ($rootScope, $log, 
 	
 	App = angular.copy(config)
 	App.session = $cookieStore.get('App.session')
+	App.location = $location
+	App.routeParams = $routeParams
 	
 	window.App = $rootScope.App = App
 	$log.info $rootScope

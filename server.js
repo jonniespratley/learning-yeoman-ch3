@@ -56,9 +56,12 @@ app.get('/api/posts', function(request, response) {
 		}
 	});
 });
+
+
 //Insert a new
 app.post('/api/posts', function(request, response) {
 	var model = new PostModel({
+		_id: null,
 		title : request.body.title,
 		slug : request.body.slug,
 		body : request.body.body,
@@ -68,14 +71,16 @@ app.post('/api/posts', function(request, response) {
 		created : new Date(),
 		modified : new Date()
 	});
+
 	model.save(function(err) {
 		if (!err) {
-			return console.log('Created');
+			console.log('Created Post', model, request.body);
+			return response.send(model);
 		} else {
 			return console.log(err);
 		}
 	});
-	return response.send(model);
+
 });
 
 //Get a single by id
@@ -91,17 +96,18 @@ app.get('/api/posts/:id', function(request, response) {
 
 //Update 
 app.post('/api/posts/:id', function(request, response) {
-	console.log('Updating post ' + request.body.title);
+	console.log('Updating post ', request.body);
 	return PostModel.findById(request.params.id, function(err, model) {
 		model.title = request.body.title;
 
 		model.save(function(err) {
 			if (!err) {
-				console.log('model updated');
+				console.log('model updated', model);
+				return response.send(model);
 			} else {
-				console.log(err);
+				return response.send(err);
 			}
-			return response.send(model);
+
 		});
 	});
 });

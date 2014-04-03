@@ -5,16 +5,15 @@ angular.module('learningYeomanCh3App').controller 'PostEditCtrl', ($scope, $loca
 	
 	#Save post
 	$scope.save = () ->
-		console.log $scope
 		console.log $scope.post
 		$scope.post.$save().then((data)->
 			console.log data
-			$location.path("/posts/#{$scope.post._id}")
+			$location.path("/posts/view/#{data._id}")
 		)
 
 	#Handle canceling edit
 	$scope.cancel = () ->
-		$location.path("/posts/#{$scope.post._id}")
+		$location.path("/posts/view/#{$scope.post._id}")
 
 	#Handle deleting a post
 	$scope.remove = () ->

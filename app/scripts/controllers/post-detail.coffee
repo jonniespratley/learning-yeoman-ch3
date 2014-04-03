@@ -6,4 +6,11 @@ angular.module('learningYeomanCh3App').controller 'PostDetailCtrl', ($scope, $lo
 	#Handle showing the edit view
 	$scope.edit = () ->
 		console.log $scope.post
-		$location.path("/posts/#{$scope.post._id}/edit")
+		$location.path("/posts/edit/#{$scope.post._id}")
+
+	#Handle deleting a post
+	$scope.remove = () ->
+		$scope.post.$remove().then((data)->
+			$location.path("/posts")
+			console.log(data)
+		)
