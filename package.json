@@ -1,7 +1,15 @@
 {
   "name": "learningyeomanch3",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Tutorial for Chapter 3",
+    "license": "MIT",
+    "main": "app/index.js",
+    "repository": "jonniespratley/generator-jps-site",
+    "author": {
+        "name": "Jonnie Spratley",
+        "email": "jonniespratley@me.com",
+        "url": "https://github.com/jonniespratley"
+    },
   "dependencies": {
     "express": "^3.5.1",
     "path": "^0.4.9",
