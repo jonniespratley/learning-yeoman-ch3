@@ -1,5 +1,4 @@
-'use strict'
-angular.module('learningYeomanCh3App').value('config', Config =
+window.Config =
 	baseurl: document.location.origin
 	sitetitle: "learning yeoman"
 	sitedesc: " a starting point for a modern angular.js application."
@@ -33,7 +32,7 @@ angular.module('learningYeomanCh3App').value('config', Config =
 	layout:
 		header: "views/_header.html"
 		sidebar: "views/_sidebar.html"
-		content: "views/_content.html"
+		content:"views/_content.html"
 		footer: "views/_footer.html"
 	menu: [
 		title: "Home"
@@ -45,4 +44,3 @@ angular.module('learningYeomanCh3App').value('config', Config =
 		title: "Posts"
 		href: "/posts"
 	]
-)

@@ -1,25 +1,21 @@
 'use strict'
-angular.module('learningYeomanCh3App').service "PostsService", ($resource, $q, $route, PostFactory) ->
-	Service = 
-		fetch: () ->
+angular.module('learningYeomanCh3App').service "PostsService", ($resource, $q, $route, Posts) ->
+	api =
+		query: () ->
 			dfd = $q.defer()
-			console.log 'fetch posts'
-			PostFactory.query().$promise.then((posts)->
+			Posts.query().$promise.then((posts)->
 					dfd.resolve(posts)
 			)
 			dfd.promise
 			
-		get: () ->
+		get: (id) ->
 			dfd = $q.defer()
-			id = $route.current.params.postId
-			console.log "fetch post #{id}"
-			PostFactory.get({postId: id}).$promise.then((post) ->
+			id = $route.current.params.postId unless id
+			Posts.get({id: id}).$promise.then((post) ->
 				dfd.resolve(post)
-				console.log(post)
 			)
 			dfd.promise
 
 		add: () ->
 			dfd = $q.defer()
-			console.log 'new post'
 			dfd.resolve({})

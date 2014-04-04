@@ -1,6 +1,16 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
+
+.center{
+  text-align: center;
+}
+.post-image{
+  width:100%;
+}
+.tag{
+  margin-right: 5px;
+}
 body {
   background: #fff;
   padding: 10px 25px;

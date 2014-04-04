@@ -1,59 +1,88 @@
-<div class="pull-right">
+<!-- <div class="pull-right">
   <a href="#/posts/" class="btn btn-default cancel"> Cancel </a>
 
   <button class="btn btn-primary save" type="button">
     Save
   </button>
 
-</div>
-<div class="page-header">
+</div> -->
+<!-- <div class="page-header">
   <h1 ng-show="post._id">Edit Post</h1>
-</div>
-
+</div> -->
+<ol class="breadcrumb">
+    <li>
+        <a href="#">Home</a>
+    </li>
+    <li>
+        <a href="#/posts">Posts</a>
+    </li>
+    <li class="active">
+        Edit
+    </li>
+</ol>
 <div class="row">
-  <div class="col-xs-7 col-sm-8">
-    <form class="form-horizontal" role="form">
-      <div class="form-group">
-        <label for="title" class="col-sm-3 control-label">Title:</label>
-        <div class="col-sm-9">
-          <input type="text" class="form-control" placeholder="Enter a Title" name="title" ng-model="post.title"/>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="slug" class="col-sm-3 control-label">Slug:</label>
-        <div class="col-sm-9">
-          <input type="text" class="form-control" ng-model="post.slug" name="slug" disabled/>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="body" class="col-sm-3 control-label">Body:</label>
-        <div class="col-sm-9">
-          <textarea class="form-control" rows="5" placeholder="Enter some contents." name="body" ng-model="post.body">This is an example post with default data.</textarea>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="image" class="col-sm-3 control-label">Image:</label>
-        <div class="col-sm-9">
-          <input type="url" class="form-control" placeholder="Enter a URL" name="image" ng-model="post.image">
-        </div>
-      </div>
-      <div class="form-group">
-				<div class="col-sm-offset-2 col-sm-10">
-				<div class="pull-right">
-					<a href="#/posts/" class="btn btn-default cancel"> Cancel </a>
-					<button class="btn btn-primary" type="submit">
-						Submit
-					</button>
-				</div>
-				</div>
-			</div>
-    </form>
-  </div>
-  <div class="col-xs-5 col-sm-4">
-    <aside class="well well-sm">
-      <img 
-        ng-src="{{post.image}}"
-        src="http://placehold.it/150x150&amp;text=Image" class="img-">
-    </aside>
-  </div>
+    <div class="col-xs-7 col-sm-8">
+        <form class="form-horizontal" role="form" ng-submit="save(post)">
+            <div class="form-group">
+                <label for="title" class="col-sm-3 control-label">Title:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="Enter title here" name="title"
+                           ng-model="post.title"/>
+                </div>
+            </div>
+            <div class="form-group hidden">
+                <label for="slug" class="col-sm-3 control-label">Slug:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" ng-model="post.slug" name="slug" disabled/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="body" class="col-sm-3 control-label">Body:</label>
+
+                <div class="col-sm-9">
+                    <textarea class="form-control" rows="5"
+                              placeholder="Enter contents here" name="body" ng-model="post.body"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="image" class="col-sm-3 control-label">Image:</label>
+
+                <div class="col-sm-9">
+                    <input type="url" class="form-control" placeholder="Enter image URL here" name="image" ng-model="post.image">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tags" class="col-sm-3 control-label">Tags:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="Separate tags with commas" name="tags" ng-model="post.tags">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="slug" class="col-sm-3 control-label">Published:</label>
+
+                <div class="col-sm-9">
+                    <input type="checkbox" class="form-control" ng-model="post.published" name="published"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="pull-right">
+                        <a class="btn btn-default cancel" ng-click="cancel()"> Cancel </a>
+
+                        <button class="btn btn-primary" type="submit">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-xs-5 col-sm-4">
+        <aside class="center">
+            <img ng-src="{{post.image}}" src="http://placehold.it/150x150&amp;text=Image" class="img-thumbnail post-image">
+        </aside>
+    </div>
 </div>
