@@ -1,6 +1,6 @@
 {
   "name": "learningyeomanch3",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {
     "express": "^3.5.1",
     "path": "^0.4.9",
@@ -33,7 +33,11 @@
     "load-grunt-tasks": "~0.2.0",
     "time-grunt": "~0.2.1",
     "grunt-connect-proxy": "^0.1.10",
-    "json-proxy": "^0.1.2"
+    "json-proxy": "^0.1.2",
+    "karma-ng-scenario": "~0.1.0",
+    "grunt-karma": "~0.8.2",
+    "karma": "~0.12.3",
+    "karma-ng-html2js-preprocessor": "~0.1.0"
   },
   "engines": {
     "node": ">=0.8.0"
