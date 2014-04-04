@@ -2,18 +2,18 @@
   "name": "learningyeomanch3",
   "version": "0.0.3",
   "description": "Tutorial for Chapter 3",
-    "license": "MIT",
-    "main": "app/index.js",
-    "repository": "jonniespratley/generator-jps-site",
-    "author": {
-        "name": "Jonnie Spratley",
-        "email": "jonniespratley@me.com",
-        "url": "https://github.com/jonniespratley"
-    },
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "jonniespratley/generator-jps-site",
+  "author": {
+    "name": "Jonnie Spratley",
+    "email": "jonniespratley@me.com",
+    "url": "https://github.com/jonniespratley"
+  },
   "dependencies": {
-    "express": "^3.5.1",
-    "path": "^0.4.9",
-    "mongoose": "^3.8.8"
+      "express": "^3.4.x",
+      "path": "^0.4.9",
+      "mongoose": "^3.8.8"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -47,8 +47,6 @@
     "grunt-connect-proxy": "^0.1.10",
     "json-proxy": "^0.1.2",
     "karma-jasmine": "~0.1.5",
-    "karma-firefox-launcher": "~0.1.3",
-    "karma-chrome-launcher": "~0.1.3",
     "karma-phantomjs-launcher": "~0.1.3",
     "karma-coverage": "~0.2.1"
   },
