@@ -1,14 +1,15 @@
 'use strict'
-angular.module('learningYeomanCh3App').controller 'PostEditCtrl', ($scope, $location, post) ->
+angular.module('learningYeomanCh3App').controller 'PostEditCtrl', ($scope, $location, $routeParams, Posts) ->
 	$scope.name = 'PostEdit'
-	$scope.post = post
+	id = $routeParams.postId
+	$scope.post = Posts.get(id: id)
 	
 	#Save post
-	$scope.save = () ->
-		console.log $scope.post
-		$scope.post.$save().then((data)->
+	$scope.save = (post) ->
+		post.tags = post.tags.split(',')
+		Posts.update({id: id}, post).$promise.then((data)->
 			console.log data
-			$location.path("/posts/view/#{data._id}")
+			$location.path("/posts/view/#{id}")
 		)
 
 	#Handle canceling edit

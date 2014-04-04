@@ -22,12 +22,12 @@
 </ol>
 <div class="row">
     <div class="col-xs-7 col-sm-8">
-        <form class="form-horizontal" role="form" ng-submit="save()">
+        <form class="form-horizontal" role="form" ng-submit="save(post)">
             <div class="form-group">
                 <label for="title" class="col-sm-3 control-label">Title:</label>
 
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" placeholder="Enter a Title" name="title"
+                    <input type="text" class="form-control" placeholder="Enter title here" name="title"
                            ng-model="post.title"/>
                 </div>
             </div>
@@ -43,15 +43,21 @@
 
                 <div class="col-sm-9">
                     <textarea class="form-control" rows="5"
-                              placeholder="Enter some contents." name="body" ng-model="post.body">This is an example
-                        post with default data.</textarea>
+                              placeholder="Enter contents here" name="body" ng-model="post.body"></textarea>
                 </div>
             </div>
             <div class="form-group">
                 <label for="image" class="col-sm-3 control-label">Image:</label>
 
                 <div class="col-sm-9">
-                    <input type="url" class="form-control" placeholder="Enter a URL" name="image" ng-model="post.image">
+                    <input type="url" class="form-control" placeholder="Enter image URL here" name="image" ng-model="post.image">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tags" class="col-sm-3 control-label">Tags:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="Separate tags with commas" name="tags" ng-model="post.tags">
                 </div>
             </div>
             <div class="form-group">
@@ -75,10 +81,10 @@
         </form>
     </div>
     <div class="col-xs-5 col-sm-4">
-        <aside class="well center">
+        <aside class="center">
             <img
                     ng-src="{{post.image}}"
-                    src="http://placehold.it/150x150&amp;text=Image" class="img-">
+                    src="http://placehold.it/150x150&amp;text=Image" class="img-thumbnail post-image">
         </aside>
     </div>
 </div>

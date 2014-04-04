@@ -4,13 +4,14 @@ angular.module('learningYeomanCh3App').controller 'PostNewCtrl', ($scope, $locat
 		title: ''
 		body: ''
 		published: true
-		image: 'http://placehold.it/150'
+		image: ''
 		tags: []
 	)
 
 	#Save post
-	$scope.save = (data) ->
-		$scope.post.$save().then((data)->
-			console.log data
+	$scope.save = () ->
+		$scope.post.tags = $scope.post.tags.split(',')
+		$scope.post.$save().then((result)->
+			console.log result
 			$location.path("/posts")
 		)
