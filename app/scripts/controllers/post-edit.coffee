@@ -6,7 +6,7 @@ angular.module('learningYeomanCh3App').controller 'PostEditCtrl', ($scope, $loca
 	
 	#Save post
 	$scope.save = (post) ->
-		post.tags = post.tags.split(',')
+		post.tags = String($scope.post.tags).split(',')
 		Posts.update({id: id}, post).$promise.then((data)->
 			console.log data
 			$location.path("/posts/view/#{id}")
