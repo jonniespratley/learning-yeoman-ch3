@@ -6,14 +6,14 @@
 	  </p>
 	</div>
 	      
-	<div class="marketing">
-	  <div ng-repeat="item in App.features" class="media">
+	<div class="marketing row">
+	  <div ng-repeat="item in App.features" class="col-sm-4 feature center">
 	    <img 
 	      alt="{{ item.title }}"
 	      src="http://placehold.it/80x80"
 	      ng-src="{{ item.image }}"
-	      class="media-object pull-left img-thumbnail"/>
-	    <h4>{{ item.title }}</h4>
+	      class="img-circle"/>
+	    <h3>{{ item.title }}</h3>
 	    <p>{{ item.body }}</p>
 	  </div>  
 	</div>
