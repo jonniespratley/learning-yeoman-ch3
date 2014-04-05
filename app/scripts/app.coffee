@@ -1,6 +1,7 @@
 'use strict'
 
 angular.module('learningYeomanCh3App', [
+	'ngAnimate'
 	'ngCookies'
 	'ngResource'
 	'ngSanitize'
