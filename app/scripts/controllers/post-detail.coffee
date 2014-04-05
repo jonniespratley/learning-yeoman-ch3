@@ -10,7 +10,9 @@ angular.module('learningYeomanCh3App').controller 'PostDetailCtrl', ($scope, $lo
 
 	#Handle deleting a post
 	$scope.remove = () ->
-		$scope.post.$remove().then((data)->
-			$location.path("/posts")
-			console.log(data)
-		)
+		confirmDelete = confirm('Are you sure you want to delete this?')
+		if confirmDelete
+			$scope.post.$remove().then((data)->
+				$location.path("/posts")
+				console.log(data)
+			)

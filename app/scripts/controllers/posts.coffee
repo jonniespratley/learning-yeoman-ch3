@@ -9,7 +9,7 @@ angular.module('learningYeomanCh3App').controller 'PostsCtrl', ($scope, $locatio
 	$scope.name = 'Posts'
 	$scope.posts = Posts.query()
 	$scope.p = null
-	#$scope.tag = 'generator-angular'
+	$scope.postFilter = null
 
 	$scope.add = ()->
 		$location.path('/posts/new')

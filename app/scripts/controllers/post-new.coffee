@@ -8,6 +8,10 @@ angular.module('learningYeomanCh3App').controller 'PostNewCtrl', ($scope, $locat
 		tags: []
 	)
 
+	#Handle canceling edit
+	$scope.cancel = () ->
+		$location.path("/posts")
+	
 	#Save post
 	$scope.save = () ->
 		$scope.post.tags = $scope.post.tags.split(',')
