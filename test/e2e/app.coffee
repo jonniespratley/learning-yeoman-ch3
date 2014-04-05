@@ -50,16 +50,23 @@ Config =
   MainPage view
 ###
 MainPage = ->
- @sitetitle = element(protractor.By.binding("App.sitetitle"))
- @sitedesc = element(protractor.By.binding("App.sitedesc"))
- @get = ->
-	return browser.get("http://localhost:9000")
- return
+	@sitetitle = element(protractor.By.binding("App.sitetitle"))
+	@sitedesc = element(protractor.By.binding("App.sitedesc"))
+	@featureTitle = element(protractor.By.binding("App.feature.title"))
+	@get = ->
+		return browser.get("http://localhost:9000")
+
+	return
 
 describe 'Chapter3 e2e:', ->
- describe "the main page", ->
-	it "should have feature and 3 features", ->
-	 mainPage = new MainPage()
-	 mainPage.get()
+	mainPage = new MainPage()
+	describe "the main page", ->
+		beforeEach ->
+			mainPage.get()
 
-	 expect(mainPage.sitetitle.getText()).toEqual(Config.sitetitle)
+		it "should have site title and description", ->
+			expect(mainPage.sitetitle.getText()).toEqual(Config.sitetitle)
+			expect(mainPage.sitedesc.getText()).toEqual(Config.sitedesc)
+
+		it "should have feature title, image and description", ->
+		 expect(mainPage.featureTitle.getText()).toEqual(Config.feature.title)
