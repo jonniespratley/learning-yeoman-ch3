@@ -10,7 +10,7 @@ angular.module('learningYeomanCh3App').controller 'PostNewCtrl', ($scope, $locat
 
 	#Save post
 	$scope.save = () ->
-		$scope.post.tags = $scope.post.tags.split(',')
+		$scope.post.tags = String($scope.post.tags).split(',')
 		$scope.post.$save().then((result)->
 			console.log result
 			$location.path("/posts")

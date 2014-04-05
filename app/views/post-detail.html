@@ -12,34 +12,25 @@
         </li>
     </ol>
 
-    <div class="row">
-        <div class="col-sm-8">
+
+
 
 
             <div class="post">
-                <div class="page-header">
-                    <h1>{{post.title}}
-                    </h1>
-                    <span>Posted on {{post.created | date:'mediumDate'}}</span>
-                    <span class="label label-default tag" ng-repeat="t in post.tags">{{t}}</span>
+                <div class="header">
 
-                    <a ng-click="edit(post)" class="btn btn-xs btn-default edit"> <i
-                            class="glyphicon glyphicon-pencil"></i> EDIT </a>
-                    <a class="btn btn-xs btn-default delete" ng-click="remove()"> <i
-                            class="glyphicon glyphicon-remove"></i> DEL</a>
+                        <h1 class="media-heading">{{post.title}}</h1>
+
+                    <span>Posted on {{post.created | date:'mediumDate'}}</span> |
+
+                    |
+                    <a href="#/posts/edit/{{post._id}}" class="btn btn-xs btn-default edit"> <i class="glyphicon glyphicon-pencil"></i> EDIT</a>
+
                 </div>
                 <article ng-bind-html="post.body | markdown"></article>
             </div>
 
-            <div class="col-xs-5 col-sm-4">
-                <aside class="center">
-                    <img ng-src="{{post.image}}" src="http://placehold.it/150x150&amp;text=Image"
-                         class="img-thumbnail post-image">
-                </aside>
-            </div>
 
 
-        </div>
-    </div>
 
 </div>
