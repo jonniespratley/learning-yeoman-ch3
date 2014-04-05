@@ -1,5 +1,4 @@
 'use strict'
-
 describe 'Service: Post', () ->
 
   # load the service's module

@@ -49,7 +49,7 @@ module.exports = function (grunt) {
         tasks: ['newer:coffee:dist']
       },
       coffeeTest: {
-        files: ['test/spec/{,*/}*.{coffee,litcoffee,coffee.md}'],
+        files: ['test/{,**/}*.{coffee,litcoffee,coffee.md}'],
         tasks: ['newer:coffee:test', 'karma']
       },
       compass: {
@@ -167,6 +167,7 @@ module.exports = function (grunt) {
     // Compiles CoffeeScript to JavaScript
     coffee: {
       options: {
+        bare: true,
         sourceMap: true,
         sourceRoot: ''
       },
