@@ -10,6 +10,16 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
   }
 }
 
+.loading{
+  position: absolute;
+  left: 40%;
+  padding: 15px;
+  background-color: #eee;
+  border-radius: 5px;
+  top: 40%;
+  z-index: 500;
+}
+
 /* @group Animate */
 
 .view-animate {

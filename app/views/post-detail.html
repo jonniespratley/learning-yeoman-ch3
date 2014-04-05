@@ -7,9 +7,7 @@
         <li>
             <a href="#/posts">Posts</a>
         </li>
-        <li class="active">
-            {{post.title}}
-        </li>
+        <li class="active">{{post.title}}</li>
     </ol>
 
 
@@ -22,8 +20,8 @@
                         <h1 class="media-heading">{{post.title}}</h1>
 
                     <span>Posted on {{post.created | date:'mediumDate'}}</span> |
+					<span ng-if="post.tags">Tags: <span class="label label-default tag" ng-repeat="t in post.tags">{{t}}</span> |</span>
 
-                    |
                     <a href="#/posts/edit/{{post._id}}" class="btn btn-xs btn-default edit"> <i class="glyphicon glyphicon-pencil"></i> EDIT</a>
 
                 </div>

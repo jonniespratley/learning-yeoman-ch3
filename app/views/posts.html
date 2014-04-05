@@ -1,36 +1,37 @@
 <div id="posts">
 	<button class="btn btn-default pull-right" ng-click="add()">Add New</button>
-    <ol class="breadcrumb">
-        <li>
-            <a href="#">Home</a>
-        </li>
-        <li>
-            <a href="#/posts">Posts</a>
-        </li>
-        <li class="active">
-            {{post.title}}
-        </li>
-    </ol>
+	<ol class="breadcrumb">
+		<li>
+			<a href="#">Home</a>
+		</li>
 
-    <ul class="posts list-unstyled">
-        <li ng-repeat="post in posts | filter:tag">
-            <div class="post" data-id="{{post._id}}">
+		<li class="active">
+			Posts
+		</li>
+	</ol>
+
+	<ul class="posts list-unstyled">
+		<li ng-repeat="post in posts | filter:tag">
+			<div class="post" data-id="{{post._id}}">
 
 
-                    <div class="header">
-                        <a href="" ng-click="view(post._id)">
-                            <h1 class="media-heading">{{post.title}}</h1>
-                        </a>
-                        <span>Posted on {{post.created | date:'mediumDate'}}</span> |
-                        Tags: <span class="label label-default tag" ng-repeat="t in post.tags">{{t}}</span>
-                        |
-                        <a href="#/posts/edit/{{post._id}}" class="btn btn-xs btn-default edit"> <i class="glyphicon glyphicon-pencil"></i> EDIT</a>
+				<div class="header">
+					<a href="" ng-click="view(post._id)">
+						<h1 class="media-heading">{{post.title}}</h1>
+					</a>
+					<span>Posted on {{post.created | date:'mediumDate'}}</span> |
 
-                    </div>
-                    <section ng-bind-html="post.body | markdown:250"></section>
+					<span ng-if="post.tags">Tags: <span class="label label-default tag"
+														ng-repeat="t in post.tags">{{t}}</span> |</span>
 
-                </div>
+					<a href="#/posts/edit/{{post._id}}" class="btn btn-xs btn-default edit"> <i
+							class="glyphicon glyphicon-pencil"></i> EDIT</a>
 
-        </li>
-    </ul>
+				</div>
+				<section ng-bind-html="post.body | markdown:250"></section>
+
+			</div>
+
+		</li>
+	</ul>
 </div>

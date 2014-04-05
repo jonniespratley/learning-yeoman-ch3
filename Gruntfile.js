@@ -18,6 +18,7 @@ var proxyConfig = {
 
 var LIVERELOAD_PORT = 35729;
 var SERVER_PORT = 9000;
+var RUNNER_PORT = 9002;
 //var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
 var mountFolder = function(connect, dir) {
 	return connect.static(require('path').resolve(dir));
@@ -75,7 +76,7 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: 9000,
+        port: SERVER_PORT,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
         livereload: 35729,
@@ -99,7 +100,7 @@ module.exports = function (grunt) {
       },
       test: {
         options: {
-          port: 9001,
+          port: RUNNER_PORT,
           base: [
             '.tmp',
             'test',
