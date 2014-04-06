@@ -21,6 +21,8 @@ angular.module('learningYeomanCh3App', [
 			.when '/posts',
 				templateUrl: 'views/posts.html'
 				controller: 'PostsCtrl'
+				resolve: (Posts)->
+					posts = Posts.fetch()
 			
 			.when '/posts/view/:postId*',
 				templateUrl: 'views/post-detail.html'
@@ -47,8 +49,7 @@ angular.module('learningYeomanCh3App').controller 'AppCtrl', ($rootScope, $log, 
 	App.session = $cookieStore.get('App.session')
 	App.location = $location
 	App.routeParams = $routeParams
-	
+
 	window.App = $rootScope.App = App
 	$log.info $rootScope
-	
-	
+

@@ -5,10 +5,10 @@ angular.module('learningYeomanCh3App').directive('loading', ($rootScope) ->
 	replace: true
 	link: (scope, element, attrs) ->
 		element.addClass('loading').fadeOut('fast')
-		$rootScope.$on( '$routeChangeStart', ->
+		$rootScope.$on( '$locationChangeStart', ->
 			element.fadeIn('fast')
 		)
-		$rootScope.$on('$routeChangeSuccess', ->
+		$rootScope.$on('$locationChangeSuccess', ->
 			element.fadeOut()
 		)
 	)

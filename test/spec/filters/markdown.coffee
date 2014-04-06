@@ -16,5 +16,6 @@ describe 'Filter: markdown', () ->
 	it 'should return the input converted to HTML and truncated to length', () ->
 		input = 'This text is **bold**, and this will be truncated.'
 		output = '<p>This text is <strong>bold</strong>, and</p>'
-		#Limit to 26 chars
+
+			#Limit to 26 chars
 		expect(markdown(input, 26)).toBe(output)
