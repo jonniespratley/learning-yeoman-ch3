@@ -16,12 +16,12 @@ Config =
 		body: "Using HTML5 for better user experience."
 		image: "http://a481ab4f6ea4dd65cff0-b2b68ced242ecf1cb9bc1021688e3775.r49.cf1.rackcdn.com/img/learning-yeoman/feature-html5.png",
 
-	 	id: 2
+			id: 2
 		title: "AngularJS"
 		body: "Framework of choice is Angular"
 		image: "http://a481ab4f6ea4dd65cff0-b2b68ced242ecf1cb9bc1021688e3775.r49.cf1.rackcdn.com/img/learning-yeoman/feature-angular.png",
 
-	 	id: 3
+			id: 3
 		title: "Twitter Bootstrap"
 		body: "UI is Twitter Bootstrap 3.0."
 		image: "http://a481ab4f6ea4dd65cff0-b2b68ced242ecf1cb9bc1021688e3775.r49.cf1.rackcdn.com/img/learning-yeoman/feature-bootstrap.png"
@@ -46,6 +46,7 @@ Config =
 		]
 
 
+
 #MainPage view
 MainPage = ->
 	@sitetitle = element(protractor.By.binding("App.sitetitle"))
@@ -53,9 +54,8 @@ MainPage = ->
 	@featureDesc = element(protractor.By.binding("App.feature.body"))
 	@features = element(protractor.By.binding("App.features"))
 	@get = ->
-		return browser.get(Config.baseurl)
-
-	return
+		return browser.get("http://localhost:9000/#")
+	@name = 'MainPage'
 
 #Post Edit Page
 PostPage = ->
@@ -67,10 +67,10 @@ PostPage = ->
 	@submitBtn = element(protractor.By.css('button[type="submit"]'))
 
 	@getNew = ->
-		return browser.get(Config.baseurl+'/posts/new')
+		return browser.get(Config.baseurl + '/posts/new')
 
 	@getEdit = (id)->
-		return browser.get(Config.baseurl+'/posts/edit/'+id)
+		return browser.get(Config.baseurl + '/posts/edit/' + id)
 
 	@form = (p)->
 		@title.sendKeys(p.title)
@@ -82,8 +82,19 @@ PostPage = ->
 	@name = 'PostEditPage'
 
 
-
 describe 'Chapter3 e2e:', ->
+	describe "the main page", ->
+		beforeEach ->
+			browser.get('http://localhost:9000')
+
+		it "should have site title and description", ->
+			siteTitle = element(protractor.By.binding("App.sitetitle"))
+			featureTitle = element(protractor.By.binding("App.feature.title"))
+			featureDesc = element(protractor.By.binding("App.feature.body"))
+
+			expect(siteTitle.getText()).toEqual(Config.sitetitle)
+			expect(featureTitle.getText()).toEqual(Config.feature.title)
+			expect(featureDesc.getText()).toEqual(Config.feature.body)
 
 	describe "the main page", ->
 		mainPage = new MainPage()

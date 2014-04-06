@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Tutorial for Chapter 3",
   "dependencies": {
-    "express": "^3.4.0",
+    "express": "~3.0.0",
     "path": "^0.4.9",
     "mongoose": "^3.8.8"
   },
