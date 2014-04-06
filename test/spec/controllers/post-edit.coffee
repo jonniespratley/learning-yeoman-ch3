@@ -23,6 +23,10 @@ describe 'Controller: PostEditCtrl', () ->
 		)
 		slugify = slugifyFilter
 		httpBackend = _$httpBackend_
+		scope.post = post
+
+		httpBackend.when('DELETE', '/api/posts/1').respond({_id:1})
+		httpBackend.when('PUT', '/api/posts/1').respond({_id:1})
 
 		PostEditCtrl = $controller 'PostEditCtrl', {
 			$scope: scope
@@ -40,16 +44,13 @@ describe 'Controller: PostEditCtrl', () ->
 		expect(location.path()).toBe('/posts/view/1')
 
 	it 'should update the post', () ->
-		httpBackend.expectPUT('/api/posts/1', post).respond({_id:1})
 		scope.save()
 		httpBackend.flush()
 		expect(location.path()).toBe('/posts/view/1')
 
-	xit 'should delete the post', () ->
-		#httpBackend.expectDELETE('/api/posts/1', post).respond({_id:1})
-		#location.path('/posts/edit/1')
+	it 'should delete the post', () ->
+		location.path('/posts/edit/1')
 		scope.remove()
-
-		#httpBackend.flush()
+		httpBackend.flush()
 		expect(location.path()).toBe('/posts')
 

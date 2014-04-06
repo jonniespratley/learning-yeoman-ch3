@@ -32,3 +32,8 @@ describe 'Controller: PostsCtrl', () ->
 		scope.view(1)
 		expect(location.path()).toEqual('/posts/view/1')
 
+	it 'should change the location to /posts/edit/:id', () ->
+		location.path('/posts')
+		scope.edit(1)
+		expect(location.path()).toEqual('/posts/edit/1')
+

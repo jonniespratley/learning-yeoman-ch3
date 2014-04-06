@@ -9,3 +9,6 @@ angular.module('learningYeomanCh3App').controller 'PostsCtrl', ($scope, $locatio
 
 	$scope.view = (id)->
 		$location.path('/posts/view/' + id)
+
+	$scope.edit = (id)->
+		$location.path('/posts/edit/' + id)
