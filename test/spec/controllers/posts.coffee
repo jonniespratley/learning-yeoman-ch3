@@ -11,13 +11,16 @@ describe 'Controller: PostsCtrl', () ->
 	beforeEach inject ($controller, $rootScope, $location) ->
 		scope = $rootScope.$new()
 		location = $location
+		posts = [1,2,3]
 		PostsCtrl = $controller 'PostsCtrl', {
 			$scope: scope
 			$location: location
+			posts: posts
 		}
 
 	it 'should have a name property equal to Posts on the scope', () ->
 		expect(scope.name).toBe('Posts')
+		expect(scope.posts.length).toBe(3)
 
 	it 'should change the location to /posts/new', () ->
 		location.path('/posts')

@@ -43,7 +43,6 @@ angular.module('learningYeomanCh3App', [
 				templateUrl: 'views/post-edit.html'
 				controller: 'PostNewCtrl'
 
-
 			.otherwise
 				redirectTo: '/'
 

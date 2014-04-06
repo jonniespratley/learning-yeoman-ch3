@@ -5,5 +5,4 @@ angular.module('learningYeomanCh3App').controller 'PostDetailCtrl', ($scope, $lo
 	
 	#Handle showing the edit view
 	$scope.edit = () ->
-		console.log $scope.post
 		$location.path("/posts/edit/#{post._id}")

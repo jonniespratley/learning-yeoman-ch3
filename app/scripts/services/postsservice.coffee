@@ -14,7 +14,3 @@ angular.module('learningYeomanCh3App').factory "PostsService", ($resource, $q, $
 				dfd.resolve(post)
 			)
 			return dfd.promise
-
-		add: () ->
-			dfd = $q.defer()
-			dfd.resolve({})
