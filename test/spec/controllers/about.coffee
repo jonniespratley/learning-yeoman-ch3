@@ -15,5 +15,5 @@ describe 'Controller: AboutCtrl', () ->
 			$scope: scope
 		}
 
-	xit 'should attach a list of awesomeThings to the scope', () ->
+	it 'should attach a list of awesomeThings to the scope', () ->
 		expect(scope.awesomeThings.length).toBe 3

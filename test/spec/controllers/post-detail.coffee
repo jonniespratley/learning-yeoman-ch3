@@ -7,13 +7,32 @@ describe 'Controller: PostDetailCtrl', () ->
 
 	PostDetailCtrl = {}
 	scope = {}
+	post = {}
+	location = null
+	routeParams = null
 
 	# Initialize the controller and a mock scope
-	beforeEach inject ($controller, $rootScope) ->
+	beforeEach inject ($controller, $rootScope, $location, $routeParams, Post) ->
 		scope = $rootScope.$new()
+		location = $location
+		routeParams = $routeParams
+
+		post = new Post(id: 1, title: 'Test Post')
+
+		scope.post = post
+		routeParams.postId = 1
+
 		PostDetailCtrl = $controller 'PostDetailCtrl', {
-			$scope: scope
+			$scope: scope,
+			$location: location,
+			$routeParams: routeParams,
+			Post: Post
 		}
 
-	xit 'should attach a list of awesomeThings to the scope', () ->
-		expect(scope.awesomeThings.length).toBe 3
+	it 'should have a name on the scope', () ->
+		expect(scope.name).toBe('PostDetailCtrl')
+
+	it 'should load the edit view', () ->
+		location.path('posts/view/1')
+		scope.edit()
+		expect(location.path()).toBe('/posts/edit/1')

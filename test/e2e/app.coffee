@@ -51,8 +51,8 @@ Config =
 ###
 MainPage = ->
 	@sitetitle = element(protractor.By.binding("App.sitetitle"))
-	@sitedesc = element(protractor.By.binding("App.sitedesc"))
 	@featureTitle = element(protractor.By.binding("App.feature.title"))
+	@featureDesc = element(protractor.By.binding("App.feature.body"))
 	@get = ->
 		return browser.get("http://localhost:9000")
 
@@ -60,13 +60,14 @@ MainPage = ->
 
 describe 'Chapter3 e2e:', ->
 	mainPage = new MainPage()
+
 	describe "the main page", ->
 		beforeEach ->
 			mainPage.get()
 
 		it "should have site title and description", ->
 			expect(mainPage.sitetitle.getText()).toEqual(Config.sitetitle)
-			expect(mainPage.sitedesc.getText()).toEqual(Config.sitedesc)
 
 		it "should have feature title, image and description", ->
-		 expect(mainPage.featureTitle.getText()).toEqual(Config.feature.title)
+			expect(mainPage.featureTitle.getText()).toEqual(Config.feature.title)
+			expect(mainPage.featureDesc.getText()).toEqual(Config.feature.body)

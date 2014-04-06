@@ -32,13 +32,10 @@ angular.module('learningYeomanCh3App').value('Config', Config =
 			content: "views/_content.html"
 			footer: "views/_footer.html"
 		menu: [
-			title: "Home"
-			href: "/"
+			title: "Home", href: "/"
 		,
-			title: "About"
-			href: "/about"
+			title: "About", href: "/about"
 		,
-			title: "Posts"
-			href: "/posts"
+			title: "Posts", href: "/posts"
 		]
 )

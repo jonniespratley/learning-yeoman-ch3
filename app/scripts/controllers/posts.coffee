@@ -1,8 +1,8 @@
 'use strict'
 
-angular.module('learningYeomanCh3App').controller 'PostsCtrl', ($scope, $location, Posts) ->
+angular.module('learningYeomanCh3App').controller 'PostsCtrl', ($scope, $location, posts) ->
 	$scope.name = 'Posts'
-	$scope.posts = Posts.query()
+	$scope.posts = posts
 
 	$scope.add = ()->
 		$location.path('/posts/new')

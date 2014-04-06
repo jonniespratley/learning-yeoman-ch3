@@ -1,16 +1,16 @@
 'use strict'
-angular.module('learningYeomanCh3App').controller 'PostEditCtrl', ($scope, $location, $routeParams, Posts, slugifyFilter) ->
+angular.module('learningYeomanCh3App').controller 'PostEditCtrl', ($scope, $location, post, slugifyFilter) ->
 	$scope.name = 'PostEdit'
-	id = $routeParams.postId
-	$scope.post = Posts.get(id: id)
+	$scope.post = post
 	
 	#Save post
 	$scope.save = (post) ->
-		post.tags = String($scope.post.tags).split(',')
+		post.tags = String(post.tags).split(',')
 		post.slug = slugifyFilter(post.title, true)
-		Posts.update({id: id}, post).$promise.then((data)->
+
+		$scope.post.$update().then((data)->
 			console.log data
-			$location.path("/posts/view/#{id}")
+			$location.path("/posts/view/#{$scope.post._id}")
 		)
 
 	#Handle canceling edit

@@ -13,5 +13,5 @@ describe 'Controller: MainCtrl', () ->
 			$scope: scope
 		}
 
-	xit 'should attach a list of awesomeThings to the scope', () ->
-		expect(scope.awesomeThings.length).toBe 3
+	it 'should have a name on the scope', () ->
+		expect(scope.name).toBe('MainCtrl')
