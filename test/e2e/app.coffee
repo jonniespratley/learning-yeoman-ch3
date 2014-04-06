@@ -1,5 +1,5 @@
 Config =
-	baseurl: ''
+	baseurl: "http://localhost:9000/#"
 	sitetitle: "learning yeoman"
 	sitedesc: " a starting point for a modern angular.js application."
 	sitecopy: "2014 Copywrite"
@@ -46,22 +46,47 @@ Config =
 		]
 
 
-###
-  MainPage view
-###
+#MainPage view
 MainPage = ->
 	@sitetitle = element(protractor.By.binding("App.sitetitle"))
 	@featureTitle = element(protractor.By.binding("App.feature.title"))
 	@featureDesc = element(protractor.By.binding("App.feature.body"))
+	@features = element(protractor.By.binding("App.features"))
 	@get = ->
-		return browser.get("http://localhost:9000")
+		return browser.get(Config.baseurl)
 
 	return
 
+#Post Edit Page
+PostPage = ->
+	@title = element(protractor.By.model('post.title'))
+	@body = element(protractor.By.model('post.body'))
+	@image = element(protractor.By.model('post.image'))
+	@tags = element(protractor.By.model('post.tags'))
+	@published = element(protractor.By.model('post.published'))
+	@submitBtn = element(protractor.By.css('button[type="submit"]'))
+
+	@getNew = ->
+		return browser.get(Config.baseurl+'/posts/new')
+
+	@getEdit = (id)->
+		return browser.get(Config.baseurl+'/posts/edit/'+id)
+
+	@form = (p)->
+		@title.sendKeys(p.title)
+		@body.sendKeys(p.body)
+		@image.sendKeys(p.image)
+		@tags.sendKeys(p.tags)
+		@submitBtn.click()
+
+	@name = 'PostEditPage'
+
+
+
 describe 'Chapter3 e2e:', ->
-	mainPage = new MainPage()
 
 	describe "the main page", ->
+		mainPage = new MainPage()
 		beforeEach ->
 			mainPage.get()
 
@@ -71,3 +96,13 @@ describe 'Chapter3 e2e:', ->
 		it "should have feature title, image and description", ->
 			expect(mainPage.featureTitle.getText()).toEqual(Config.feature.title)
 			expect(mainPage.featureDesc.getText()).toEqual(Config.feature.body)
+
+	describe 'the new post page', ->
+		postPage = new PostPage()
+		beforeEach ->
+			postPage.getNew()
+
+		it 'should create a post', ->
+			postPage.form({title: 'Test', body: 'Test post body', tags: 'protractor,angular,test', image: ''})
+			browser.sleep(1500)
+			expect(browser.getCurrentUrl()).toEqual(Config.baseurl + '/posts')
