@@ -1,5 +1,5 @@
 {
-  "name": "learningyeomanch3",
+  "name": "yeoman-blog",
   "version": "0.0.1",
   "description": "Tutorial for Chapter 3",
   "dependencies": {
@@ -45,6 +45,6 @@
     "karma-phantomjs-launcher": "^0.1.4"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=0.10.0"
   }
 }
