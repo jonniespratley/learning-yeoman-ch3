@@ -5,8 +5,8 @@ describe 'Service: config', () ->
 
 	# instantiate service
 	config = {}
-	beforeEach inject (_config_) ->
-		config = _config_
+	beforeEach inject (_Config_) ->
+		config = _Config_
 
 	it 'should contain sitetitle and sitedesc', () ->
 		expect(!!config).toBe true
