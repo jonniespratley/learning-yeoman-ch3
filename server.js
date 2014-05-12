@@ -5,6 +5,25 @@ var application_root = __dirname,
 	mongoose = require('mongoose'),
 	app = express();
 
+var DS = require('jps-ds').DS;
+
+var _ds = new DS( {
+	host: 'localhost/learning-yeoman',
+	//host: 'test:test@ds037498.mongolab.com:37498/learning-yeoman',
+	models: {
+		'posts': {
+			title: String,
+			slug: String,
+			body: String,
+			image: String,
+			published: Boolean,
+			tags: Array,
+			created: Date,
+			modified: Date
+		}
+	}
+} );
+
 // Configure server
 app.configure(function () {
 	//parses request body and populates request.body
@@ -22,37 +41,7 @@ app.configure(function () {
 	}));
 });
 
-//Connect to database
-mongoose.connect('mongodb://localhost/learning-yeoman');
 
-var createModel = function (request) {
-	return new PostModel({
-		_id: request.body._id ? request.body._id : null,
-		title: request.body.title,
-		slug: request.body.slug,
-		body: request.body.body,
-		image: request.body.image,
-		published: request.body.published,
-		tags: request.body.tags,
-		created: request.body.created ? request.body.created : new Date(),
-		modified: new Date()
-	});
-}
-
-//Schemas
-var Post = new mongoose.Schema({
-	title: String,
-	slug: String,
-	body: String,
-	image: String,
-	published: Boolean,
-	tags: Array,
-	created: Date,
-	modified: Date
-});
-
-//Models
-var PostModel = mongoose.model('Post', Post);
 
 //Routes
 // Routes
@@ -62,38 +51,30 @@ app.get('/api', function (request, response) {
 
 //Get a list 
 app.get('/api/posts', function (request, response) {
-	return PostModel.find(function (err, data) {
-		if (!err) {
-			return response.send(data);
-		} else {
-			return console.log(err);
-		}
+	_ds.findAll('posts').then(function(data){
+		return response.send(data);
 	});
 });
 
 
 //Insert a new
 app.post('/api/posts', function (request, response) {
-	var model = createModel(request);
-	model.save(function (err) {
-		if (!err) {
-			console.log('Created Post', model, request.body);
-			return response.send(model);
-		} else {
-			return console.log(err);
-		}
-	});
+	_ds.create( 'posts', {
+		title: request.body.title,
+		body: request.body.body,
+		published: request.body.published,
+		created: new Date()
+	} ).then( function (model) {
+		return response.send(model);
+		console.log( 'model created', model );
+	} );
 
 });
 
 //Get a single by id
 app.get('/api/posts/:id', function (request, response) {
-	PostModel.findById(request.params.id, function (err, model) {
-		if (!err) {
-			return response.send(model);
-		} else {
-			return console.log(err);
-		}
+	_ds.findOne('posts', request.params.id).then(function(data){
+		return response.send(data);
 	});
 });
 
@@ -101,31 +82,24 @@ app.get('/api/posts/:id', function (request, response) {
 app.put('/api/posts/:id', function (request, response) {
 	console.log('Find ID#' + request.params.id, request.body);
 
-	var obj = request.body;
-	var id = obj._id;
-	delete obj._id;
-	if (id) {
-		PostModel.update({_id: id}, obj, {upsert: true}, function (err) {
-			console.log(err);
-			return response.send(err);
-		});
-	}
+	_ds.update( 'posts', request.params.id, {
+		title: request.body.title,
+		body: request.body.body,
+		image: request.body.image,
+		tags: request.body.tags,
+		published: request.body.published
+	} ).then( function (model) {
+		return response.send(model);
+		console.log( 'model updated', model );
+	} );
 
 });
 
 //Delete 
 app.delete('/api/posts/:id', function (request, response) {
-	console.log('Deleting post with id: ' + request.params.id);
-	return PostModel.findById(request.params.id, function (err, model) {
-		return model.remove(function (err) {
-			if (!err) {
-				console.log('model removed');
-				return response.send('');
-			} else {
-				console.log(err);
-			}
-		});
-	});
+	_ds.destroy( 'posts', request.params.id).then( function (data) {
+		return response.send(data);
+	} );
 });
 //Start server
 var port = 9090;

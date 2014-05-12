@@ -66,11 +66,18 @@ PostPage = ->
 	@published = element(protractor.By.model('post.published'))
 	@submitBtn = element(protractor.By.css('button[type="submit"]'))
 
+	@get = ->
+		return browser.get(Config.baseurl + '/posts')
+
 	@getNew = ->
 		return browser.get(Config.baseurl + '/posts/new')
 
 	@getEdit = (id)->
 		return browser.get(Config.baseurl + '/posts/edit/' + id)
+
+	@edit = (id) ->
+		@editBtn = element(protractor.By.css("[data-id=\"#{id}\"] .edit"))
+		@editBtn.click()
 
 	@form = (p)->
 		@title.sendKeys(p.title)
@@ -113,5 +120,8 @@ describe 'Chapter3 e2e:', ->
 
 		it 'should create a post', ->
 			expect(browser.getCurrentUrl()).toEqual(Config.baseurl + '/posts/new')
-			postPage.form({title: 'Test', body: 'Test post body', tags: 'protractor,angular,test', image: 'http://placehold.it/200'})
+			postPage.form({title: 'Protractor Test -' + new Date().toString(), body: 'Test post body', tags: 'protractor,angular,test', image: 'http://placehold.it/200'})
 			expect(browser.getCurrentUrl()).toEqual(Config.baseurl + '/posts')
+
+		it 'should edit a post', ->
+			postPage.edit()
