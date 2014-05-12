@@ -7,7 +7,7 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
-var serverEndpoint = 'http://localhost:9191';
+var serverEndpoint = 'http://localhost:9090/api';
 var proxyConfig = {
 	proxy : {
 		forward : {
@@ -376,7 +376,8 @@ module.exports = function(grunt) {
 
 		grunt.task.run(['clean:server',
 		// 'bower-install',
-		'configureProxies', 'concurrent:server', 'autoprefixer', 'connect:livereload', 'watch']);
+		'configureProxies', 'concurrent:server', 'autoprefixer', 
+		'connect:livereload', 'watch']);
 	});
 
 	grunt.registerTask('server', function() {

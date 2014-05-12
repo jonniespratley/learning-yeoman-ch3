@@ -83,6 +83,7 @@ PostPage = ->
 
 
 describe 'Chapter3 e2e:', ->
+	mainPage = new MainPage()
 	describe "the main page", ->
 		beforeEach ->
 			browser.get('http://localhost:9000')
@@ -97,10 +98,6 @@ describe 'Chapter3 e2e:', ->
 			expect(featureDesc.getText()).toEqual(Config.feature.body)
 
 	describe "the main page", ->
-		mainPage = new MainPage()
-		beforeEach ->
-			mainPage.get()
-
 		it "should have site title and description", ->
 			expect(mainPage.sitetitle.getText()).toEqual(Config.sitetitle)
 

@@ -128,7 +128,7 @@ app.delete('/api/posts/:id', function (request, response) {
 	});
 });
 //Start server
-var port = 9191;
+var port = 9090;
 app.listen(port, function () {
 	console.log('Express server listening on port %d in %s mode', port, app.settings.env);
 });
