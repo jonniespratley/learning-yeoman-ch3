@@ -78,6 +78,7 @@ PostPage = ->
 		@image.sendKeys(p.image)
 		@tags.sendKeys(p.tags)
 		@submitBtn.click()
+		browser.sleep(1500)
 
 	@name = 'PostEditPage'
 
@@ -111,6 +112,6 @@ describe 'Chapter3 e2e:', ->
 			postPage.getNew()
 
 		it 'should create a post', ->
-			postPage.form({title: 'Test', body: 'Test post body', tags: 'protractor,angular,test', image: ''})
-			browser.sleep(1500)
+			expect(browser.getCurrentUrl()).toEqual(Config.baseurl + '/posts/new')
+			postPage.form({title: 'Test', body: 'Test post body', tags: 'protractor,angular,test', image: 'http://placehold.it/200'})
 			expect(browser.getCurrentUrl()).toEqual(Config.baseurl + '/posts')
