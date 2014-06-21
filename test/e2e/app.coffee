@@ -92,24 +92,13 @@ PostPage = ->
 
 describe 'Chapter3 e2e:', ->
 	mainPage = new MainPage()
+
 	describe "the main page", ->
 		beforeEach ->
-			browser.get('http://localhost:9000')
+			mainPage.get()
 
-		it "should have site title and description", ->
-			siteTitle = element(protractor.By.binding("App.sitetitle"))
-			featureTitle = element(protractor.By.binding("App.feature.title"))
-			featureDesc = element(protractor.By.binding("App.feature.body"))
-
-			expect(siteTitle.getText()).toEqual(Config.sitetitle)
-			expect(featureTitle.getText()).toEqual(Config.feature.title)
-			expect(featureDesc.getText()).toEqual(Config.feature.body)
-
-	describe "the main page", ->
 		it "should have site title and description", ->
 			expect(mainPage.sitetitle.getText()).toEqual(Config.sitetitle)
-
-		it "should have feature title, image and description", ->
 			expect(mainPage.featureTitle.getText()).toEqual(Config.feature.title)
 			expect(mainPage.featureDesc.getText()).toEqual(Config.feature.body)
 
@@ -123,5 +112,5 @@ describe 'Chapter3 e2e:', ->
 			postPage.form({title: 'Protractor Test -' + new Date().toString(), body: 'Test post body', tags: 'protractor,angular,test', image: 'http://placehold.it/200'})
 			expect(browser.getCurrentUrl()).toEqual(Config.baseurl + '/posts')
 
-		it 'should edit a post', ->
-			postPage.edit()
+		#it 'should edit a post', ->
+		#	postPage.edit()

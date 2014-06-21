@@ -386,7 +386,7 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('test', ['clean:server', 'concurrent:test', 'autoprefixer', 'connect:test', 'karma']);
-	grunt.registerTask('test:e2e', ['clean:server', 'concurrent:test', 'autoprefixer', 'connect:test', 'protractor']);
+	grunt.registerTask('test:e2e', ['test', 'protractor']);
 
 	grunt.registerTask('build', ['clean:dist',
 	//'bower-install',
