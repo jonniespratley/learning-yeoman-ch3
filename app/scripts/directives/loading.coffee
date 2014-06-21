@@ -4,7 +4,7 @@ angular.module('learningYeomanCh3App').directive('loading', ($rootScope) ->
 	restrict: 'EA'
 	replace: true
 	link: (scope, element, attrs) ->
-		element.addClass('loading').fadeOut('fast')
+		element.addClass('loading').hide()
 		$rootScope.$on( '$locationChangeStart', ->
 			element.fadeIn('fast')
 		)

@@ -48,14 +48,15 @@ angular.module('learningYeomanCh3App', [
 
 
 #App Controller
-angular.module('learningYeomanCh3App').controller 'AppCtrl', ($rootScope, $log, $route, $location, $routeParams, $cookieStore, Config) ->
-	$rootScope.name = 'chapter3App'
+angular.module('learningYeomanCh3App').controller 'AppCtrl', ($scope, $rootScope, $log, $route, $location, $routeParams, $cookieStore, Config) ->
+	$scope.name = 'chapter3App'
 	
 	App = angular.copy(Config)
 	App.session = $cookieStore.get('App.session')
 	App.location = $location
 	App.routeParams = $routeParams
 
-	window.App = $rootScope.App = App
+	window.App = $scope.App = $rootScope.App = App
+
 	$log.info $rootScope
 

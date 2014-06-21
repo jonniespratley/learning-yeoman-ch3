@@ -14,15 +14,15 @@ describe 'Service: PostsService', () ->
 	beforeEach inject (_PostsService_, _$httpBackend_) ->
 		PostsService = _PostsService_
 		httpBackend = _$httpBackend_
-		httpBackend.expectGET('/api/posts').respond(mockData)
-		httpBackend.whenGET('/views/main.html').respond(mockData)
+		httpBackend.whenGET('views/main.html').respond(mockData)
 
 	afterEach( ->
 		httpBackend.verifyNoOutstandingExpectation()
 		httpBackend.verifyNoOutstandingRequest()
 	)
 
-	xit 'should fetch list of posts', () ->
+	it 'should fetch list of posts and resolve promise on success', () ->
+		httpBackend.expectGET('/api/posts').respond(200, mockData)
 		posts = null
 		promise = PostsService.query()
 		promise.then((data)->
@@ -31,3 +31,41 @@ describe 'Service: PostsService', () ->
 		expect(posts).toBeNull()
 		httpBackend.flush()
 		expect(posts.length).toEqual(3)
+
+	it 'should fetch list of posts and reject promise on error', () ->
+		httpBackend.expectGET('/api/posts').respond(404, 'Error')
+		posts = null
+		promise = PostsService.query()
+		promise.then(
+			(data)-> posts = data
+		,
+		(e) -> posts = e
+		)
+		expect(posts).toBeNull()
+		httpBackend.flush()
+
+		expect(posts.data).toBe('Error')
+
+	it 'should fetch a post and resolve promise on success', ->
+		httpBackend.expectGET('/api/posts/1').respond(200, {id: 1, title: 'Post'})
+		post = null
+		promise = PostsService.get(1)
+		promise.then((data)->
+			post = data
+		)
+		expect(post).toBeNull()
+		httpBackend.flush()
+		expect(post.id).toEqual(1)
+
+	it 'should fetch a post and reject promise on error', ->
+		httpBackend.expectGET('/api/posts/1').respond(404, 'Error')
+		post = null
+		promise = PostsService.get(1)
+		promise.then(
+			(data)-> post = data
+		,
+			(e) -> post = e
+		)
+		expect(post).toBeNull()
+		httpBackend.flush()
+		expect(post.data).toBe('Error')
