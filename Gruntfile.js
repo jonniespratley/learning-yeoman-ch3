@@ -57,6 +57,10 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         tasks: ['compass:server', 'autoprefixer']
       },
+	    templates: {
+		    files: ['<%= yeoman.app %>/views/{,*/}*.{html}'],
+		    tasks: ['ngtemplates']
+	    },
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -395,7 +399,14 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         singleRun: true
       }
-    }
+    },
+	  ngtemplates:  {
+		  learningYeomanCh3App:        {
+			  cwd:      '<%= yeoman.app %>',
+			  src:      'views/**.html',
+			  dest:     '<%= yeoman.dist %>/app.templates.js'
+		  }
+	  }
   });
 
 
