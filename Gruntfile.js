@@ -329,8 +329,8 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
-            'views/{,*/}*.html',
-            'bower_components/**/*',
+           // 'views/{,*/}*.html',
+           // 'bower_components/**/*',
             'images/{,*/}*.{webp}',
             'fonts/*'
           ]
@@ -353,6 +353,7 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'coffee:dist',
+	      'ngtemplates',
         'compass:server'
       ],
       test: [
@@ -361,6 +362,7 @@ module.exports = function (grunt) {
       ],
       dist: [
         'coffee',
+	      'ngtemplates',
         'compass:dist',
         'imagemin',
         'svgmin'
@@ -401,10 +403,10 @@ module.exports = function (grunt) {
       }
     },
 	  ngtemplates:  {
-		  learningYeomanCh3App:        {
+		  learningYeomanCh3App:{
 			  cwd:      '<%= yeoman.app %>',
 			  src:      'views/**.html',
-			  dest:     '<%= yeoman.dist %>/app.templates.js'
+			  dest:     '.tmp/scripts/templates.js'
 		  }
 	  }
   });
