@@ -9,8 +9,10 @@
 <html class="no-js"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
+	<!--[if IE 7]>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
+	<![endif]-->
+	<title>Learning Yeoman - Chapter 3</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -25,17 +27,17 @@
 	<link rel="stylesheet" href="styles/main.css">
 	<!-- endbuild -->
 </head>
-<body ng-app="learningYeomanCh3App">
+<body data-ng-app="learningYeomanCh3App">
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
 	your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<article id="app" ng-controller="AppCtrl" class="container" ng-cloak>
-	<header id="header" ng-include="App.layout.header"></header>
-	<section id="content" ng-include="App.layout.content"></section>
-	<footer id="footer" ng-include="App.layout.footer"></footer>
+<article id="app" data-ng-controller="AppCtrl" class="container" data-ng-cloak>
+	<header id="header" data-ng-include="App.layout.header"></header>
+	<section id="content" data-ng-include="App.layout.content"></section>
+	<footer id="footer" data-ng-include="App.layout.footer"></footer>
 </article>
 
 
