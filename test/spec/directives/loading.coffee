@@ -2,17 +2,21 @@
 describe 'Directive: loading', () ->
 	beforeEach module 'learningYeomanCh3App'
 
-	scope = {}
-	element = {}
+	scope = null
+	element = null
 
-	beforeEach inject ($controller, $rootScope, $location, $compile) ->
+	beforeEach inject ($controller, $rootScope, $compile) ->
 		scope = $rootScope.$new()
-		scope.location = $location
 		element = angular.element '<loading></loading>'
 		element = $compile(element) scope
 
 	it 'should replace element with Loading...', () ->
 		expect(element.text()).toBe 'Loading...'
 
-	it 'should be hidden', () ->
-		expect(element.attr('class')).toBe('loading');
+	it 'should hidden by default', () ->
+		expect(element.attr('style')).toContain 'display: none;'
+
+	it 'should be visible during $locationChangeStart event', inject ($rootScope, $location) ->
+		$location.path('/about')
+		$rootScope.$apply()
+		expect(element.attr('style')).not.toContain 'display: none;'

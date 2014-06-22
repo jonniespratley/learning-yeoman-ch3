@@ -9,6 +9,6 @@ angular.module('learningYeomanCh3App').directive('loading', ($rootScope) ->
 			element.fadeIn('fast')
 		)
 		$rootScope.$on('$locationChangeSuccess', ->
-			element.fadeOut()
+			element.fadeOut('fast')
 		)
 	)
