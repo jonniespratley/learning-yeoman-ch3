@@ -12,6 +12,7 @@ module.exports = function (config) {
 		// list of files / patterns to load in the browser
 		files: [
 
+			//Dependencies
 			'app/bower_components/jquery/jquery.js',
 			'app/bower_components/angular/angular.js',
 			'app/bower_components/angular-mocks/angular-mocks.js',
@@ -20,18 +21,19 @@ module.exports = function (config) {
 			'app/bower_components/angular-resource/angular-resource.js',
 			'app/bower_components/angular-route/angular-route.js',
 			'app/bower_components/angular-sanitize/angular-sanitize.js',
-			//'app/bower_components/angular-scenario/angular-scenario.js',
 			'app/bower_components/bootstrap/dist/js/bootstrap.js',
 			'app/bower_components/markdown/lib/markdown.js',
 
+			//Source
 			'.tmp/scripts/**/*.js',
-			'.tmp/mock/**/*.js',
+
+			//Specs
 			'.tmp/spec/**/*.js'
 		],
 		plugins: ['karma-*'],
-
 		reporters: ['progress', 'coverage'],
 
+		//Coverage and coffee
 		preprocessors: {
 			'.tmp/scripts/**/*.js': ['coverage']
 		},
