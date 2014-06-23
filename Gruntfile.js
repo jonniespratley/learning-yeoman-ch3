@@ -142,7 +142,8 @@ module.exports = function (grunt) {
           ]
         }]
       },
-      server: '.tmp'
+      server: '.tmp',
+	    coverage: 'coverage'
     },
 
     // Add vendor prefixed styles

@@ -28,12 +28,9 @@ window.Config =
 		user: null
 	layout:
 		header: "views/_header.html"
-		content: "views/_content.html"
 		footer: "views/_footer.html"
 	menu: [
 		title: "Home", href: "/"
 	,
 		title: "About", href: "/about"
-	,
-		title: "Posts", href: "/posts"
 	]

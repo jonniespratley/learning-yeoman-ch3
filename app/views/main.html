@@ -1,27 +1,27 @@
 <div class="jumbotron">
 	<h1>{{ App.feature.title }}</h1>
-	<img ng-src="{{ App.feature.image  }}"/>
+	<img ng-src="{{ App.feature.image  }}"
+		 alt="{{ App.feature.title }}"/>
 
 	<p class="lead">
 		{{ App.feature.body }}
 	</p>
 </div>
-
 <div class="marketing">
-
 	<ul class="media-list">
 		<li class="media feature" ng-repeat="item in App.features">
 			<a class="pull-left" href="#">
-				<img alt="{{ item.title }}" src="http://placehold.it/80x80" ng-src="{{ item.image }}"
+				<img alt="{{ item.title }}"
+					 ng-src="{{ item.image }}"
+					 src="http://placehold.it/80x80"
 					 class="media-object"/>
 			</a>
 
 			<div class="media-body">
-				<h4 class="media-heading">{{item.title}}</h4>
+				<h4 class="media-heading">{{ item.title }}</h4>
 
 				<p>{{ item.body }}</p>
 			</div>
 		</li>
 	</ul>
-
 </div>
