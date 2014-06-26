@@ -195,20 +195,20 @@
     </style>
 </head>
 <body>
-<div class="header low">
+<div class="header high">
     <h1>Code coverage report for <span class="entity">scripts/controllers/post-edit.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">11.76% <small>(2 / 17)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">100% <small>(13 / 13)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
         Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Functions: <span class="metric">14.29% <small>(1 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(6 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">11.76% <small>(2 / 17)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(13 / 13)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
@@ -239,79 +239,49 @@
 21
 22
 23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+24</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function() {
-  'use strict';
-  angular.module('learningYeomanCh3App').controller('PostEditCtrl', <span class="fstat-no" title="function not covered" >function($scope, $location, $routeParams, Posts) {</span>
-<span class="cstat-no" title="statement not covered" >    var id;</span>
-<span class="cstat-no" title="statement not covered" >    $scope.name = 'PostEdit';</span>
-<span class="cstat-no" title="statement not covered" >    id = $routeParams.postId;</span>
-<span class="cstat-no" title="statement not covered" >    $scope.post = Posts.get({</span>
-      id: id
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+angular.module('learningYeomanCh3App').controller('PostEditCtrl', function($scope, $location, post, slugifyFilter) {
+  $scope.name = 'PostEditCtrl';
+  $scope.post = post;
+  $scope.save = function() {
+    $scope.post.tags = String($scope.post.tags).split(',');
+    $scope.post.slug = slugifyFilter($scope.post.title, true);
+    return $scope.post.$update().then(function(data) {
+      return $location.path("/posts/view/" + data._id);
     });
-<span class="cstat-no" title="statement not covered" >    $scope.save = <span class="fstat-no" title="function not covered" >function(post) {</span></span>
-<span class="cstat-no" title="statement not covered" >      post.tags = String($scope.post.tags).split(',');</span>
-<span class="cstat-no" title="statement not covered" >      return Posts.update({</span>
-        id: id
-      }, post).$promise.then(<span class="fstat-no" title="function not covered" >function(data) {</span>
-<span class="cstat-no" title="statement not covered" >        console.log(data);</span>
-<span class="cstat-no" title="statement not covered" >        return $location.path("/posts/view/" + id);</span>
-      });
-    };
-<span class="cstat-no" title="statement not covered" >    $scope.cancel = <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      return $location.path("/posts/view/" + $scope.post._id);</span>
-    };
-<span class="cstat-no" title="statement not covered" >    return $scope.remove = <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      return $scope.post.$remove().then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
-<span class="cstat-no" title="statement not covered" >        $location.path("/posts");</span>
-<span class="cstat-no" title="statement not covered" >        return console.log(data);</span>
-      });
-    };
-  });
-&nbsp;
-}).call(this);
+  };
+  $scope.cancel = function() {
+    return $location.path("/posts/view/" + $scope.post._id);
+  };
+  return $scope.remove = function() {
+    return $scope.post.$remove().then(function(data) {
+      return $location.path("/posts");
+    });
+  };
+});
 &nbsp;
 /*
 //@ sourceMappingURL=post-edit.js.map
@@ -320,7 +290,7 @@
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Apr 03 2014 23:43:40 GMT-0700 (PDT)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Jun 26 2014 11:02:02 GMT-0700 (PDT)</div>
 </div>
 
 <script src="../../prettify.js"></script>
