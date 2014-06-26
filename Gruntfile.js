@@ -82,7 +82,7 @@ module.exports = function (grunt) {
 				port: SERVER_PORT,
 				// Change this to '0.0.0.0' to access the server from outside.
 				hostname: 'localhost',
-				livereload: 35729,
+				livereload: LIVERELOAD_PORT,
 				middleware: function (connect) {
 					return [
 						require( 'json-proxy' ).initialize( proxyConfig ),
