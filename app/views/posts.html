@@ -1,42 +1,25 @@
 <div id="posts">
 	<button class="btn btn-default pull-right" ng-click="add()">Add New</button>
-    <ol class="breadcrumb">
-        <li>
-            <a href="#">Home</a>
-        </li>
-        <li>
-            <a href="#/posts">Posts</a>
-        </li>
-        <li class="active">
-            {{post.title}}
-        </li>
-    </ol>
 
 
-    <ul class="media-list">
-        <li ng-repeat="post in posts | filter:postFilter">
 
+	<ol class="breadcrumb">
+		<li>
+			<a href="#">Home</a>
+		</li>
+		<li class="active">
+			Posts
+		</li>
+	</ol>
 
-            <div class="media post" data-id="{{post._id}}">
-                <a class="pull-left"
-                   href=""
-                   ng-click="view(post._id)">
-                    <img class="media-object img-thumbnail"
-                         alt="{{post.title}}" ng-src="{{post.image}}"/>
-                </a>
+	<ul class="posts list-unstyled">
+		<li ng-repeat="post in posts | filter:tag">
+			<div class="post" data-id="{{post._id}}">
+				<header ng-include="'views/post-header.html'"></header>
+				<section ng-bind-html="post.body | markdown:150"></section>
+			</div>
+		</li>
+	</ul>
 
-                <div class="media-body">
-
-                    <h4 class="media-heading">{{post.title}}</h4>
-
-                    <p>
-                        {{post.body}}
-                    </p>
-
-                </div>
-            </div>
-
-
-        </li>
-    </ul>
 </div>
+

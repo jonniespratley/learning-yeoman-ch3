@@ -8,39 +8,32 @@ window.Config =
 	debug: true
 	feature:
 		title: 'Chapter 3'
-		image: 'http://a481ab4f6ea4dd65cff0-b2b68ced242ecf1cb9bc1021688e3775.r49.cf1.rackcdn.com/img/learning-yeoman/yo-ng.png'
 		body: 'A starting point for a modern angular.js application.'
+		image: 'http://goo.gl/YHBZjc'
 	features: [
-		id: 1
-		title: "HTML5"
-		body: "Using HTML5 for better user experience."
-		image: "http://a481ab4f6ea4dd65cff0-b2b68ced242ecf1cb9bc1021688e3775.r49.cf1.rackcdn.com/img/learning-yeoman/feature-html5.png"
+		title: "yo"
+		body: "yo scaffolds out a new application."
+		image: "http://goo.gl/g6LO99"
 	,
-		id: 2
-		title: "AngularJS"
-		body: "Framework of choice is Angular"
-		image: "http://a481ab4f6ea4dd65cff0-b2b68ced242ecf1cb9bc1021688e3775.r49.cf1.rackcdn.com/img/learning-yeoman/feature-angular.png"
+		title: "Bower"
+		body: "Bower is used for dependency management. "
+		image: "http://goo.gl/GpxBAx"
 	,
-		id: 3
-		title: "Twitter Bootstrap"
-		body: "UI is Twitter Bootstrap 3.0."
-		image: "http://a481ab4f6ea4dd65cff0-b2b68ced242ecf1cb9bc1021688e3775.r49.cf1.rackcdn.com/img/learning-yeoman/feature-bootstrap.png"
+		title: "Grunt"
+		body: "Grunt is used to build, preview and test your project."
+		image: "http://goo.gl/9M00hx"
 	]
 	session:
 		authorized: false
 		user: null
 	layout:
 		header: "views/_header.html"
-		sidebar: "views/_sidebar.html"
-		content:"views/_content.html"
+		content: "views/_content.html"
 		footer: "views/_footer.html"
 	menu: [
-		title: "Home"
-		href: "/"
+		title: "Home", href: "/"
 	,
-		title: "About"
-		href: "/about"
+		title: "About", href: "/about"
 	,
-		title: "Posts"
-		href: "/posts"
+		title: "Posts", href: "/posts"
 	]

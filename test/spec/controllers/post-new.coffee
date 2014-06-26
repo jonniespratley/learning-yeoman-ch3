@@ -1,19 +1,38 @@
 'use strict'
-
 describe 'Controller: PostNewCtrl', () ->
+	# load the controller's module
+	beforeEach module 'learningYeomanCh3App'
 
-  # load the controller's module
-  beforeEach module 'learningYeomanCh3App'
+	PostNewCtrl = {}
+	scope = {}
+	location = null
+	post =
+		_id: null
+		title: 'Test Post'
+		tags: ['jasmine', 'karma']
 
-  PostNewCtrl = {}
-  scope = {}
+	httpBackend = null
 
-  # Initialize the controller and a mock scope
-  beforeEach inject ($controller, $rootScope) ->
-    scope = $rootScope.$new()
-    PostNewCtrl = $controller 'PostNewCtrl', {
-      $scope: scope
-    }
+	# Initialize the controller and a mock scope
+	beforeEach inject ($controller, $rootScope, _$httpBackend_, $location, Post) ->
+		scope = $rootScope.$new()
+		location = $location
+		httpBackend = _$httpBackend_
 
-  it 'should attach a list of awesomeThings to the scope', () ->
-    expect(scope.awesomeThings.length).toBe 3
+
+		scope.post = post
+
+		PostNewCtrl = $controller 'PostNewCtrl', {
+			$scope: scope
+			$location: location,
+			Post: Post
+		}
+
+	it 'should have a name on the scope', () ->
+		expect(scope.name).toBe('PostNewCtrl')
+
+	it 'should create a new post', () ->
+		httpBackend.expectPOST('/api/posts', post).respond({_id:1})
+		scope.save(post)
+		httpBackend.flush()
+		expect(location.path()).toBe('/posts')

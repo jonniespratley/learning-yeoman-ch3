@@ -2,18 +2,29 @@
 
 describe 'Controller: PostDetailCtrl', () ->
 
-  # load the controller's module
-  beforeEach module 'learningYeomanCh3App'
+	# load the controller's module
+	beforeEach module 'learningYeomanCh3App'
 
-  PostDetailCtrl = {}
-  scope = {}
+	PostDetailCtrl = {}
+	scope = {}
+	post = {}
+	location = null
 
-  # Initialize the controller and a mock scope
-  beforeEach inject ($controller, $rootScope) ->
-    scope = $rootScope.$new()
-    PostDetailCtrl = $controller 'PostDetailCtrl', {
-      $scope: scope
-    }
+	# Initialize the controller and a mock scope
+	beforeEach inject ($controller, $rootScope, $location, Post) ->
+		scope = $rootScope.$new()
+		location = $location
+		PostDetailCtrl = $controller 'PostDetailCtrl', {
+			$scope: scope,
+			$location: location,
+			post: new Post(_id: 1, title: 'Test Post')
+		}
 
-  it 'should attach a list of awesomeThings to the scope', () ->
-    expect(scope.awesomeThings.length).toBe 3
+	it 'should have a name on the scope', () ->
+		expect(scope.name).toBe('PostDetailCtrl')
+		expect(scope.post.title).toEqual('Test Post')
+
+	it 'should load the edit view', () ->
+		location.path('posts/view/1')
+		scope.edit()
+		expect(location.path()).toBe('/posts/edit/1')

@@ -1,16 +1,22 @@
 'use strict'
-
 describe 'Directive: loading', () ->
+	beforeEach module 'learningYeomanCh3App'
 
-  # load the directive's module
-  beforeEach module 'learningYeomanCh3App'
+	scope = null
+	element = null
 
-  scope = {}
+	beforeEach inject ($controller, $rootScope, $compile) ->
+		scope = $rootScope.$new()
+		element = angular.element '<loading></loading>'
+		element = $compile(element) scope
 
-  beforeEach inject ($controller, $rootScope) ->
-    scope = $rootScope.$new()
+	it 'should replace element with Loading...', () ->
+		expect(element.text()).toBe 'Loading...'
 
-  it 'should make hidden element visible', inject ($compile) ->
-    element = angular.element '<loading></loading>'
-    element = $compile(element) scope
-    expect(element.text()).toBe 'this is the loading directive'
+	it 'should hidden by default', () ->
+		expect(element.attr('style')).toContain 'display: none;'
+
+	it 'should be visible during $locationChangeStart event', inject ($rootScope, $location) ->
+		$location.path('/about')
+		$rootScope.$apply()
+		expect(element.attr('style')).not.toContain 'display: none;'

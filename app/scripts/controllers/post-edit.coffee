@@ -1,15 +1,15 @@
 'use strict'
-angular.module('learningYeomanCh3App').controller 'PostEditCtrl', ($scope, $location, $routeParams, Posts) ->
-	$scope.name = 'PostEdit'
-	id = $routeParams.postId
-	$scope.post = Posts.get(id: id)
+angular.module('learningYeomanCh3App').controller 'PostEditCtrl', ($scope, $location, post, slugifyFilter) ->
+	$scope.name = 'PostEditCtrl'
+	$scope.post = post
 	
 	#Save post
-	$scope.save = (post) ->
-		post.tags = String($scope.post.tags).split(',')
-		Posts.update({id: id}, post).$promise.then((data)->
-			console.log data
-			$location.path("/posts/view/#{id}")
+	$scope.save = () ->
+		$scope.post.tags = String($scope.post.tags).split(',')
+		$scope.post.slug = slugifyFilter($scope.post.title, true)
+
+		$scope.post.$update().then((data)->
+			$location.path("/posts/view/#{data._id}")
 		)
 
 	#Handle canceling edit
@@ -18,7 +18,8 @@ angular.module('learningYeomanCh3App').controller 'PostEditCtrl', ($scope, $loca
 
 	#Handle deleting a post
 	$scope.remove = () ->
+		#confirmDel = confirm('Are you sure you want to delete this post?')
+		#if confirmDel
 		$scope.post.$remove().then((data)->
 			$location.path("/posts")
-			console.log(data)
 		)

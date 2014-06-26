@@ -1,9 +1,5 @@
 'use strict'
-
-angular.module('learningYeomanCh3App')
-  .controller 'MainCtrl', ($scope) ->
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate'
-      'AngularJS'
-      'Karma'
-    ]
+angular.module('learningYeomanCh3App').controller 'MainCtrl', ($scope) ->
+	$scope.name = 'MainCtrl'
+	$scope.filter =
+	 tag: 'featured'

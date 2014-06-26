@@ -1,6 +1,7 @@
 'use strict'
 
 angular.module('learningYeomanCh3App', [
+	'ngAnimate'
 	'ngCookies'
 	'ngResource'
 	'ngSanitize'
@@ -20,34 +21,42 @@ angular.module('learningYeomanCh3App', [
 			.when '/posts',
 				templateUrl: 'views/posts.html'
 				controller: 'PostsCtrl'
+				resolve:
+					posts: (PostsService) ->
+						return PostsService.query()
 			
 			.when '/posts/view/:postId*',
 				templateUrl: 'views/post-detail.html'
 				controller: 'PostDetailCtrl'
+				resolve:
+					post: (PostsService)->
+						return PostsService.get()
 			
 			.when '/posts/edit/:postId',
 				templateUrl: 'views/post-edit.html'
 				controller: 'PostEditCtrl'
+				resolve:
+					post: (PostsService)->
+						return PostsService.get()
 
 			.when '/posts/new',
 				templateUrl: 'views/post-edit.html'
 				controller: 'PostNewCtrl'
-
 
 			.otherwise
 				redirectTo: '/'
 
 
 #App Controller
-angular.module('learningYeomanCh3App').controller 'AppCtrl', ($rootScope, $log, $route, $location, $routeParams, $cookieStore, config) ->
-	$rootScope.name = 'chapter3App'
+angular.module('learningYeomanCh3App').controller 'AppCtrl', ($scope, $rootScope, $log, $route, $location, $routeParams, $cookieStore, Config) ->
+	$scope.name = 'chapter3App'
 	
-	App = angular.copy(config)
+	App = angular.copy(Config)
 	App.session = $cookieStore.get('App.session')
 	App.location = $location
 	App.routeParams = $routeParams
-	
-	window.App = $rootScope.App = App
+
+	window.App = $scope.App = $rootScope.App = App
+
 	$log.info $rootScope
-	
-	
+

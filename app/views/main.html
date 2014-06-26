@@ -1,19 +1,27 @@
-	<div class="jumbotron">
-	  <h1>{{ App.feature.title }}</h1>
-	  <img ng-src="{{ App.feature.image  }}"/>
-	  <p class="lead">
-	    {{ App.feature.body }}
-	  </p>
-	</div>
-	      
-	<div class="marketing">
-	  <div ng-repeat="item in App.features" class="media">
-	    <img 
-	      alt="{{ item.title }}"
-	      src="http://placehold.it/80x80"
-	      ng-src="{{ item.image }}"
-	      class="media-object pull-left img-thumbnail"/>
-	    <h4>{{ item.title }}</h4>
-	    <p>{{ item.body }}</p>
-	  </div>  
-	</div>
+<div class="jumbotron">
+	<h1>{{ App.feature.title }}</h1>
+	<img ng-src="{{ App.feature.image  }}"/>
+
+	<p class="lead">
+		{{ App.feature.body }}
+	</p>
+</div>
+
+<div class="marketing">
+
+	<ul class="media-list">
+		<li class="media feature" ng-repeat="item in App.features">
+			<a class="pull-left" href="#">
+				<img alt="{{ item.title }}" src="http://placehold.it/80x80" ng-src="{{ item.image }}"
+					 class="media-object"/>
+			</a>
+
+			<div class="media-body">
+				<h4 class="media-heading">{{item.title}}</h4>
+
+				<p>{{ item.body }}</p>
+			</div>
+		</li>
+	</ul>
+
+</div>

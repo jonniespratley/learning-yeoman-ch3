@@ -1,4 +1,4 @@
-<div id="post-detail" class="content">
+<div id="post-detail">
 	<ol class="breadcrumb">
 		<li>
 			<a href="#">Home</a>
@@ -6,39 +6,10 @@
 		<li>
 			<a href="#/posts">Posts</a>
 		</li>
-		<li class="active">
-			{{post.title}}
-		</li>
+		<li class="active">{{post.title}}</li>
 	</ol>
-
-
-
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="page-header">
-				<h1>{{post.title}}
-				</h1>
-				<span>Posted on {{post.created | date:'mediumDate'}}</span>
-				<span class="label label-default tag" ng-repeat="t in post.tags">{{t}}</span>
-
-				<a ng-click="edit(post)" class="btn btn-xs btn-default edit"> <i class="glyphicon glyphicon-pencil"></i> EDIT </a>
-				<a  class="btn btn-xs btn-default delete" ng-click="remove()"> <i class="glyphicon glyphicon-remove"></i> DEL</a>
-			</div>
-			<article ng-bind-html="post.body | markdown"></article>
-			
-			
-			<!--markdown-editor ng-model="post.body" on-save="save()" -->
-
-			
-		</div>
-		<!--
-		<div class="col-xs-5 col-sm-4">
-			<aside class="center">
-				<img ng-src="{{post.image}}" src="http://placehold.it/150x150&amp;text=Image" class="img-thumbnail post-image">
-			</aside>
-		</div>
-		-->
-
+	<div class="post">
+		<header ng-include="'views/post-header.html'"></header>
+		<article ng-bind-html="post.body | markdown"></article>
 	</div>
-
 </div>

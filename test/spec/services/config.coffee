@@ -1,14 +1,14 @@
 'use strict'
-
 describe 'Service: config', () ->
+	# load the service's module
+	beforeEach module 'learningYeomanCh3App'
 
-  # load the service's module
-  beforeEach module 'learningYeomanCh3App'
+	# instantiate service
+	config = {}
+	beforeEach inject (_Config_) ->
+		config = _Config_
 
-  # instantiate service
-  config = {}
-  beforeEach inject (_config_) ->
-    config = _config_
-
-  it 'should do something', () ->
-    expect(!!config).toBe true
+	it 'should contain sitetitle and sitedesc', () ->
+		expect(!!config).toBe true
+		expect(config.sitetitle).toBeDefined()
+		expect(config.sitedesc).toBeDefined()

@@ -23,7 +23,7 @@ app.configure(function () {
 });
 
 //Connect to database
-mongoose.connect('mongodb://localhost/learning-yeoman');
+mongoose.connect('mongodb://demo:demo@kahana.mongohq.com:10016/learning-yeoman');
 
 var createModel = function (request) {
 	return new PostModel({
