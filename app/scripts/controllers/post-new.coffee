@@ -10,13 +10,12 @@ angular.module('learningYeomanCh3App').controller 'PostNewCtrl', ($scope, $locat
 
 	#Handle canceling edit
 	$scope.cancel = () ->
-		$location.path("/posts")
+		$location.path('/posts')
 	
 	#Save post
 	$scope.save = (post) ->
 		$scope.post = new Post(post)
 		$scope.post.tags = String($scope.post.tags).split(',')
 		$scope.post.$save().then((result)->
-			console.log result
-			$location.path("/posts")
+			$location.path('/posts')
 		)

@@ -5,7 +5,6 @@ angular.module('learningYeomanCh3App').controller 'PostDetailCtrl', ($scope, $lo
 
 	#Handle showing the edit view
 	$scope.edit = () ->
-		console.log $scope.post
 		$location.path("/posts/edit/#{$scope.post._id}")
 
 	#Handle deleting a post
@@ -13,8 +12,7 @@ angular.module('learningYeomanCh3App').controller 'PostDetailCtrl', ($scope, $lo
 		confirmDelete = confirm('Are you sure you want to delete this?')
 		if confirmDelete
 			$scope.post.$remove().then((data)->
-				$location.path("/posts")
-				console.log(data)
+				$location.path('/posts')
 			)
 
 		$location.path("/posts/edit/#{post._id}")
