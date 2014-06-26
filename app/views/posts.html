@@ -1,8 +1,5 @@
 <div id="posts">
 	<button class="btn btn-default pull-right" ng-click="add()">Add New</button>
-
-
-
 	<ol class="breadcrumb">
 		<li>
 			<a href="#">Home</a>
@@ -11,8 +8,7 @@
 			Posts
 		</li>
 	</ol>
-
-	<ul class="posts list-unstyled">
+	<ul class="posts list-unstyled" ng-if="posts">
 		<li ng-repeat="post in posts | filter:tag">
 			<div class="post" data-id="{{post._id}}">
 				<header ng-include="'views/post-header.html'"></header>
@@ -20,6 +16,7 @@
 			</div>
 		</li>
 	</ul>
-
+	<div class="alert alert-info" ng-if="!posts">
+		<strong>Notice:</strong> There are no posts available.
+	</div>
 </div>
-

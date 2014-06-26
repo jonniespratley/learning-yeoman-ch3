@@ -1,14 +1,14 @@
 window.Config =
 	baseurl: document.location.origin
 	sitetitle: "learning yeoman"
-	sitedesc: " a starting point for a modern angular.js application."
-	sitecopy: "2014 Copywrite"
-	version: '0.0.1'
+	sitedesc: "The tutorial for Chapter 3"
+	sitecopy: "2014 Copyright"
+	version: '1.0.0'
 	email: "admin@email.com"
 	debug: true
 	feature:
 		title: 'Chapter 3'
-		body: 'A starting point for a modern angular.js application.'
+		body: 'A starting point for a modern AngularJS app.'
 		image: 'http://goo.gl/YHBZjc'
 	features: [
 		title: "yo"
