@@ -78,7 +78,7 @@ app.post('/api/posts', function (request, response) {
 	model.save(function (err) {
 		if (!err) {
 			console.log('Created Post', model, request.body);
-			return response.send(model);
+			return response.json(model);
 		} else {
 			return console.log(err);
 		}
@@ -90,7 +90,7 @@ app.post('/api/posts', function (request, response) {
 app.get('/api/posts/:id', function (request, response) {
 	PostModel.findById(request.params.id, function (err, model) {
 		if (!err) {
-			return response.send(model);
+			return response.json(model);
 		} else {
 			return console.log(err);
 		}
@@ -107,7 +107,7 @@ app.put('/api/posts/:id', function (request, response) {
 	if (id) {
 		PostModel.update({_id: id}, obj, {upsert: true}, function (err) {
 			console.log(err);
-			return response.send(err);
+			return response.json(err);
 		});
 	}
 
@@ -120,7 +120,7 @@ app.delete('/api/posts/:id', function (request, response) {
 		return model.remove(function (err) {
 			if (!err) {
 				console.log('model removed');
-				return response.send('');
+				return response.json('');
 			} else {
 				console.log(err);
 			}

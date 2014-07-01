@@ -7,7 +7,7 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
-var serverEndpoint = 'http://jonniespratley.me:8181/api/v2/learning-yeoman-ch3';
+var serverEndpoint = '127.0.0.1:9191';
 var proxyConfig = {
 	proxy: {
 		forward: {
@@ -77,7 +77,7 @@ module.exports = function (grunt) {
 			options: {
 				port: SERVER_PORT,
 				// Change this to '0.0.0.0' to access the server from outside.
-				hostname: 'localhost',
+				hostname: '127.0.0.1',
 				livereload: LIVERELOAD_PORT,
 				middleware: function (connect) {
 					return [
@@ -364,7 +364,7 @@ module.exports = function (grunt) {
 		// Run some tasks in parallel to speed up the build process
 		concurrent: {
 			server: [
-				'coffee:dist',
+				'coffee',
 				'ngtemplates'
 			],
 			test: [
