@@ -9,7 +9,7 @@ exports.config = {
 	},
 
 	// Spec patterns are relative to the location of the spec file.
-	specs: ['.tmp/e2e/*.js'],
+	specs: ['.tmp/protractor/*.js'],
 
 	// Options to be passed to Jasmine-node.
 	jasmineNodeOpts: {
