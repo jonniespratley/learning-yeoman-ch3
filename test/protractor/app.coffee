@@ -112,6 +112,6 @@ describe 'Learning Yeoman - Chapter 3 e2e:', ->
 
 		it 'should create a post', ->
 			postPage.addBtn.click()
-			postPage.form({title: 'Test', body: 'Test post body', tags: 'protractor,angular,test', image: ''})
+			postPage.form({title: 'Test', body: 'Test post body', tags: 'protractor,test', image: ''})
 			browser.sleep(1500)
 			expect(browser.getCurrentUrl()).toEqual(Config.baseurl + '/posts')
