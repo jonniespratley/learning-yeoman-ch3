@@ -13,6 +13,7 @@ angular.module('learningYeomanCh3App').factory "PostsService", ($resource, $q, $
 			return dfd.promise
 		get: (id) ->
 			dfd = $q.defer()
+			id = $route.current.params?.id
 			throw new Error('Must provide ID!') unless id
 			Post.get({id: id}).$promise.then(
 				(post) ->

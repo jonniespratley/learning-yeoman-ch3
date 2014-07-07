@@ -57,19 +57,30 @@ MainPage = ->
 
 #Post Edit Page
 PostPage = ->
+	@url = Config.baseurl+ '/posts'
 	@title = element(protractor.By.model('post.title'))
 	@body = element(protractor.By.model('post.body'))
 	@image = element(protractor.By.model('post.image'))
 	@tags = element(protractor.By.model('post.tags'))
 	@published = element(protractor.By.model('post.published'))
 	@submitBtn = element(protractor.By.css('button[type="submit"]'))
+	@addBtn = element(protractor.By.partialButtonText('Add New'))
 
+	#Load the /posts page
+	@get = ->
+		return browser.get(@url)
+
+	#Load the /posts/new page
 	@getNew = ->
-		return browser.get(Config.baseurl + '/posts/new')
+		@get()
+		browser.sleep(1000)
+		@addBtn.click()
 
+	#Load the /posts/edit/ID page
 	@getEdit = (id)->
 		return browser.get(Config.baseurl + '/posts/edit/' + id)
 
+	#Handle entering values into the form.
 	@form = (p)->
 		@title.sendKeys(p.title)
 		@body.sendKeys(p.body)
@@ -81,8 +92,10 @@ PostPage = ->
 
 
 describe 'Learning Yeoman - Chapter 3 e2e:', ->
+
 	describe "the main page", ->
 		mainPage = new MainPage()
+
 		beforeEach ->
 			mainPage.get()
 
@@ -91,13 +104,14 @@ describe 'Learning Yeoman - Chapter 3 e2e:', ->
 			expect(mainPage.featureTitle.getText()).toEqual(Config.feature.title)
 			expect(mainPage.featureDesc.getText()).toEqual(Config.feature.body)
 
-
 	describe 'the new post page', ->
 		postPage = new PostPage()
+
 		beforeEach ->
-			postPage.getNew()
+			postPage.get()
 
 		it 'should create a post', ->
+			postPage.addBtn.click()
 			postPage.form({title: 'Test', body: 'Test post body', tags: 'protractor,angular,test', image: ''})
 			browser.sleep(1500)
 			expect(browser.getCurrentUrl()).toEqual(Config.baseurl + '/posts')

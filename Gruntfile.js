@@ -8,6 +8,7 @@
 // 'test/spec/**/*.js'
 
 var serverEndpoint = '127.0.0.1:9191';
+//var serverEndpoint = 'jonniespratley.me:8181';
 var proxyConfig = {
 	proxy: {
 		forward: {
@@ -315,6 +316,16 @@ module.exports = function (grunt) {
 						cwd: '.tmp/concat/scripts',
 						src: '*.js',
 						dest: '.tmp/concat/scripts'
+					}
+				]
+			},
+			all: {
+				files: [
+					{
+						expand: true,
+						cwd: '.tmp/scripts',
+						src: '**/*.js',
+						dest: '.tmp/scripts'
 					}
 				]
 			}
