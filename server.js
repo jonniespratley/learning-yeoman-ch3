@@ -23,7 +23,7 @@ app.configure(function () {
 });
 
 //Connect to database
-mongoose.connect('mongodb://demo:demo@kahana.mongohq.com:10016/learning-yeoman');
+mongoose.connect('mongodb://test:test@kahana.mongohq.com:10016/learning-yeoman');
 
 var createModel = function (request) {
 	return new PostModel({
@@ -60,7 +60,7 @@ app.get('/api', function (request, response) {
 	response.send('API is running');
 });
 
-//Get a list 
+//Get a list
 app.get('/api/posts', function (request, response) {
 	return PostModel.find(function (err, data) {
 		if (!err) {
@@ -97,7 +97,7 @@ app.get('/api/posts/:id', function (request, response) {
 	});
 });
 
-//Update 
+//Update
 app.put('/api/posts/:id', function (request, response) {
 	console.log('Find ID#' + request.params.id, request.body);
 
@@ -113,7 +113,7 @@ app.put('/api/posts/:id', function (request, response) {
 
 });
 
-//Delete 
+//Delete
 app.delete('/api/posts/:id', function (request, response) {
 	console.log('Deleting post with id: ' + request.params.id);
 	return PostModel.findById(request.params.id, function (err, model) {

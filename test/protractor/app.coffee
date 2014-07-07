@@ -45,8 +45,6 @@ Config =
 			href: "/posts"
 		]
 
-
-
 #MainPage view
 MainPage = ->
 	@sitetitle = element(protractor.By.binding("App.sitetitle"))
@@ -82,31 +80,17 @@ PostPage = ->
 	@name = 'PostEditPage'
 
 
-describe 'Chapter3 e2e:', ->
-	describe "the main page", ->
-		beforeEach ->
-			browser.get(Config.baseurl)
-
-		it "should have site title and description", ->
-			siteTitle = element(protractor.By.binding("App.sitetitle"))
-			featureTitle = element(protractor.By.binding("App.feature.title"))
-			featureDesc = element(protractor.By.binding("App.feature.body"))
-
-			expect(siteTitle.getText()).toEqual(Config.sitetitle)
-			expect(featureTitle.getText()).toEqual(Config.feature.title)
-			expect(featureDesc.getText()).toEqual(Config.feature.body)
-
+describe 'Learning Yeoman - Chapter 3 e2e:', ->
 	describe "the main page", ->
 		mainPage = new MainPage()
 		beforeEach ->
 			mainPage.get()
 
-		it "should have site title and description", ->
+		it "should have site title, feature title, image and description", ->
 			expect(mainPage.sitetitle.getText()).toEqual(Config.sitetitle)
-
-		it "should have feature title, image and description", ->
 			expect(mainPage.featureTitle.getText()).toEqual(Config.feature.title)
 			expect(mainPage.featureDesc.getText()).toEqual(Config.feature.body)
+
 
 	describe 'the new post page', ->
 		postPage = new PostPage()

@@ -423,6 +423,28 @@ module.exports = function (grunt) {
 				src: 'views/**.html',
 				dest: '.tmp/scripts/templates.js'
 			}
+		},
+
+		/* Protractor testing */
+		protractor: {
+			options: {
+				keepAlive: true,
+				noColor: false
+			},
+			e2e: {
+				options: {
+					configFile: "e2e.conf.js",
+					args: {}
+				}
+			}
+		},
+		protractor_webdriver: {
+			options: {
+				command: 'webdriver-manager start'
+			},
+			e2e: {
+
+			}
 		}
 	});
 
@@ -446,6 +468,8 @@ module.exports = function (grunt) {
 		grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
 		grunt.task.run(['serve']);
 	});
+
+	grunt.registerTask('test:e2e', ['coffee', 'protractor_webdriver', 'protractor']);
 
 	grunt.registerTask('test', [
 		'clean:server',
