@@ -8,3 +8,4 @@ coverage/
 .grunt
 .DS_Store
 coverage
+atlassian-ide-plugin.xml
