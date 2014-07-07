@@ -1,5 +1,5 @@
 Config =
-	baseurl: "http://localhost:9000/#"
+	baseurl: "http://127.0.0.1:9000/#"
 	sitetitle: "learning yeoman"
 	sitedesc: " a starting point for a modern angular.js application."
 	sitecopy: "2014 Copywrite"
@@ -54,7 +54,7 @@ MainPage = ->
 	@featureDesc = element(protractor.By.binding("App.feature.body"))
 	@features = element(protractor.By.binding("App.features"))
 	@get = ->
-		return browser.get("http://localhost:9000/#")
+		return browser.get(Config.baseurl)
 	@name = 'MainPage'
 
 #Post Edit Page
@@ -85,7 +85,7 @@ PostPage = ->
 describe 'Chapter3 e2e:', ->
 	describe "the main page", ->
 		beforeEach ->
-			browser.get('http://localhost:9000')
+			browser.get(Config.baseurl)
 
 		it "should have site title and description", ->
 			siteTitle = element(protractor.By.binding("App.sitetitle"))

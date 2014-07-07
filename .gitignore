@@ -5,3 +5,6 @@ dist
 app/bower_components
 .idea/
 coverage/
+.grunt
+.DS_Store
+coverage

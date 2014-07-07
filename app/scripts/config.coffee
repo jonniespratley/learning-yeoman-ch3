@@ -8,7 +8,7 @@ window.Config =
 	debug: true
 	feature:
 		title: 'Chapter 3'
-		body: 'A starting point for a modern AngularJS app.'
+		body: 'A starting point for a modern angular.js application.'
 		image: 'http://goo.gl/YHBZjc'
 	features: [
 		title: "yo"
