@@ -1,0 +1,1486 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'grunt-protractor-webdriver',
+1 verbose cli   '--save-dev' ]
+2 info using npm@1.4.16
+3 info using node@v0.10.24
+4 warn package.json learning-yeoman-ch3@1.0.0 No repository field.
+5 warn package.json path@0.4.9 path is also the name of a node core module.
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'grunt-protractor-webdriver', null ]
+8 verbose cache add name=undefined spec="grunt-protractor-webdriver" args=["grunt-protractor-webdriver",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'grunt-protractor-webdriver',
+9 verbose parsed url   path: 'grunt-protractor-webdriver',
+9 verbose parsed url   href: 'grunt-protractor-webdriver' }
+10 silly lockFile 26051b90-grunt-protractor-webdriver grunt-protractor-webdriver
+11 verbose lock grunt-protractor-webdriver /Users/jonniespratley/.npm/26051b90-grunt-protractor-webdriver.lock
+12 silly lockFile 26051b90-grunt-protractor-webdriver grunt-protractor-webdriver
+13 silly lockFile 26051b90-grunt-protractor-webdriver grunt-protractor-webdriver
+14 verbose addNamed [ 'grunt-protractor-webdriver', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile 0ec397ea-grunt-protractor-webdriver grunt-protractor-webdriver@
+17 verbose lock grunt-protractor-webdriver@ /Users/jonniespratley/.npm/0ec397ea-grunt-protractor-webdriver.lock
+18 silly addNameRange { name: 'grunt-protractor-webdriver',
+18 silly addNameRange   range: '*',
+18 silly addNameRange   hasData: false }
+19 verbose request where is /grunt-protractor-webdriver
+20 verbose request registry https://registry.npmjs.org/
+21 verbose request id c2b69a18ff4ff30b
+22 verbose url raw /grunt-protractor-webdriver
+23 verbose url resolving [ 'https://registry.npmjs.org/',
+23 verbose url resolving   './grunt-protractor-webdriver' ]
+24 verbose url resolved https://registry.npmjs.org/grunt-protractor-webdriver
+25 verbose request where is https://registry.npmjs.org/grunt-protractor-webdriver
+26 info trying registry request attempt 1 at 21:37:36
+27 verbose etag "CK6MM19ZDU75VHXEBSPRKC5RN"
+28 http GET https://registry.npmjs.org/grunt-protractor-webdriver
+29 http 304 https://registry.npmjs.org/grunt-protractor-webdriver
+30 silly registry.get cb [ 304,
+30 silly registry.get   { date: 'Mon, 14 Jul 2014 04:37:38 GMT',
+30 silly registry.get     server: 'Apache',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     'last-modified': 'Mon, 14 Jul 2014 04:37:38 GMT',
+30 silly registry.get     'cache-control': 'max-age=30',
+30 silly registry.get     etag: '"CK6MM19ZDU75VHXEBSPRKC5RN"',
+30 silly registry.get     'x-served-by': 'cache-sjc3120-SJC',
+30 silly registry.get     'x-cache': 'HIT',
+30 silly registry.get     'x-cache-hits': '1',
+30 silly registry.get     'x-timer': 'S1405312658.156698,VS0,VE82',
+30 silly registry.get     vary: 'Accept',
+30 silly registry.get     'content-length': '0',
+30 silly registry.get     'keep-alive': 'timeout=10, max=50',
+30 silly registry.get     connection: 'Keep-Alive' } ]
+31 verbose etag https://registry.npmjs.org/grunt-protractor-webdriver from cache
+32 silly addNameRange number 2 { name: 'grunt-protractor-webdriver', range: '*', hasData: true }
+33 silly addNameRange versions [ 'grunt-protractor-webdriver',
+33 silly addNameRange   [ '0.1.0', '0.1.1', '0.1.2', '0.1.4', '0.1.6', '0.1.7', '0.1.8' ] ]
+34 verbose addNamed [ 'grunt-protractor-webdriver', '0.1.8' ]
+35 verbose addNamed [ '0.1.8', '0.1.8' ]
+36 silly lockFile d600bd35-grunt-protractor-webdriver-0-1-8 grunt-protractor-webdriver@0.1.8
+37 verbose lock grunt-protractor-webdriver@0.1.8 /Users/jonniespratley/.npm/d600bd35-grunt-protractor-webdriver-0-1-8.lock
+38 silly lockFile d600bd35-grunt-protractor-webdriver-0-1-8 grunt-protractor-webdriver@0.1.8
+39 silly lockFile d600bd35-grunt-protractor-webdriver-0-1-8 grunt-protractor-webdriver@0.1.8
+40 silly lockFile 0ec397ea-grunt-protractor-webdriver grunt-protractor-webdriver@
+41 silly lockFile 0ec397ea-grunt-protractor-webdriver grunt-protractor-webdriver@
+42 silly resolved [ { name: 'grunt-protractor-webdriver',
+42 silly resolved     description: 'grunt plugin for starting Protractor\'s bundled Selenium Webdriver',
+42 silly resolved     version: '0.1.8',
+42 silly resolved     homepage: 'https://github.com/seckardt/grunt-protractor-webdriver',
+42 silly resolved     author: { name: 'Steffen Eckardt', email: 'mosh666@gmail.com' },
+42 silly resolved     repository:
+42 silly resolved      { type: 'git',
+42 silly resolved        url: 'git://github.com/seckardt/grunt-protractor-webdriver.git' },
+42 silly resolved     bugs: { url: 'https://github.com/seckardt/grunt-protractor-webdriver/issues' },
+42 silly resolved     licenses: [ [Object] ],
+42 silly resolved     engines: { node: '>= 0.8.0' },
+42 silly resolved     devDependencies:
+42 silly resolved      { 'grunt-contrib-jshint': '~0.10.0',
+42 silly resolved        'grunt-protractor-runner': '~1.0.0',
+42 silly resolved        'grunt-express': '~1.3.5',
+42 silly resolved        'grunt-shell': '~0.7.0',
+42 silly resolved        protractor: '~0.23.1',
+42 silly resolved        express: '~3.5.0',
+42 silly resolved        grunt: '~0.4.5' },
+42 silly resolved     peerDependencies: { grunt: '>=0.4.4', protractor: '>=0.14.0' },
+42 silly resolved     keywords: [ 'gruntplugin', 'protractor', 'webdriver', 'selenium', 'testing' ],
+42 silly resolved     scripts: { start: 'node server.js' },
+42 silly resolved     _id: 'grunt-protractor-webdriver@0.1.8',
+42 silly resolved     _shasum: 'fa296e778f5243a221ed9e12ef875156480cc3a9',
+42 silly resolved     _from: 'grunt-protractor-webdriver@',
+42 silly resolved     _npmVersion: '1.4.9',
+42 silly resolved     _npmUser: { name: 'seckardt', email: 'mosh666@gmail.com' },
+42 silly resolved     maintainers: [ [Object] ],
+42 silly resolved     dist:
+42 silly resolved      { shasum: 'fa296e778f5243a221ed9e12ef875156480cc3a9',
+42 silly resolved        tarball: 'http://registry.npmjs.org/grunt-protractor-webdriver/-/grunt-protractor-webdriver-0.1.8.tgz' },
+42 silly resolved     directories: {},
+42 silly resolved     _resolved: 'https://registry.npmjs.org/grunt-protractor-webdriver/-/grunt-protractor-webdriver-0.1.8.tgz',
+42 silly resolved     readme: 'ERROR: No README data found!' } ]
+43 info install grunt-protractor-webdriver@0.1.8 into /WWW/Learning_Yeoman/learning-yeoman-ch3
+44 info installOne grunt-protractor-webdriver@0.1.8
+45 verbose node_modules/grunt-protractor-webdriver unbuild
+46 verbose tar unpack /Users/jonniespratley/.npm/grunt-protractor-webdriver/0.1.8/package.tgz
+47 silly lockFile 6cfe5415-dules-grunt-protractor-webdriver tar:///WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules/grunt-protractor-webdriver
+48 verbose lock tar:///WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules/grunt-protractor-webdriver /Users/jonniespratley/.npm/6cfe5415-dules-grunt-protractor-webdriver.lock
+49 silly lockFile cca3f289-ctor-webdriver-0-1-8-package-tgz tar:///Users/jonniespratley/.npm/grunt-protractor-webdriver/0.1.8/package.tgz
+50 verbose lock tar:///Users/jonniespratley/.npm/grunt-protractor-webdriver/0.1.8/package.tgz /Users/jonniespratley/.npm/cca3f289-ctor-webdriver-0-1-8-package-tgz.lock
+51 silly gunzTarPerm modes [ '755', '644' ]
+52 silly gunzTarPerm extractEntry package.json
+53 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+54 silly gunzTarPerm extractEntry .npmignore
+55 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+56 silly gunzTarPerm extractEntry README.md
+57 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+58 silly gunzTarPerm extractEntry Gruntfile.js
+59 silly gunzTarPerm modified mode [ 'Gruntfile.js', 438, 420 ]
+60 silly gunzTarPerm extractEntry protractor.conf.js
+61 silly gunzTarPerm modified mode [ 'protractor.conf.js', 438, 420 ]
+62 silly gunzTarPerm extractEntry server.js
+63 silly gunzTarPerm modified mode [ 'server.js', 438, 420 ]
+64 silly gunzTarPerm extractEntry bower_components/angular/README.md
+65 silly gunzTarPerm modified mode [ 'bower_components/angular/README.md', 438, 420 ]
+66 silly gunzTarPerm extractEntry bower_components/angular/angular.js
+67 silly gunzTarPerm modified mode [ 'bower_components/angular/angular.js', 438, 420 ]
+68 silly gunzTarPerm extractEntry bower_components/angular/angular.min.js
+69 silly gunzTarPerm modified mode [ 'bower_components/angular/angular.min.js', 438, 420 ]
+70 silly gunzTarPerm extractEntry bower_components/angular/.bower.json
+71 silly gunzTarPerm modified mode [ 'bower_components/angular/.bower.json', 438, 420 ]
+72 silly gunzTarPerm extractEntry bower_components/angular/angular-csp.css
+73 silly gunzTarPerm modified mode [ 'bower_components/angular/angular-csp.css', 438, 420 ]
+74 silly gunzTarPerm extractEntry bower_components/angular/angular.min.js.gzip
+75 silly gunzTarPerm modified mode [ 'bower_components/angular/angular.min.js.gzip', 438, 420 ]
+76 silly gunzTarPerm extractEntry bower_components/angular/angular.min.js.map
+77 silly gunzTarPerm modified mode [ 'bower_components/angular/angular.min.js.map', 438, 420 ]
+78 silly gunzTarPerm extractEntry bower_components/angular/bower.json
+79 silly gunzTarPerm modified mode [ 'bower_components/angular/bower.json', 438, 420 ]
+80 silly gunzTarPerm extractEntry .jshintrc
+81 silly gunzTarPerm modified mode [ '.jshintrc', 438, 420 ]
+82 silly gunzTarPerm extractEntry tasks/protractor_webdriver.js
+83 silly gunzTarPerm modified mode [ 'tasks/protractor_webdriver.js', 438, 420 ]
+84 silly gunzTarPerm extractEntry LICENSE-MIT
+85 silly gunzTarPerm modified mode [ 'LICENSE-MIT', 438, 420 ]
+86 silly gunzTarPerm extractEntry .bowerrc
+87 silly gunzTarPerm modified mode [ '.bowerrc', 438, 420 ]
+88 silly gunzTarPerm extractEntry protractor.md
+89 silly gunzTarPerm modified mode [ 'protractor.md', 438, 420 ]
+90 silly gunzTarPerm extractEntry bower.json
+91 silly gunzTarPerm modified mode [ 'bower.json', 438, 420 ]
+92 silly gunzTarPerm extractEntry test/e2e/Main.spec.js
+93 silly gunzTarPerm modified mode [ 'test/e2e/Main.spec.js', 438, 420 ]
+94 silly gunzTarPerm extractEntry test/e2e/app.js
+95 silly gunzTarPerm modified mode [ 'test/e2e/app.js', 438, 420 ]
+96 silly gunzTarPerm extractEntry test/e2e/index.html
+97 silly gunzTarPerm modified mode [ 'test/e2e/index.html', 438, 420 ]
+98 silly lockFile 6cfe5415-dules-grunt-protractor-webdriver tar:///WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules/grunt-protractor-webdriver
+99 silly lockFile 6cfe5415-dules-grunt-protractor-webdriver tar:///WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules/grunt-protractor-webdriver
+100 silly lockFile cca3f289-ctor-webdriver-0-1-8-package-tgz tar:///Users/jonniespratley/.npm/grunt-protractor-webdriver/0.1.8/package.tgz
+101 silly lockFile cca3f289-ctor-webdriver-0-1-8-package-tgz tar:///Users/jonniespratley/.npm/grunt-protractor-webdriver/0.1.8/package.tgz
+102 info preinstall grunt-protractor-webdriver@0.1.8
+103 verbose readDependencies using package.json deps
+104 verbose readDependencies using package.json deps
+105 silly resolved []
+106 verbose about to build /WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules/grunt-protractor-webdriver
+107 info build /WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules/grunt-protractor-webdriver
+108 verbose linkStuff [ false,
+108 verbose linkStuff   false,
+108 verbose linkStuff   false,
+108 verbose linkStuff   '/WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules' ]
+109 info linkStuff grunt-protractor-webdriver@0.1.8
+110 verbose linkBins grunt-protractor-webdriver@0.1.8
+111 verbose linkMans grunt-protractor-webdriver@0.1.8
+112 verbose rebuildBundles grunt-protractor-webdriver@0.1.8
+113 info install grunt-protractor-webdriver@0.1.8
+114 info postinstall grunt-protractor-webdriver@0.1.8
+115 verbose readDependencies using package.json deps
+116 verbose cache add [ 'protractor@>=0.14.0', null ]
+117 verbose cache add name=undefined spec="protractor@>=0.14.0" args=["protractor@>=0.14.0",null]
+118 verbose parsed url { protocol: null,
+118 verbose parsed url   slashes: null,
+118 verbose parsed url   auth: null,
+118 verbose parsed url   host: null,
+118 verbose parsed url   port: null,
+118 verbose parsed url   hostname: null,
+118 verbose parsed url   hash: null,
+118 verbose parsed url   search: null,
+118 verbose parsed url   query: null,
+118 verbose parsed url   pathname: 'protractor@%3E=0.14.0',
+118 verbose parsed url   path: 'protractor@%3E=0.14.0',
+118 verbose parsed url   href: 'protractor@%3E=0.14.0' }
+119 verbose cache add name="protractor" spec=">=0.14.0" args=["protractor",">=0.14.0"]
+120 verbose parsed url { protocol: null,
+120 verbose parsed url   slashes: null,
+120 verbose parsed url   auth: null,
+120 verbose parsed url   host: null,
+120 verbose parsed url   port: null,
+120 verbose parsed url   hostname: null,
+120 verbose parsed url   hash: null,
+120 verbose parsed url   search: null,
+120 verbose parsed url   query: null,
+120 verbose parsed url   pathname: '%3E=0.14.0',
+120 verbose parsed url   path: '%3E=0.14.0',
+120 verbose parsed url   href: '%3E=0.14.0' }
+121 verbose addNamed [ 'protractor', '>=0.14.0' ]
+122 verbose addNamed [ null, '>=0.14.0' ]
+123 silly lockFile 9e93847e-protractor-0-14-0 protractor@>=0.14.0
+124 verbose lock protractor@>=0.14.0 /Users/jonniespratley/.npm/9e93847e-protractor-0-14-0.lock
+125 silly addNameRange { name: 'protractor', range: '>=0.14.0', hasData: false }
+126 verbose request where is /protractor
+127 verbose request registry https://registry.npmjs.org/
+128 verbose url raw /protractor
+129 verbose url resolving [ 'https://registry.npmjs.org/', './protractor' ]
+130 verbose url resolved https://registry.npmjs.org/protractor
+131 verbose request where is https://registry.npmjs.org/protractor
+132 info trying registry request attempt 1 at 21:37:38
+133 verbose etag "1ME2LWIQF3E3RUAXXT8WKDIQX"
+134 http GET https://registry.npmjs.org/protractor
+135 http 304 https://registry.npmjs.org/protractor
+136 silly registry.get cb [ 304,
+136 silly registry.get   { date: 'Mon, 14 Jul 2014 04:37:41 GMT',
+136 silly registry.get     server: 'Apache',
+136 silly registry.get     via: '1.1 varnish',
+136 silly registry.get     'last-modified': 'Mon, 14 Jul 2014 04:37:41 GMT',
+136 silly registry.get     'cache-control': 'max-age=30',
+136 silly registry.get     etag: '"1ME2LWIQF3E3RUAXXT8WKDIQX"',
+136 silly registry.get     'x-served-by': 'cache-sjc3128-SJC',
+136 silly registry.get     'x-cache': 'HIT',
+136 silly registry.get     'x-cache-hits': '1',
+136 silly registry.get     'x-timer': 'S1405312661.902967,VS0,VE31',
+136 silly registry.get     vary: 'Accept',
+136 silly registry.get     'content-length': '0',
+136 silly registry.get     'keep-alive': 'timeout=10, max=50',
+136 silly registry.get     connection: 'Keep-Alive' } ]
+137 verbose etag https://registry.npmjs.org/protractor from cache
+138 silly addNameRange number 2 { name: 'protractor', range: '>=0.14.0', hasData: true }
+139 silly addNameRange versions [ 'protractor',
+139 silly addNameRange   [ '0.1.0',
+139 silly addNameRange     '0.1.1',
+139 silly addNameRange     '0.1.2',
+139 silly addNameRange     '0.1.3',
+139 silly addNameRange     '0.2.0',
+139 silly addNameRange     '0.2.1',
+139 silly addNameRange     '0.3.0',
+139 silly addNameRange     '0.4.0',
+139 silly addNameRange     '0.4.1',
+139 silly addNameRange     '0.5.0',
+139 silly addNameRange     '0.6.1',
+139 silly addNameRange     '0.7.0',
+139 silly addNameRange     '0.8.0',
+139 silly addNameRange     '0.9.0',
+139 silly addNameRange     '0.10.0',
+139 silly addNameRange     '0.11.0',
+139 silly addNameRange     '0.12.0',
+139 silly addNameRange     '0.12.1',
+139 silly addNameRange     '0.13.0',
+139 silly addNameRange     '0.14.0',
+139 silly addNameRange     '0.15.0',
+139 silly addNameRange     '0.16.0',
+139 silly addNameRange     '0.16.1',
+139 silly addNameRange     '0.17.0',
+139 silly addNameRange     '0.18.0',
+139 silly addNameRange     '0.18.1',
+139 silly addNameRange     '0.19.0',
+139 silly addNameRange     '0.20.0',
+139 silly addNameRange     '0.20.1',
+139 silly addNameRange     '0.21.0',
+139 silly addNameRange     '0.22.0',
+139 silly addNameRange     '0.23.0',
+139 silly addNameRange     '0.23.1',
+139 silly addNameRange     '0.24.0',
+139 silly addNameRange     '0.24.1',
+139 silly addNameRange     '0.24.2',
+139 silly addNameRange     '1.0.0-rc1',
+139 silly addNameRange     '1.0.0-rc2',
+139 silly addNameRange     '1.0.0-rc3',
+139 silly addNameRange     '1.0.0-rc4' ] ]
+140 verbose addNamed [ 'protractor', '1.0.0-rc4' ]
+141 verbose addNamed [ '1.0.0-rc4', '1.0.0-rc4' ]
+142 silly lockFile df751ce1-protractor-1-0-0-rc4 protractor@1.0.0-rc4
+143 verbose lock protractor@1.0.0-rc4 /Users/jonniespratley/.npm/df751ce1-protractor-1-0-0-rc4.lock
+144 silly lockFile df751ce1-protractor-1-0-0-rc4 protractor@1.0.0-rc4
+145 silly lockFile df751ce1-protractor-1-0-0-rc4 protractor@1.0.0-rc4
+146 silly lockFile 9e93847e-protractor-0-14-0 protractor@>=0.14.0
+147 silly lockFile 9e93847e-protractor-0-14-0 protractor@>=0.14.0
+148 silly resolved [ { name: 'protractor',
+148 silly resolved     description: 'Webdriver E2E test wrapper for Angular.',
+148 silly resolved     homepage: 'https://github.com/angular/protractor',
+148 silly resolved     keywords:
+148 silly resolved      [ 'angular',
+148 silly resolved        'test',
+148 silly resolved        'testing',
+148 silly resolved        'webdriver',
+148 silly resolved        'webdriverjs',
+148 silly resolved        'selenium' ],
+148 silly resolved     author: { name: 'Julie Ralph', email: 'ju.ralph@gmail.com' },
+148 silly resolved     dependencies:
+148 silly resolved      { request: '~2.36.0',
+148 silly resolved        'selenium-webdriver': '2.42.1',
+148 silly resolved        minijasminenode: '1.1.1',
+148 silly resolved        jasminewd: '1.0.3',
+148 silly resolved        saucelabs: '~0.1.0',
+148 silly resolved        glob: '~3.2',
+148 silly resolved        'adm-zip': '0.4.4',
+148 silly resolved        optimist: '~0.6.0',
+148 silly resolved        q: '1.0.0',
+148 silly resolved        lodash: '~2.4.1',
+148 silly resolved        'source-map-support': '~0.2.6' },
+148 silly resolved     devDependencies:
+148 silly resolved      { 'expect.js': '~0.2.0',
+148 silly resolved        chai: '~1.8.1',
+148 silly resolved        'chai-as-promised': '~4.1.0',
+148 silly resolved        'jasmine-reporters': '~0.2.1',
+148 silly resolved        jshint: '2.5.0',
+148 silly resolved        mocha: '~1.18.0',
+148 silly resolved        cucumber: '~0.3.3',
+148 silly resolved        express: '~3.3.4',
+148 silly resolved        lodash: '~2.4.1',
+148 silly resolved        rimraf: '~2.2.6',
+148 silly resolved        dgeni: '~0.2.2',
+148 silly resolved        'dgeni-packages': '~0.6.0' },
+148 silly resolved     repository: { type: 'git', url: 'git://github.com/angular/protractor.git' },
+148 silly resolved     bin:
+148 silly resolved      { protractor: 'bin/protractor',
+148 silly resolved        'webdriver-manager': 'bin/webdriver-manager' },
+148 silly resolved     main: 'lib/protractor.js',
+148 silly resolved     scripts:
+148 silly resolved      { pretest: 'jshint lib spec',
+148 silly resolved        test: 'scripts/test.js',
+148 silly resolved        start: 'testapp/scripts/web-server.js' },
+148 silly resolved     license: 'MIT',
+148 silly resolved     version: '1.0.0-rc4',
+148 silly resolved     webdriverVersions: { selenium: '2.42.2', chromedriver: '2.10', iedriver: '2.42.0' },
+148 silly resolved     gitHead: '8fb4f1a15ce03785fe01206f78f65ba6189523ad',
+148 silly resolved     bugs: { url: 'https://github.com/angular/protractor/issues' },
+148 silly resolved     _id: 'protractor@1.0.0-rc4',
+148 silly resolved     _shasum: '291c9b0b7530bbd16583e30226a6b6aa9ad82624',
+148 silly resolved     _from: 'protractor@>=0.14.0',
+148 silly resolved     _npmVersion: '1.4.14',
+148 silly resolved     _npmUser: { name: 'juliemr', email: 'ju.ralph@gmail.com' },
+148 silly resolved     maintainers: [ [Object], [Object] ],
+148 silly resolved     dist:
+148 silly resolved      { shasum: '291c9b0b7530bbd16583e30226a6b6aa9ad82624',
+148 silly resolved        tarball: 'http://registry.npmjs.org/protractor/-/protractor-1.0.0-rc4.tgz' },
+148 silly resolved     directories: {},
+148 silly resolved     _resolved: 'https://registry.npmjs.org/protractor/-/protractor-1.0.0-rc4.tgz',
+148 silly resolved     readme: 'ERROR: No README data found!' } ]
+149 info install protractor@1.0.0-rc4 into /WWW/Learning_Yeoman/learning-yeoman-ch3
+150 info installOne protractor@1.0.0-rc4
+151 verbose node_modules/protractor unbuild
+152 verbose tar unpack /Users/jonniespratley/.npm/protractor/1.0.0-rc4/package.tgz
+153 silly lockFile ecd02f78-oman-ch3-node-modules-protractor tar:///WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules/protractor
+154 verbose lock tar:///WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules/protractor /Users/jonniespratley/.npm/ecd02f78-oman-ch3-node-modules-protractor.lock
+155 silly lockFile 43f55a1d-protractor-1-0-0-rc4-package-tgz tar:///Users/jonniespratley/.npm/protractor/1.0.0-rc4/package.tgz
+156 verbose lock tar:///Users/jonniespratley/.npm/protractor/1.0.0-rc4/package.tgz /Users/jonniespratley/.npm/43f55a1d-protractor-1-0-0-rc4-package-tgz.lock
+157 silly gunzTarPerm modes [ '755', '644' ]
+158 silly gunzTarPerm extractEntry package.json
+159 silly gunzTarPerm extractEntry README.md
+160 silly gunzTarPerm extractEntry LICENSE
+161 silly gunzTarPerm extractEntry example/chromeOnlyConf.js
+162 silly gunzTarPerm extractEntry example/conf.js
+163 silly gunzTarPerm extractEntry example/example_spec.js
+164 silly gunzTarPerm extractEntry CONTRIBUTING.md
+165 silly gunzTarPerm extractEntry bin/elementexplorer.js
+166 silly gunzTarPerm extractEntry bin/protractor
+167 silly gunzTarPerm extractEntry bin/webdriver-manager
+168 silly gunzTarPerm extractEntry docs/referenceConf.js
+169 silly gunzTarPerm extractEntry docs/locators.md
+170 silly gunzTarPerm extractEntry docs/control-flow.md
+171 silly gunzTarPerm extractEntry docs/debugging.md
+172 silly gunzTarPerm extractEntry docs/faq.md
+173 silly gunzTarPerm extractEntry docs/install.md
+174 silly gunzTarPerm extractEntry docs/library-only.md
+175 silly gunzTarPerm extractEntry docs/browser-setup.md
+176 silly gunzTarPerm extractEntry docs/overview.md
+177 silly gunzTarPerm extractEntry docs/page-objects.md
+178 silly gunzTarPerm extractEntry docs/api.md
+179 silly gunzTarPerm extractEntry docs/toc.md
+180 silly gunzTarPerm extractEntry docs/tutorial.md
+181 silly gunzTarPerm extractEntry docs/using-mocha.md
+182 silly gunzTarPerm extractEntry CHANGELOG.md
+183 silly gunzTarPerm extractEntry lib/cli.js
+184 silly gunzTarPerm extractEntry lib/configParser.js
+185 silly gunzTarPerm extractEntry lib/taskScheduler.js
+186 silly gunzTarPerm extractEntry lib/runner.js
+187 silly gunzTarPerm extractEntry lib/launcher.js
+188 silly gunzTarPerm extractEntry lib/clientsidescripts.js
+189 silly gunzTarPerm extractEntry lib/protractor.js
+190 silly gunzTarPerm extractEntry lib/runFromLauncher.js
+191 silly gunzTarPerm extractEntry lib/wddebugger.js
+192 silly gunzTarPerm extractEntry lib/locators.js
+193 silly gunzTarPerm extractEntry lib/frameworks/README.md
+194 silly gunzTarPerm extractEntry lib/frameworks/cucumber.js
+195 silly gunzTarPerm extractEntry lib/frameworks/debugprint.js
+196 silly gunzTarPerm extractEntry lib/frameworks/jasmine.js
+197 silly gunzTarPerm extractEntry lib/frameworks/mocha.js
+198 silly gunzTarPerm extractEntry lib/driverProviders/README.md
+199 silly gunzTarPerm extractEntry lib/driverProviders/chrome.js
+200 silly gunzTarPerm extractEntry lib/driverProviders/hosted.js
+201 silly gunzTarPerm extractEntry lib/driverProviders/local.js
+202 silly gunzTarPerm extractEntry lib/driverProviders/mock.js
+203 silly gunzTarPerm extractEntry lib/driverProviders/sauce.js
+204 silly gunzTarPerm extractEntry .jshintrc
+205 silly gunzTarPerm extractEntry scripts/generate-docs.js
+206 silly gunzTarPerm extractEntry scripts/test.js
+207 silly gunzTarPerm extractEntry scripts/print_logs.sh
+208 silly gunzTarPerm extractEntry scripts/sauce_connect_setup.sh
+209 silly gunzTarPerm extractEntry scripts/testonsauce.sh
+210 silly gunzTarPerm extractEntry scripts/testserver.sh
+211 silly gunzTarPerm extractEntry scripts/wait_for_browser_provider.sh
+212 silly gunzTarPerm extractEntry testapp/app.js
+213 silly gunzTarPerm extractEntry testapp/favicon.ico
+214 silly gunzTarPerm extractEntry testapp/app.css
+215 silly gunzTarPerm extractEntry testapp/alt_root_index.html
+216 silly gunzTarPerm extractEntry testapp/async/async.js
+217 silly gunzTarPerm extractEntry testapp/async/async.html
+218 silly gunzTarPerm extractEntry testapp/bindings/bindings.js
+219 silly gunzTarPerm extractEntry testapp/bindings/bindings.html
+220 silly gunzTarPerm extractEntry testapp/components/app-version.js
+221 silly gunzTarPerm extractEntry testapp/conflict/conflict.js
+222 silly gunzTarPerm extractEntry testapp/conflict/conflict.html
+223 silly gunzTarPerm extractEntry testapp/animation/animation.js
+224 silly gunzTarPerm extractEntry testapp/animation/animation.css
+225 silly gunzTarPerm extractEntry testapp/animation/animation.html
+226 silly gunzTarPerm extractEntry testapp/form/form.js
+227 silly gunzTarPerm extractEntry testapp/form/form.html
+228 silly gunzTarPerm extractEntry testapp/index.html
+229 silly gunzTarPerm extractEntry testapp/lib/angular_v1.2.9/angular-animate.min.js
+230 silly gunzTarPerm extractEntry testapp/lib/angular_v1.2.9/angular-route.min.js
+231 silly gunzTarPerm extractEntry testapp/lib/angular_v1.2.9/angular.min.js
+232 silly gunzTarPerm extractEntry testapp/lib/angular_v1.2.9/angular-animate.min.js.map
+233 silly gunzTarPerm extractEntry testapp/lib/angular_v1.2.9/angular-route.min.js.map
+234 silly gunzTarPerm extractEntry testapp/lib/angular_v1.2.9/angular.min.js.map
+235 silly gunzTarPerm extractEntry testapp/login.html
+236 silly gunzTarPerm extractEntry testapp/polling/polling.js
+237 silly gunzTarPerm extractEntry testapp/polling/polling.html
+238 silly gunzTarPerm extractEntry testapp/repeater/repeater.js
+239 silly gunzTarPerm extractEntry testapp/repeater/repeater.html
+240 silly gunzTarPerm extractEntry testapp/scripts/web-server.js
+241 silly lockFile ecd02f78-oman-ch3-node-modules-protractor tar:///WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules/protractor
+242 silly lockFile ecd02f78-oman-ch3-node-modules-protractor tar:///WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules/protractor
+243 silly lockFile 43f55a1d-protractor-1-0-0-rc4-package-tgz tar:///Users/jonniespratley/.npm/protractor/1.0.0-rc4/package.tgz
+244 silly lockFile 43f55a1d-protractor-1-0-0-rc4-package-tgz tar:///Users/jonniespratley/.npm/protractor/1.0.0-rc4/package.tgz
+245 info preinstall protractor@1.0.0-rc4
+246 verbose readDependencies using package.json deps
+247 verbose readDependencies using package.json deps
+248 verbose cache add [ 'request@~2.36.0', null ]
+249 verbose cache add name=undefined spec="request@~2.36.0" args=["request@~2.36.0",null]
+250 verbose parsed url { protocol: null,
+250 verbose parsed url   slashes: null,
+250 verbose parsed url   auth: null,
+250 verbose parsed url   host: null,
+250 verbose parsed url   port: null,
+250 verbose parsed url   hostname: null,
+250 verbose parsed url   hash: null,
+250 verbose parsed url   search: null,
+250 verbose parsed url   query: null,
+250 verbose parsed url   pathname: 'request@~2.36.0',
+250 verbose parsed url   path: 'request@~2.36.0',
+250 verbose parsed url   href: 'request@~2.36.0' }
+251 verbose cache add [ 'selenium-webdriver@2.42.1', null ]
+252 verbose cache add name=undefined spec="selenium-webdriver@2.42.1" args=["selenium-webdriver@2.42.1",null]
+253 verbose parsed url { protocol: null,
+253 verbose parsed url   slashes: null,
+253 verbose parsed url   auth: null,
+253 verbose parsed url   host: null,
+253 verbose parsed url   port: null,
+253 verbose parsed url   hostname: null,
+253 verbose parsed url   hash: null,
+253 verbose parsed url   search: null,
+253 verbose parsed url   query: null,
+253 verbose parsed url   pathname: 'selenium-webdriver@2.42.1',
+253 verbose parsed url   path: 'selenium-webdriver@2.42.1',
+253 verbose parsed url   href: 'selenium-webdriver@2.42.1' }
+254 verbose cache add name="request" spec="~2.36.0" args=["request","~2.36.0"]
+255 verbose parsed url { protocol: null,
+255 verbose parsed url   slashes: null,
+255 verbose parsed url   auth: null,
+255 verbose parsed url   host: null,
+255 verbose parsed url   port: null,
+255 verbose parsed url   hostname: null,
+255 verbose parsed url   hash: null,
+255 verbose parsed url   search: null,
+255 verbose parsed url   query: null,
+255 verbose parsed url   pathname: '~2.36.0',
+255 verbose parsed url   path: '~2.36.0',
+255 verbose parsed url   href: '~2.36.0' }
+256 verbose addNamed [ 'request', '~2.36.0' ]
+257 verbose addNamed [ null, '>=2.36.0-0 <2.37.0-0' ]
+258 silly lockFile e78d8142-request-2-36-0 request@~2.36.0
+259 verbose lock request@~2.36.0 /Users/jonniespratley/.npm/e78d8142-request-2-36-0.lock
+260 verbose cache add [ 'minijasminenode@1.1.1', null ]
+261 verbose cache add name=undefined spec="minijasminenode@1.1.1" args=["minijasminenode@1.1.1",null]
+262 verbose parsed url { protocol: null,
+262 verbose parsed url   slashes: null,
+262 verbose parsed url   auth: null,
+262 verbose parsed url   host: null,
+262 verbose parsed url   port: null,
+262 verbose parsed url   hostname: null,
+262 verbose parsed url   hash: null,
+262 verbose parsed url   search: null,
+262 verbose parsed url   query: null,
+262 verbose parsed url   pathname: 'minijasminenode@1.1.1',
+262 verbose parsed url   path: 'minijasminenode@1.1.1',
+262 verbose parsed url   href: 'minijasminenode@1.1.1' }
+263 verbose cache add [ 'jasminewd@1.0.3', null ]
+264 verbose cache add name=undefined spec="jasminewd@1.0.3" args=["jasminewd@1.0.3",null]
+265 verbose parsed url { protocol: null,
+265 verbose parsed url   slashes: null,
+265 verbose parsed url   auth: null,
+265 verbose parsed url   host: null,
+265 verbose parsed url   port: null,
+265 verbose parsed url   hostname: null,
+265 verbose parsed url   hash: null,
+265 verbose parsed url   search: null,
+265 verbose parsed url   query: null,
+265 verbose parsed url   pathname: 'jasminewd@1.0.3',
+265 verbose parsed url   path: 'jasminewd@1.0.3',
+265 verbose parsed url   href: 'jasminewd@1.0.3' }
+266 verbose cache add [ 'saucelabs@~0.1.0', null ]
+267 verbose cache add name=undefined spec="saucelabs@~0.1.0" args=["saucelabs@~0.1.0",null]
+268 verbose parsed url { protocol: null,
+268 verbose parsed url   slashes: null,
+268 verbose parsed url   auth: null,
+268 verbose parsed url   host: null,
+268 verbose parsed url   port: null,
+268 verbose parsed url   hostname: null,
+268 verbose parsed url   hash: null,
+268 verbose parsed url   search: null,
+268 verbose parsed url   query: null,
+268 verbose parsed url   pathname: 'saucelabs@~0.1.0',
+268 verbose parsed url   path: 'saucelabs@~0.1.0',
+268 verbose parsed url   href: 'saucelabs@~0.1.0' }
+269 verbose cache add name="selenium-webdriver" spec="2.42.1" args=["selenium-webdriver","2.42.1"]
+270 verbose parsed url { protocol: null,
+270 verbose parsed url   slashes: null,
+270 verbose parsed url   auth: null,
+270 verbose parsed url   host: null,
+270 verbose parsed url   port: null,
+270 verbose parsed url   hostname: null,
+270 verbose parsed url   hash: null,
+270 verbose parsed url   search: null,
+270 verbose parsed url   query: null,
+270 verbose parsed url   pathname: '2.42.1',
+270 verbose parsed url   path: '2.42.1',
+270 verbose parsed url   href: '2.42.1' }
+271 verbose addNamed [ 'selenium-webdriver', '2.42.1' ]
+272 verbose addNamed [ '2.42.1', '2.42.1' ]
+273 silly lockFile afd5c8d8-selenium-webdriver-2-42-1 selenium-webdriver@2.42.1
+274 verbose lock selenium-webdriver@2.42.1 /Users/jonniespratley/.npm/afd5c8d8-selenium-webdriver-2-42-1.lock
+275 verbose cache add name="minijasminenode" spec="1.1.1" args=["minijasminenode","1.1.1"]
+276 verbose parsed url { protocol: null,
+276 verbose parsed url   slashes: null,
+276 verbose parsed url   auth: null,
+276 verbose parsed url   host: null,
+276 verbose parsed url   port: null,
+276 verbose parsed url   hostname: null,
+276 verbose parsed url   hash: null,
+276 verbose parsed url   search: null,
+276 verbose parsed url   query: null,
+276 verbose parsed url   pathname: '1.1.1',
+276 verbose parsed url   path: '1.1.1',
+276 verbose parsed url   href: '1.1.1' }
+277 verbose addNamed [ 'minijasminenode', '1.1.1' ]
+278 verbose addNamed [ '1.1.1', '1.1.1' ]
+279 silly lockFile c6f9a010-minijasminenode-1-1-1 minijasminenode@1.1.1
+280 verbose lock minijasminenode@1.1.1 /Users/jonniespratley/.npm/c6f9a010-minijasminenode-1-1-1.lock
+281 verbose cache add name="jasminewd" spec="1.0.3" args=["jasminewd","1.0.3"]
+282 verbose parsed url { protocol: null,
+282 verbose parsed url   slashes: null,
+282 verbose parsed url   auth: null,
+282 verbose parsed url   host: null,
+282 verbose parsed url   port: null,
+282 verbose parsed url   hostname: null,
+282 verbose parsed url   hash: null,
+282 verbose parsed url   search: null,
+282 verbose parsed url   query: null,
+282 verbose parsed url   pathname: '1.0.3',
+282 verbose parsed url   path: '1.0.3',
+282 verbose parsed url   href: '1.0.3' }
+283 verbose addNamed [ 'jasminewd', '1.0.3' ]
+284 verbose addNamed [ '1.0.3', '1.0.3' ]
+285 silly lockFile 487bf7f0-jasminewd-1-0-3 jasminewd@1.0.3
+286 verbose lock jasminewd@1.0.3 /Users/jonniespratley/.npm/487bf7f0-jasminewd-1-0-3.lock
+287 verbose cache add name="saucelabs" spec="~0.1.0" args=["saucelabs","~0.1.0"]
+288 verbose parsed url { protocol: null,
+288 verbose parsed url   slashes: null,
+288 verbose parsed url   auth: null,
+288 verbose parsed url   host: null,
+288 verbose parsed url   port: null,
+288 verbose parsed url   hostname: null,
+288 verbose parsed url   hash: null,
+288 verbose parsed url   search: null,
+288 verbose parsed url   query: null,
+288 verbose parsed url   pathname: '~0.1.0',
+288 verbose parsed url   path: '~0.1.0',
+288 verbose parsed url   href: '~0.1.0' }
+289 verbose addNamed [ 'saucelabs', '~0.1.0' ]
+290 verbose addNamed [ null, '>=0.1.0-0 <0.2.0-0' ]
+291 silly lockFile c500d5dc-saucelabs-0-1-0 saucelabs@~0.1.0
+292 verbose lock saucelabs@~0.1.0 /Users/jonniespratley/.npm/c500d5dc-saucelabs-0-1-0.lock
+293 verbose cache add [ 'glob@~3.2', null ]
+294 verbose cache add name=undefined spec="glob@~3.2" args=["glob@~3.2",null]
+295 verbose parsed url { protocol: null,
+295 verbose parsed url   slashes: null,
+295 verbose parsed url   auth: null,
+295 verbose parsed url   host: null,
+295 verbose parsed url   port: null,
+295 verbose parsed url   hostname: null,
+295 verbose parsed url   hash: null,
+295 verbose parsed url   search: null,
+295 verbose parsed url   query: null,
+295 verbose parsed url   pathname: 'glob@~3.2',
+295 verbose parsed url   path: 'glob@~3.2',
+295 verbose parsed url   href: 'glob@~3.2' }
+296 verbose cache add [ 'adm-zip@0.4.4', null ]
+297 verbose cache add name=undefined spec="adm-zip@0.4.4" args=["adm-zip@0.4.4",null]
+298 verbose parsed url { protocol: null,
+298 verbose parsed url   slashes: null,
+298 verbose parsed url   auth: null,
+298 verbose parsed url   host: null,
+298 verbose parsed url   port: null,
+298 verbose parsed url   hostname: null,
+298 verbose parsed url   hash: null,
+298 verbose parsed url   search: null,
+298 verbose parsed url   query: null,
+298 verbose parsed url   pathname: 'adm-zip@0.4.4',
+298 verbose parsed url   path: 'adm-zip@0.4.4',
+298 verbose parsed url   href: 'adm-zip@0.4.4' }
+299 verbose cache add [ 'optimist@~0.6.0', null ]
+300 verbose cache add name=undefined spec="optimist@~0.6.0" args=["optimist@~0.6.0",null]
+301 verbose parsed url { protocol: null,
+301 verbose parsed url   slashes: null,
+301 verbose parsed url   auth: null,
+301 verbose parsed url   host: null,
+301 verbose parsed url   port: null,
+301 verbose parsed url   hostname: null,
+301 verbose parsed url   hash: null,
+301 verbose parsed url   search: null,
+301 verbose parsed url   query: null,
+301 verbose parsed url   pathname: 'optimist@~0.6.0',
+301 verbose parsed url   path: 'optimist@~0.6.0',
+301 verbose parsed url   href: 'optimist@~0.6.0' }
+302 verbose cache add [ 'q@1.0.0', null ]
+303 verbose cache add name=undefined spec="q@1.0.0" args=["q@1.0.0",null]
+304 verbose parsed url { protocol: null,
+304 verbose parsed url   slashes: null,
+304 verbose parsed url   auth: null,
+304 verbose parsed url   host: null,
+304 verbose parsed url   port: null,
+304 verbose parsed url   hostname: null,
+304 verbose parsed url   hash: null,
+304 verbose parsed url   search: null,
+304 verbose parsed url   query: null,
+304 verbose parsed url   pathname: 'q@1.0.0',
+304 verbose parsed url   path: 'q@1.0.0',
+304 verbose parsed url   href: 'q@1.0.0' }
+305 verbose cache add [ 'lodash@~2.4.1', null ]
+306 verbose cache add name=undefined spec="lodash@~2.4.1" args=["lodash@~2.4.1",null]
+307 verbose parsed url { protocol: null,
+307 verbose parsed url   slashes: null,
+307 verbose parsed url   auth: null,
+307 verbose parsed url   host: null,
+307 verbose parsed url   port: null,
+307 verbose parsed url   hostname: null,
+307 verbose parsed url   hash: null,
+307 verbose parsed url   search: null,
+307 verbose parsed url   query: null,
+307 verbose parsed url   pathname: 'lodash@~2.4.1',
+307 verbose parsed url   path: 'lodash@~2.4.1',
+307 verbose parsed url   href: 'lodash@~2.4.1' }
+308 silly addNameRange { name: 'request',
+308 silly addNameRange   range: '>=2.36.0-0 <2.37.0-0',
+308 silly addNameRange   hasData: false }
+309 verbose cache add name="glob" spec="~3.2" args=["glob","~3.2"]
+310 verbose parsed url { protocol: null,
+310 verbose parsed url   slashes: null,
+310 verbose parsed url   auth: null,
+310 verbose parsed url   host: null,
+310 verbose parsed url   port: null,
+310 verbose parsed url   hostname: null,
+310 verbose parsed url   hash: null,
+310 verbose parsed url   search: null,
+310 verbose parsed url   query: null,
+310 verbose parsed url   pathname: '~3.2',
+310 verbose parsed url   path: '~3.2',
+310 verbose parsed url   href: '~3.2' }
+311 verbose addNamed [ 'glob', '~3.2' ]
+312 verbose addNamed [ null, '>=3.2.0-0 <3.3.0-0' ]
+313 silly lockFile 4d6d6f56-glob-3-2 glob@~3.2
+314 verbose lock glob@~3.2 /Users/jonniespratley/.npm/4d6d6f56-glob-3-2.lock
+315 verbose cache add name="adm-zip" spec="0.4.4" args=["adm-zip","0.4.4"]
+316 verbose parsed url { protocol: null,
+316 verbose parsed url   slashes: null,
+316 verbose parsed url   auth: null,
+316 verbose parsed url   host: null,
+316 verbose parsed url   port: null,
+316 verbose parsed url   hostname: null,
+316 verbose parsed url   hash: null,
+316 verbose parsed url   search: null,
+316 verbose parsed url   query: null,
+316 verbose parsed url   pathname: '0.4.4',
+316 verbose parsed url   path: '0.4.4',
+316 verbose parsed url   href: '0.4.4' }
+317 verbose addNamed [ 'adm-zip', '0.4.4' ]
+318 verbose addNamed [ '0.4.4', '0.4.4' ]
+319 silly lockFile 54f7ada5-adm-zip-0-4-4 adm-zip@0.4.4
+320 verbose lock adm-zip@0.4.4 /Users/jonniespratley/.npm/54f7ada5-adm-zip-0-4-4.lock
+321 verbose cache add name="optimist" spec="~0.6.0" args=["optimist","~0.6.0"]
+322 verbose parsed url { protocol: null,
+322 verbose parsed url   slashes: null,
+322 verbose parsed url   auth: null,
+322 verbose parsed url   host: null,
+322 verbose parsed url   port: null,
+322 verbose parsed url   hostname: null,
+322 verbose parsed url   hash: null,
+322 verbose parsed url   search: null,
+322 verbose parsed url   query: null,
+322 verbose parsed url   pathname: '~0.6.0',
+322 verbose parsed url   path: '~0.6.0',
+322 verbose parsed url   href: '~0.6.0' }
+323 verbose addNamed [ 'optimist', '~0.6.0' ]
+324 verbose addNamed [ null, '>=0.6.0-0 <0.7.0-0' ]
+325 silly lockFile 07193858-optimist-0-6-0 optimist@~0.6.0
+326 verbose lock optimist@~0.6.0 /Users/jonniespratley/.npm/07193858-optimist-0-6-0.lock
+327 verbose cache add name="q" spec="1.0.0" args=["q","1.0.0"]
+328 verbose parsed url { protocol: null,
+328 verbose parsed url   slashes: null,
+328 verbose parsed url   auth: null,
+328 verbose parsed url   host: null,
+328 verbose parsed url   port: null,
+328 verbose parsed url   hostname: null,
+328 verbose parsed url   hash: null,
+328 verbose parsed url   search: null,
+328 verbose parsed url   query: null,
+328 verbose parsed url   pathname: '1.0.0',
+328 verbose parsed url   path: '1.0.0',
+328 verbose parsed url   href: '1.0.0' }
+329 verbose addNamed [ 'q', '1.0.0' ]
+330 verbose addNamed [ '1.0.0', '1.0.0' ]
+331 silly lockFile 4a267efb-q-1-0-0 q@1.0.0
+332 verbose lock q@1.0.0 /Users/jonniespratley/.npm/4a267efb-q-1-0-0.lock
+333 verbose cache add [ 'source-map-support@~0.2.6', null ]
+334 verbose cache add name=undefined spec="source-map-support@~0.2.6" args=["source-map-support@~0.2.6",null]
+335 verbose parsed url { protocol: null,
+335 verbose parsed url   slashes: null,
+335 verbose parsed url   auth: null,
+335 verbose parsed url   host: null,
+335 verbose parsed url   port: null,
+335 verbose parsed url   hostname: null,
+335 verbose parsed url   hash: null,
+335 verbose parsed url   search: null,
+335 verbose parsed url   query: null,
+335 verbose parsed url   pathname: 'source-map-support@~0.2.6',
+335 verbose parsed url   path: 'source-map-support@~0.2.6',
+335 verbose parsed url   href: 'source-map-support@~0.2.6' }
+336 verbose cache add name="lodash" spec="~2.4.1" args=["lodash","~2.4.1"]
+337 verbose parsed url { protocol: null,
+337 verbose parsed url   slashes: null,
+337 verbose parsed url   auth: null,
+337 verbose parsed url   host: null,
+337 verbose parsed url   port: null,
+337 verbose parsed url   hostname: null,
+337 verbose parsed url   hash: null,
+337 verbose parsed url   search: null,
+337 verbose parsed url   query: null,
+337 verbose parsed url   pathname: '~2.4.1',
+337 verbose parsed url   path: '~2.4.1',
+337 verbose parsed url   href: '~2.4.1' }
+338 verbose addNamed [ 'lodash', '~2.4.1' ]
+339 verbose addNamed [ null, '>=2.4.1-0 <2.5.0-0' ]
+340 silly lockFile 257f9ab3-lodash-2-4-1 lodash@~2.4.1
+341 verbose lock lodash@~2.4.1 /Users/jonniespratley/.npm/257f9ab3-lodash-2-4-1.lock
+342 silly addNameRange { name: 'saucelabs',
+342 silly addNameRange   range: '>=0.1.0-0 <0.2.0-0',
+342 silly addNameRange   hasData: false }
+343 verbose cache add name="source-map-support" spec="~0.2.6" args=["source-map-support","~0.2.6"]
+344 verbose parsed url { protocol: null,
+344 verbose parsed url   slashes: null,
+344 verbose parsed url   auth: null,
+344 verbose parsed url   host: null,
+344 verbose parsed url   port: null,
+344 verbose parsed url   hostname: null,
+344 verbose parsed url   hash: null,
+344 verbose parsed url   search: null,
+344 verbose parsed url   query: null,
+344 verbose parsed url   pathname: '~0.2.6',
+344 verbose parsed url   path: '~0.2.6',
+344 verbose parsed url   href: '~0.2.6' }
+345 verbose addNamed [ 'source-map-support', '~0.2.6' ]
+346 verbose addNamed [ null, '>=0.2.6-0 <0.3.0-0' ]
+347 silly lockFile b62bd5f3-source-map-support-0-2-6 source-map-support@~0.2.6
+348 verbose lock source-map-support@~0.2.6 /Users/jonniespratley/.npm/b62bd5f3-source-map-support-0-2-6.lock
+349 verbose request where is /selenium-webdriver
+350 verbose request registry https://registry.npmjs.org/
+351 verbose url raw /selenium-webdriver
+352 verbose url resolving [ 'https://registry.npmjs.org/', './selenium-webdriver' ]
+353 verbose url resolved https://registry.npmjs.org/selenium-webdriver
+354 verbose request where is https://registry.npmjs.org/selenium-webdriver
+355 info trying registry request attempt 1 at 21:37:42
+356 http GET https://registry.npmjs.org/selenium-webdriver
+357 verbose request where is /saucelabs
+358 verbose request registry https://registry.npmjs.org/
+359 verbose url raw /saucelabs
+360 verbose url resolving [ 'https://registry.npmjs.org/', './saucelabs' ]
+361 verbose url resolved https://registry.npmjs.org/saucelabs
+362 verbose request where is https://registry.npmjs.org/saucelabs
+363 info trying registry request attempt 1 at 21:37:42
+364 http GET https://registry.npmjs.org/saucelabs
+365 silly addNameRange { name: 'glob', range: '>=3.2.0-0 <3.3.0-0', hasData: false }
+366 verbose request where is /minijasminenode
+367 verbose request registry https://registry.npmjs.org/
+368 verbose url raw /minijasminenode
+369 verbose url resolving [ 'https://registry.npmjs.org/', './minijasminenode' ]
+370 verbose url resolved https://registry.npmjs.org/minijasminenode
+371 verbose request where is https://registry.npmjs.org/minijasminenode
+372 info trying registry request attempt 1 at 21:37:42
+373 http GET https://registry.npmjs.org/minijasminenode
+374 silly addNameRange { name: 'optimist', range: '>=0.6.0-0 <0.7.0-0', hasData: false }
+375 verbose request where is /jasminewd
+376 verbose request registry https://registry.npmjs.org/
+377 verbose url raw /jasminewd
+378 verbose url resolving [ 'https://registry.npmjs.org/', './jasminewd' ]
+379 verbose url resolved https://registry.npmjs.org/jasminewd
+380 verbose request where is https://registry.npmjs.org/jasminewd
+381 info trying registry request attempt 1 at 21:37:42
+382 http GET https://registry.npmjs.org/jasminewd
+383 silly addNameRange { name: 'lodash', range: '>=2.4.1-0 <2.5.0-0', hasData: false }
+384 silly addNameRange { name: 'source-map-support',
+384 silly addNameRange   range: '>=0.2.6-0 <0.3.0-0',
+384 silly addNameRange   hasData: false }
+385 verbose request where is /request
+386 verbose request registry https://registry.npmjs.org/
+387 verbose url raw /request
+388 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+389 verbose url resolved https://registry.npmjs.org/request
+390 verbose request where is https://registry.npmjs.org/request
+391 info trying registry request attempt 1 at 21:37:42
+392 verbose etag "9Y5IYE8VT7ZCSZI80K00WPLCO"
+393 http GET https://registry.npmjs.org/request
+394 verbose request where is /source-map-support
+395 verbose request registry https://registry.npmjs.org/
+396 verbose url raw /source-map-support
+397 verbose url resolving [ 'https://registry.npmjs.org/', './source-map-support' ]
+398 verbose url resolved https://registry.npmjs.org/source-map-support
+399 verbose request where is https://registry.npmjs.org/source-map-support
+400 info trying registry request attempt 1 at 21:37:42
+401 http GET https://registry.npmjs.org/source-map-support
+402 verbose request where is /glob
+403 verbose request registry https://registry.npmjs.org/
+404 verbose url raw /glob
+405 verbose url resolving [ 'https://registry.npmjs.org/', './glob' ]
+406 verbose url resolved https://registry.npmjs.org/glob
+407 verbose request where is https://registry.npmjs.org/glob
+408 info trying registry request attempt 1 at 21:37:42
+409 verbose etag "61U982R6YVWKAZ9Y15ZBGC7RS"
+410 http GET https://registry.npmjs.org/glob
+411 verbose request where is /adm-zip
+412 verbose request registry https://registry.npmjs.org/
+413 verbose url raw /adm-zip
+414 verbose url resolving [ 'https://registry.npmjs.org/', './adm-zip' ]
+415 verbose url resolved https://registry.npmjs.org/adm-zip
+416 verbose request where is https://registry.npmjs.org/adm-zip
+417 info trying registry request attempt 1 at 21:37:42
+418 verbose etag "95G3IHNKWJ2CXPZVZGCLWIAVN"
+419 http GET https://registry.npmjs.org/adm-zip
+420 verbose request where is /optimist
+421 verbose request registry https://registry.npmjs.org/
+422 verbose url raw /optimist
+423 verbose url resolving [ 'https://registry.npmjs.org/', './optimist' ]
+424 verbose url resolved https://registry.npmjs.org/optimist
+425 verbose request where is https://registry.npmjs.org/optimist
+426 info trying registry request attempt 1 at 21:37:42
+427 verbose etag "76ZAI9O97KGVNGML7RVRRBVJA"
+428 http GET https://registry.npmjs.org/optimist
+429 verbose request where is /lodash
+430 verbose request registry https://registry.npmjs.org/
+431 verbose url raw /lodash
+432 verbose url resolving [ 'https://registry.npmjs.org/', './lodash' ]
+433 verbose url resolved https://registry.npmjs.org/lodash
+434 verbose request where is https://registry.npmjs.org/lodash
+435 info trying registry request attempt 1 at 21:37:42
+436 verbose etag "1SBOWN4XJ6N54WYEHJTKT5VAP"
+437 http GET https://registry.npmjs.org/lodash
+438 verbose request where is /q
+439 verbose request registry https://registry.npmjs.org/
+440 verbose url raw /q
+441 verbose url resolving [ 'https://registry.npmjs.org/', './q' ]
+442 verbose url resolved https://registry.npmjs.org/q
+443 verbose request where is https://registry.npmjs.org/q
+444 info trying registry request attempt 1 at 21:37:42
+445 verbose etag "B1AMY3GU3GP5Q2TPV9H7G61J"
+446 http GET https://registry.npmjs.org/q
+447 http 200 https://registry.npmjs.org/minijasminenode
+448 silly registry.get cb [ 200,
+448 silly registry.get   { date: 'Mon, 14 Jul 2014 04:37:42 GMT',
+448 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+448 silly registry.get     etag: '"8XZ5V8KECDHIAKEXO9ZJTESMX"',
+448 silly registry.get     'content-type': 'application/json',
+448 silly registry.get     'cache-control': 'max-age=30',
+448 silly registry.get     'content-length': '16973',
+448 silly registry.get     'accept-ranges': 'bytes',
+448 silly registry.get     via: '1.1 varnish',
+448 silly registry.get     age: '3766',
+448 silly registry.get     'x-served-by': 'cache-sjc3135-SJC',
+448 silly registry.get     'x-cache': 'HIT',
+448 silly registry.get     'x-cache-hits': '1',
+448 silly registry.get     'x-timer': 'S1405312662.373623,VS0,VE37',
+448 silly registry.get     vary: 'Accept',
+448 silly registry.get     'keep-alive': 'timeout=10, max=50',
+448 silly registry.get     connection: 'Keep-Alive' } ]
+449 silly lockFile 18197b09-nenode-minijasminenode-1-1-1-tgz https://registry.npmjs.org/minijasminenode/-/minijasminenode-1.1.1.tgz
+450 verbose lock https://registry.npmjs.org/minijasminenode/-/minijasminenode-1.1.1.tgz /Users/jonniespratley/.npm/18197b09-nenode-minijasminenode-1-1-1-tgz.lock
+451 verbose addRemoteTarball [ 'https://registry.npmjs.org/minijasminenode/-/minijasminenode-1.1.1.tgz',
+451 verbose addRemoteTarball   '7f9637d66428a531c05f4f10b69a311b5dfb60e9' ]
+452 info retry fetch attempt 1 at 21:37:42
+453 verbose fetch to= /var/folders/mz/45_gqj796617htnbqlxzk4440000gn/T/npm-31158-P5IxhkU3/registry.npmjs.org/minijasminenode/-/minijasminenode-1.1.1.tgz
+454 http GET https://registry.npmjs.org/minijasminenode/-/minijasminenode-1.1.1.tgz
+455 http 200 https://registry.npmjs.org/source-map-support
+456 silly registry.get cb [ 200,
+456 silly registry.get   { date: 'Mon, 14 Jul 2014 04:37:42 GMT',
+456 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+456 silly registry.get     etag: '"AWLTLSHPE8ZKDJB2YQ8DANI7C"',
+456 silly registry.get     'content-type': 'application/json',
+456 silly registry.get     'cache-control': 'max-age=30',
+456 silly registry.get     'content-length': '21075',
+456 silly registry.get     'accept-ranges': 'bytes',
+456 silly registry.get     via: '1.1 varnish',
+456 silly registry.get     age: '9848',
+456 silly registry.get     'x-served-by': 'cache-sjc3135-SJC',
+456 silly registry.get     'x-cache': 'MISS',
+456 silly registry.get     'x-cache-hits': '0',
+456 silly registry.get     'x-timer': 'S1405312662.528654,VS0,VE84',
+456 silly registry.get     vary: 'Accept',
+456 silly registry.get     'keep-alive': 'timeout=10, max=49',
+456 silly registry.get     connection: 'Keep-Alive' } ]
+457 silly addNameRange number 2 { name: 'source-map-support',
+457 silly addNameRange   range: '>=0.2.6-0 <0.3.0-0',
+457 silly addNameRange   hasData: true }
+458 silly addNameRange versions [ 'source-map-support',
+458 silly addNameRange   [ '0.1.0',
+458 silly addNameRange     '0.1.1',
+458 silly addNameRange     '0.1.2',
+458 silly addNameRange     '0.1.3',
+458 silly addNameRange     '0.1.4',
+458 silly addNameRange     '0.1.5',
+458 silly addNameRange     '0.1.6',
+458 silly addNameRange     '0.1.7',
+458 silly addNameRange     '0.1.8',
+458 silly addNameRange     '0.1.9',
+458 silly addNameRange     '0.2.0',
+458 silly addNameRange     '0.2.1',
+458 silly addNameRange     '0.2.2',
+458 silly addNameRange     '0.2.3',
+458 silly addNameRange     '0.2.4',
+458 silly addNameRange     '0.2.5',
+458 silly addNameRange     '0.2.6',
+458 silly addNameRange     '0.2.7' ] ]
+459 verbose addNamed [ 'source-map-support', '0.2.7' ]
+460 verbose addNamed [ '0.2.7', '0.2.7' ]
+461 silly lockFile e95197e8-source-map-support-0-2-7 source-map-support@0.2.7
+462 verbose lock source-map-support@0.2.7 /Users/jonniespratley/.npm/e95197e8-source-map-support-0-2-7.lock
+463 silly lockFile 581f77d4-ort-source-map-support-0-2-7-tgz https://registry.npmjs.org/source-map-support/-/source-map-support-0.2.7.tgz
+464 verbose lock https://registry.npmjs.org/source-map-support/-/source-map-support-0.2.7.tgz /Users/jonniespratley/.npm/581f77d4-ort-source-map-support-0-2-7-tgz.lock
+465 verbose addRemoteTarball [ 'https://registry.npmjs.org/source-map-support/-/source-map-support-0.2.7.tgz',
+465 verbose addRemoteTarball   '2480585e0891c8c1dd0dcbb1d7585f57de0b6ee1' ]
+466 info retry fetch attempt 1 at 21:37:42
+467 verbose fetch to= /var/folders/mz/45_gqj796617htnbqlxzk4440000gn/T/npm-31158-P5IxhkU3/registry.npmjs.org/source-map-support/-/source-map-support-0.2.7.tgz
+468 http GET https://registry.npmjs.org/source-map-support/-/source-map-support-0.2.7.tgz
+469 http 200 https://registry.npmjs.org/jasminewd
+470 silly registry.get cb [ 200,
+470 silly registry.get   { date: 'Mon, 14 Jul 2014 04:37:42 GMT',
+470 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+470 silly registry.get     etag: '"EFHRQQ7M2QLML0Z0H08GWEVOA"',
+470 silly registry.get     'content-type': 'application/json',
+470 silly registry.get     'cache-control': 'max-age=30',
+470 silly registry.get     'content-length': '6802',
+470 silly registry.get     'accept-ranges': 'bytes',
+470 silly registry.get     via: '1.1 varnish',
+470 silly registry.get     age: '15948',
+470 silly registry.get     'x-served-by': 'cache-sjc3123-SJC',
+470 silly registry.get     'x-cache': 'MISS',
+470 silly registry.get     'x-cache-hits': '0',
+470 silly registry.get     'x-timer': 'S1405312662.349482,VS0,VE83',
+470 silly registry.get     vary: 'Accept',
+470 silly registry.get     'keep-alive': 'timeout=10, max=50',
+470 silly registry.get     connection: 'Keep-Alive' } ]
+471 http 304 https://registry.npmjs.org/glob
+472 silly registry.get cb [ 304,
+472 silly registry.get   { date: 'Mon, 14 Jul 2014 04:37:42 GMT',
+472 silly registry.get     server: 'Apache',
+472 silly registry.get     via: '1.1 varnish',
+472 silly registry.get     'last-modified': 'Mon, 14 Jul 2014 04:37:42 GMT',
+472 silly registry.get     'cache-control': 'max-age=30',
+472 silly registry.get     etag: '"61U982R6YVWKAZ9Y15ZBGC7RS"',
+472 silly registry.get     'x-served-by': 'cache-sjc3135-SJC',
+472 silly registry.get     'x-cache': 'HIT',
+472 silly registry.get     'x-cache-hits': '1',
+472 silly registry.get     'x-timer': 'S1405312662.703505,VS0,VE0',
+472 silly registry.get     vary: 'Accept',
+472 silly registry.get     'content-length': '0',
+472 silly registry.get     'keep-alive': 'timeout=10, max=48',
+472 silly registry.get     connection: 'Keep-Alive' } ]
+473 verbose etag https://registry.npmjs.org/glob from cache
+474 silly addNameRange number 2 { name: 'glob', range: '>=3.2.0-0 <3.3.0-0', hasData: true }
+475 silly addNameRange versions [ 'glob',
+475 silly addNameRange   [ '1.1.0',
+475 silly addNameRange     '2.0.9',
+475 silly addNameRange     '2.0.8',
+475 silly addNameRange     '2.0.7',
+475 silly addNameRange     '2.1.0',
+475 silly addNameRange     '3.0.0',
+475 silly addNameRange     '3.0.1',
+475 silly addNameRange     '3.1.0',
+475 silly addNameRange     '3.1.1',
+475 silly addNameRange     '3.1.2',
+475 silly addNameRange     '3.1.3',
+475 silly addNameRange     '3.1.4',
+475 silly addNameRange     '3.1.5',
+475 silly addNameRange     '3.1.6',
+475 silly addNameRange     '3.1.7',
+475 silly addNameRange     '3.1.9',
+475 silly addNameRange     '3.1.10',
+475 silly addNameRange     '3.1.11',
+475 silly addNameRange     '3.1.12',
+475 silly addNameRange     '3.1.13',
+475 silly addNameRange     '3.1.14',
+475 silly addNameRange     '3.1.15',
+475 silly addNameRange     '3.1.16',
+475 silly addNameRange     '3.1.17',
+475 silly addNameRange     '3.1.18',
+475 silly addNameRange     '3.1.19',
+475 silly addNameRange     '3.1.20',
+475 silly addNameRange     '3.1.21',
+475 silly addNameRange     '3.2.0',
+475 silly addNameRange     '3.2.1',
+475 silly addNameRange     '3.2.3',
+475 silly addNameRange     '3.2.4',
+475 silly addNameRange     '3.2.5',
+475 silly addNameRange     '3.2.6',
+475 silly addNameRange     '3.2.7',
+475 silly addNameRange     '3.2.8',
+475 silly addNameRange     '3.2.9',
+475 silly addNameRange     '3.2.10',
+475 silly addNameRange     '3.2.11',
+475 silly addNameRange     '4.0.0',
+475 silly addNameRange     '4.0.1',
+475 silly addNameRange     '4.0.2',
+475 silly addNameRange     '4.0.3',
+475 silly addNameRange     '4.0.4' ] ]
+476 verbose addNamed [ 'glob', '3.2.11' ]
+477 verbose addNamed [ '3.2.11', '3.2.11' ]
+478 silly lockFile 3fffafa6-glob-3-2-11 glob@3.2.11
+479 verbose lock glob@3.2.11 /Users/jonniespratley/.npm/3fffafa6-glob-3-2-11.lock
+480 silly lockFile 41b3aaea-rg-jasminewd-jasminewd-1-0-3-tgz https://registry.npmjs.org/jasminewd/-/jasminewd-1.0.3.tgz
+481 verbose lock https://registry.npmjs.org/jasminewd/-/jasminewd-1.0.3.tgz /Users/jonniespratley/.npm/41b3aaea-rg-jasminewd-jasminewd-1-0-3-tgz.lock
+482 verbose addRemoteTarball [ 'https://registry.npmjs.org/jasminewd/-/jasminewd-1.0.3.tgz',
+482 verbose addRemoteTarball   'b5cdb831faceec79bd805723e5c8557d5f1b1ce4' ]
+483 info retry fetch attempt 1 at 21:37:42
+484 verbose fetch to= /var/folders/mz/45_gqj796617htnbqlxzk4440000gn/T/npm-31158-P5IxhkU3/registry.npmjs.org/jasminewd/-/jasminewd-1.0.3.tgz
+485 http GET https://registry.npmjs.org/jasminewd/-/jasminewd-1.0.3.tgz
+486 silly lockFile 3fffafa6-glob-3-2-11 glob@3.2.11
+487 silly lockFile 3fffafa6-glob-3-2-11 glob@3.2.11
+488 silly lockFile 4d6d6f56-glob-3-2 glob@~3.2
+489 silly lockFile 4d6d6f56-glob-3-2 glob@~3.2
+490 http 200 https://registry.npmjs.org/saucelabs
+491 silly registry.get cb [ 200,
+491 silly registry.get   { date: 'Mon, 14 Jul 2014 04:37:42 GMT',
+491 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+491 silly registry.get     etag: '"5MNYEIMMRXRLJM85ITAMP9C3O"',
+491 silly registry.get     'content-type': 'application/json',
+491 silly registry.get     'cache-control': 'max-age=30',
+491 silly registry.get     'content-length': '69535',
+491 silly registry.get     'accept-ranges': 'bytes',
+491 silly registry.get     via: '1.1 varnish',
+491 silly registry.get     age: '5702',
+491 silly registry.get     'x-served-by': 'cache-sjc3130-SJC',
+491 silly registry.get     'x-cache': 'HIT',
+491 silly registry.get     'x-cache-hits': '1',
+491 silly registry.get     'x-timer': 'S1405312662.327107,VS0,VE30',
+491 silly registry.get     vary: 'Accept',
+491 silly registry.get     'keep-alive': 'timeout=10, max=50',
+491 silly registry.get     connection: 'Keep-Alive' } ]
+492 silly addNameRange number 2 { name: 'saucelabs', range: '>=0.1.0-0 <0.2.0-0', hasData: true }
+493 silly addNameRange versions [ 'saucelabs',
+493 silly addNameRange   [ '0.0.1',
+493 silly addNameRange     '0.0.2-alpha',
+493 silly addNameRange     '0.0.2',
+493 silly addNameRange     '0.0.3',
+493 silly addNameRange     '0.0.4',
+493 silly addNameRange     '0.0.5',
+493 silly addNameRange     '0.0.6',
+493 silly addNameRange     '0.0.7',
+493 silly addNameRange     '0.0.8',
+493 silly addNameRange     '0.0.9',
+493 silly addNameRange     '0.1.0',
+493 silly addNameRange     '0.1.1' ] ]
+494 verbose addNamed [ 'saucelabs', '0.1.1' ]
+495 verbose addNamed [ '0.1.1', '0.1.1' ]
+496 silly lockFile 9aec44b9-saucelabs-0-1-1 saucelabs@0.1.1
+497 verbose lock saucelabs@0.1.1 /Users/jonniespratley/.npm/9aec44b9-saucelabs-0-1-1.lock
+498 silly lockFile 9aec44b9-saucelabs-0-1-1 saucelabs@0.1.1
+499 silly lockFile 9aec44b9-saucelabs-0-1-1 saucelabs@0.1.1
+500 silly lockFile c500d5dc-saucelabs-0-1-0 saucelabs@~0.1.0
+501 silly lockFile c500d5dc-saucelabs-0-1-0 saucelabs@~0.1.0
+502 http 304 https://registry.npmjs.org/optimist
+503 silly registry.get cb [ 304,
+503 silly registry.get   { date: 'Mon, 14 Jul 2014 04:37:42 GMT',
+503 silly registry.get     server: 'Apache',
+503 silly registry.get     via: '1.1 varnish',
+503 silly registry.get     'last-modified': 'Mon, 14 Jul 2014 04:37:42 GMT',
+503 silly registry.get     'cache-control': 'max-age=30',
+503 silly registry.get     etag: '"76ZAI9O97KGVNGML7RVRRBVJA"',
+503 silly registry.get     'x-served-by': 'cache-sjc3135-SJC',
+503 silly registry.get     'x-cache': 'HIT',
+503 silly registry.get     'x-cache-hits': '1',
+503 silly registry.get     'x-timer': 'S1405312662.741262,VS0,VE33',
+503 silly registry.get     vary: 'Accept',
+503 silly registry.get     'content-length': '0',
+503 silly registry.get     'keep-alive': 'timeout=10, max=47',
+503 silly registry.get     connection: 'Keep-Alive' } ]
+504 verbose etag https://registry.npmjs.org/optimist from cache
+505 silly addNameRange number 2 { name: 'optimist', range: '>=0.6.0-0 <0.7.0-0', hasData: true }
+506 silly addNameRange versions [ 'optimist',
+506 silly addNameRange   [ '0.0.1',
+506 silly addNameRange     '0.0.2',
+506 silly addNameRange     '0.0.4',
+506 silly addNameRange     '0.0.5',
+506 silly addNameRange     '0.0.6',
+506 silly addNameRange     '0.0.7',
+506 silly addNameRange     '0.1.0',
+506 silly addNameRange     '0.1.1',
+506 silly addNameRange     '0.1.2',
+506 silly addNameRange     '0.1.3',
+506 silly addNameRange     '0.1.4',
+506 silly addNameRange     '0.1.5',
+506 silly addNameRange     '0.1.6',
+506 silly addNameRange     '0.1.7',
+506 silly addNameRange     '0.1.8',
+506 silly addNameRange     '0.1.9',
+506 silly addNameRange     '0.0.3',
+506 silly addNameRange     '0.2.0',
+506 silly addNameRange     '0.2.1',
+506 silly addNameRange     '0.2.2',
+506 silly addNameRange     '0.2.3',
+506 silly addNameRange     '0.2.4',
+506 silly addNameRange     '0.2.5',
+506 silly addNameRange     '0.2.6',
+506 silly addNameRange     '0.2.7',
+506 silly addNameRange     '0.2.8',
+506 silly addNameRange     '0.3.0',
+506 silly addNameRange     '0.3.1',
+506 silly addNameRange     '0.3.3',
+506 silly addNameRange     '0.3.4',
+506 silly addNameRange     '0.3.5',
+506 silly addNameRange     '0.3.6',
+506 silly addNameRange     '0.3.7',
+506 silly addNameRange     '0.4.0',
+506 silly addNameRange     '0.5.0',
+506 silly addNameRange     '0.5.1',
+506 silly addNameRange     '0.5.2',
+506 silly addNameRange     '0.6.0',
+506 silly addNameRange     '0.6.1' ] ]
+507 verbose addNamed [ 'optimist', '0.6.1' ]
+508 verbose addNamed [ '0.6.1', '0.6.1' ]
+509 silly lockFile 0fc74eb8-optimist-0-6-1 optimist@0.6.1
+510 verbose lock optimist@0.6.1 /Users/jonniespratley/.npm/0fc74eb8-optimist-0-6-1.lock
+511 silly lockFile 0fc74eb8-optimist-0-6-1 optimist@0.6.1
+512 silly lockFile 0fc74eb8-optimist-0-6-1 optimist@0.6.1
+513 silly lockFile 07193858-optimist-0-6-0 optimist@~0.6.0
+514 silly lockFile 07193858-optimist-0-6-0 optimist@~0.6.0
+515 http 304 https://registry.npmjs.org/lodash
+516 silly registry.get cb [ 304,
+516 silly registry.get   { date: 'Mon, 14 Jul 2014 04:37:42 GMT',
+516 silly registry.get     server: 'Apache',
+516 silly registry.get     via: '1.1 varnish',
+516 silly registry.get     'last-modified': 'Mon, 14 Jul 2014 04:37:42 GMT',
+516 silly registry.get     'cache-control': 'max-age=30',
+516 silly registry.get     etag: '"1SBOWN4XJ6N54WYEHJTKT5VAP"',
+516 silly registry.get     'x-served-by': 'cache-sjc3130-SJC',
+516 silly registry.get     'x-cache': 'HIT',
+516 silly registry.get     'x-cache-hits': '1',
+516 silly registry.get     'x-timer': 'S1405312662.774299,VS0,VE0',
+516 silly registry.get     vary: 'Accept',
+516 silly registry.get     'content-length': '0',
+516 silly registry.get     'keep-alive': 'timeout=10, max=49',
+516 silly registry.get     connection: 'Keep-Alive' } ]
+517 verbose etag https://registry.npmjs.org/lodash from cache
+518 silly addNameRange number 2 { name: 'lodash', range: '>=2.4.1-0 <2.5.0-0', hasData: true }
+519 silly addNameRange versions [ 'lodash',
+519 silly addNameRange   [ '0.1.0',
+519 silly addNameRange     '0.2.0',
+519 silly addNameRange     '0.2.1',
+519 silly addNameRange     '0.2.2',
+519 silly addNameRange     '0.3.0',
+519 silly addNameRange     '0.3.1',
+519 silly addNameRange     '0.3.2',
+519 silly addNameRange     '0.4.0',
+519 silly addNameRange     '0.4.1',
+519 silly addNameRange     '0.4.2',
+519 silly addNameRange     '0.5.0-rc.1',
+519 silly addNameRange     '0.5.0',
+519 silly addNameRange     '0.5.1',
+519 silly addNameRange     '0.5.2',
+519 silly addNameRange     '0.6.0',
+519 silly addNameRange     '0.6.1',
+519 silly addNameRange     '0.7.0',
+519 silly addNameRange     '0.8.0',
+519 silly addNameRange     '0.8.1',
+519 silly addNameRange     '0.8.2',
+519 silly addNameRange     '0.9.0',
+519 silly addNameRange     '0.9.1',
+519 silly addNameRange     '0.9.2',
+519 silly addNameRange     '0.10.0',
+519 silly addNameRange     '1.0.0-rc.1',
+519 silly addNameRange     '1.0.0-rc.2',
+519 silly addNameRange     '1.0.0-rc.3',
+519 silly addNameRange     '1.0.0',
+519 silly addNameRange     '1.0.1',
+519 silly addNameRange     '1.1.0',
+519 silly addNameRange     '1.1.1',
+519 silly addNameRange     '1.2.0',
+519 silly addNameRange     '1.2.1',
+519 silly addNameRange     '1.3.0',
+519 silly addNameRange     '1.3.1',
+519 silly addNameRange     '2.0.0',
+519 silly addNameRange     '2.1.0',
+519 silly addNameRange     '2.2.0',
+519 silly addNameRange     '2.2.1',
+519 silly addNameRange     '2.3.0',
+519 silly addNameRange     '2.4.0',
+519 silly addNameRange     '2.4.1' ] ]
+520 verbose addNamed [ 'lodash', '2.4.1' ]
+521 verbose addNamed [ '2.4.1', '2.4.1' ]
+522 silly lockFile 8502be2a-lodash-2-4-1 lodash@2.4.1
+523 verbose lock lodash@2.4.1 /Users/jonniespratley/.npm/8502be2a-lodash-2-4-1.lock
+524 silly lockFile 8502be2a-lodash-2-4-1 lodash@2.4.1
+525 silly lockFile 8502be2a-lodash-2-4-1 lodash@2.4.1
+526 silly lockFile 257f9ab3-lodash-2-4-1 lodash@~2.4.1
+527 silly lockFile 257f9ab3-lodash-2-4-1 lodash@~2.4.1
+528 http 200 https://registry.npmjs.org/adm-zip
+529 silly registry.get cb [ 200,
+529 silly registry.get   { date: 'Mon, 14 Jul 2014 04:37:42 GMT',
+529 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+529 silly registry.get     etag: '"9N72GDEPC9W5236KQWNJIN9JA"',
+529 silly registry.get     'content-type': 'application/json',
+529 silly registry.get     'cache-control': 'max-age=30',
+529 silly registry.get     'content-length': '17656',
+529 silly registry.get     'accept-ranges': 'bytes',
+529 silly registry.get     via: '1.1 varnish',
+529 silly registry.get     age: '607',
+529 silly registry.get     'x-served-by': 'cache-sjc3123-SJC',
+529 silly registry.get     'x-cache': 'HIT',
+529 silly registry.get     'x-cache-hits': '1',
+529 silly registry.get     'x-timer': 'S1405312662.737709,VS0,VE30',
+529 silly registry.get     vary: 'Accept',
+529 silly registry.get     'keep-alive': 'timeout=10, max=49',
+529 silly registry.get     connection: 'Keep-Alive' } ]
+530 silly lockFile 03c4f3c6-js-org-adm-zip-adm-zip-0-4-4-tgz https://registry.npmjs.org/adm-zip/-/adm-zip-0.4.4.tgz
+531 verbose lock https://registry.npmjs.org/adm-zip/-/adm-zip-0.4.4.tgz /Users/jonniespratley/.npm/03c4f3c6-js-org-adm-zip-adm-zip-0-4-4-tgz.lock
+532 verbose addRemoteTarball [ 'https://registry.npmjs.org/adm-zip/-/adm-zip-0.4.4.tgz',
+532 verbose addRemoteTarball   'a61ed5ae6905c3aea58b3a657d25033091052736' ]
+533 info retry fetch attempt 1 at 21:37:42
+534 verbose fetch to= /var/folders/mz/45_gqj796617htnbqlxzk4440000gn/T/npm-31158-P5IxhkU3/registry.npmjs.org/adm-zip/-/adm-zip-0.4.4.tgz
+535 http GET https://registry.npmjs.org/adm-zip/-/adm-zip-0.4.4.tgz
+536 http 200 https://registry.npmjs.org/source-map-support/-/source-map-support-0.2.7.tgz
+537 http 200 https://registry.npmjs.org/minijasminenode/-/minijasminenode-1.1.1.tgz
+538 silly lockFile 18197b09-nenode-minijasminenode-1-1-1-tgz https://registry.npmjs.org/minijasminenode/-/minijasminenode-1.1.1.tgz
+539 silly lockFile 18197b09-nenode-minijasminenode-1-1-1-tgz https://registry.npmjs.org/minijasminenode/-/minijasminenode-1.1.1.tgz
+540 silly lockFile c6f9a010-minijasminenode-1-1-1 minijasminenode@1.1.1
+541 silly lockFile c6f9a010-minijasminenode-1-1-1 minijasminenode@1.1.1
+542 silly lockFile 581f77d4-ort-source-map-support-0-2-7-tgz https://registry.npmjs.org/source-map-support/-/source-map-support-0.2.7.tgz
+543 silly lockFile 581f77d4-ort-source-map-support-0-2-7-tgz https://registry.npmjs.org/source-map-support/-/source-map-support-0.2.7.tgz
+544 silly lockFile e95197e8-source-map-support-0-2-7 source-map-support@0.2.7
+545 silly lockFile e95197e8-source-map-support-0-2-7 source-map-support@0.2.7
+546 silly lockFile b62bd5f3-source-map-support-0-2-6 source-map-support@~0.2.6
+547 silly lockFile b62bd5f3-source-map-support-0-2-6 source-map-support@~0.2.6
+548 http 200 https://registry.npmjs.org/jasminewd/-/jasminewd-1.0.3.tgz
+549 silly lockFile 41b3aaea-rg-jasminewd-jasminewd-1-0-3-tgz https://registry.npmjs.org/jasminewd/-/jasminewd-1.0.3.tgz
+550 silly lockFile 41b3aaea-rg-jasminewd-jasminewd-1-0-3-tgz https://registry.npmjs.org/jasminewd/-/jasminewd-1.0.3.tgz
+551 silly lockFile 487bf7f0-jasminewd-1-0-3 jasminewd@1.0.3
+552 silly lockFile 487bf7f0-jasminewd-1-0-3 jasminewd@1.0.3
+553 http 200 https://registry.npmjs.org/request
+554 silly registry.get cb [ 200,
+554 silly registry.get   { date: 'Mon, 14 Jul 2014 04:37:42 GMT',
+554 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+554 silly registry.get     etag: '"4YYRHMMM9J8ML61S97MST3FMC"',
+554 silly registry.get     'content-type': 'application/json',
+554 silly registry.get     'cache-control': 'max-age=30',
+554 silly registry.get     'content-length': '90256',
+554 silly registry.get     'accept-ranges': 'bytes',
+554 silly registry.get     via: '1.1 varnish',
+554 silly registry.get     age: '582',
+554 silly registry.get     'x-served-by': 'cache-sjc3120-SJC',
+554 silly registry.get     'x-cache': 'HIT',
+554 silly registry.get     'x-cache-hits': '1',
+554 silly registry.get     'x-timer': 'S1405312662.332779,VS0,VE0',
+554 silly registry.get     vary: 'Accept',
+554 silly registry.get     'keep-alive': 'timeout=10, max=50',
+554 silly registry.get     connection: 'Keep-Alive' } ]
+555 silly addNameRange number 2 { name: 'request', range: '>=2.36.0-0 <2.37.0-0', hasData: true }
+556 silly addNameRange versions [ 'request',
+556 silly addNameRange   [ '0.10.0',
+556 silly addNameRange     '0.8.3',
+556 silly addNameRange     '0.9.0',
+556 silly addNameRange     '0.9.1',
+556 silly addNameRange     '0.9.5',
+556 silly addNameRange     '1.0.0',
+556 silly addNameRange     '1.1.0',
+556 silly addNameRange     '1.1.1',
+556 silly addNameRange     '1.2.0',
+556 silly addNameRange     '1.9.0',
+556 silly addNameRange     '1.9.1',
+556 silly addNameRange     '1.9.2',
+556 silly addNameRange     '1.9.3',
+556 silly addNameRange     '1.9.5',
+556 silly addNameRange     '1.9.7',
+556 silly addNameRange     '1.9.8',
+556 silly addNameRange     '1.9.9',
+556 silly addNameRange     '2.0.0',
+556 silly addNameRange     '2.0.1',
+556 silly addNameRange     '2.0.2',
+556 silly addNameRange     '2.0.3',
+556 silly addNameRange     '2.0.4',
+556 silly addNameRange     '2.0.5',
+556 silly addNameRange     '2.1.0',
+556 silly addNameRange     '2.1.1',
+556 silly addNameRange     '2.2.0',
+556 silly addNameRange     '2.2.5',
+556 silly addNameRange     '2.2.6',
+556 silly addNameRange     '2.2.9',
+556 silly addNameRange     '2.9.0',
+556 silly addNameRange     '2.9.1',
+556 silly addNameRange     '2.9.2',
+556 silly addNameRange     '2.9.3',
+556 silly addNameRange     '2.9.100',
+556 silly addNameRange     '2.9.150',
+556 silly addNameRange     '2.9.151',
+556 silly addNameRange     '2.9.152',
+556 silly addNameRange     '2.9.153',
+556 silly addNameRange     '2.9.200',
+556 silly addNameRange     '2.9.201',
+556 silly addNameRange     '2.9.202',
+556 silly addNameRange     '2.9.203',
+556 silly addNameRange     '2.10.0',
+556 silly addNameRange     '2.11.0',
+556 silly addNameRange     '2.11.1',
+556 silly addNameRange     '2.11.2',
+556 silly addNameRange     '2.11.3',
+556 silly addNameRange     '2.11.4',
+556 silly addNameRange     '2.12.0',
+556 silly addNameRange     '2.14.0',
+556 silly addNameRange     '2.16.0',
+556 silly addNameRange     '2.16.2',
+556 silly addNameRange     '2.16.4',
+556 silly addNameRange     '2.16.6',
+556 silly addNameRange     '2.18.0',
+556 silly addNameRange     '2.19.0',
+556 silly addNameRange     '2.20.0',
+556 silly addNameRange     '2.21.0',
+556 silly addNameRange     '2.22.0',
+556 silly addNameRange     '2.23.0',
+556 silly addNameRange     '2.24.0',
+556 silly addNameRange     '2.25.0',
+556 silly addNameRange     '2.26.0',
+556 silly addNameRange     '2.27.0',
+556 silly addNameRange     '2.28.0',
+556 silly addNameRange     '2.29.0',
+556 silly addNameRange     '2.30.0',
+556 silly addNameRange     '2.31.0',
+556 silly addNameRange     '2.32.0',
+556 silly addNameRange     '2.33.0',
+556 silly addNameRange     '2.34.0',
+556 silly addNameRange     '2.35.0',
+556 silly addNameRange     '2.36.0',
+556 silly addNameRange     '2.37.0' ] ]
+557 verbose addNamed [ 'request', '2.36.0' ]
+558 verbose addNamed [ '2.36.0', '2.36.0' ]
+559 silly lockFile 56e6d156-request-2-36-0 request@2.36.0
+560 verbose lock request@2.36.0 /Users/jonniespratley/.npm/56e6d156-request-2-36-0.lock
+561 silly lockFile 56e6d156-request-2-36-0 request@2.36.0
+562 silly lockFile 56e6d156-request-2-36-0 request@2.36.0
+563 silly lockFile e78d8142-request-2-36-0 request@~2.36.0
+564 silly lockFile e78d8142-request-2-36-0 request@~2.36.0
+565 http 200 https://registry.npmjs.org/selenium-webdriver
+566 silly registry.get cb [ 200,
+566 silly registry.get   { date: 'Mon, 14 Jul 2014 04:37:43 GMT',
+566 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+566 silly registry.get     etag: '"C7WRTH4CD2XWPCC0Y0N6YKF5Z"',
+566 silly registry.get     'content-type': 'application/json',
+566 silly registry.get     'cache-control': 'max-age=30',
+566 silly registry.get     'content-length': '22502',
+566 silly registry.get     'accept-ranges': 'bytes',
+566 silly registry.get     via: '1.1 varnish',
+566 silly registry.get     age: '3161',
+566 silly registry.get     'x-served-by': 'cache-sjc3128-SJC',
+566 silly registry.get     'x-cache': 'HIT',
+566 silly registry.get     'x-cache-hits': '1',
+566 silly registry.get     'x-timer': 'S1405312663.589518,VS0,VE30',
+566 silly registry.get     vary: 'Accept',
+566 silly registry.get     'keep-alive': 'timeout=10, max=50',
+566 silly registry.get     connection: 'Keep-Alive' } ]
+567 silly lockFile 1c2b9210-er-selenium-webdriver-2-42-1-tgz https://registry.npmjs.org/selenium-webdriver/-/selenium-webdriver-2.42.1.tgz
+568 verbose lock https://registry.npmjs.org/selenium-webdriver/-/selenium-webdriver-2.42.1.tgz /Users/jonniespratley/.npm/1c2b9210-er-selenium-webdriver-2-42-1-tgz.lock
+569 verbose addRemoteTarball [ 'https://registry.npmjs.org/selenium-webdriver/-/selenium-webdriver-2.42.1.tgz',
+569 verbose addRemoteTarball   '61984d1583b89c80a9f3bf31623d00bcc82a8d0e' ]
+570 info retry fetch attempt 1 at 21:37:43
+571 verbose fetch to= /var/folders/mz/45_gqj796617htnbqlxzk4440000gn/T/npm-31158-P5IxhkU3/registry.npmjs.org/selenium-webdriver/-/selenium-webdriver-2.42.1.tgz
+572 http GET https://registry.npmjs.org/selenium-webdriver/-/selenium-webdriver-2.42.1.tgz
+573 http 200 https://registry.npmjs.org/selenium-webdriver/-/selenium-webdriver-2.42.1.tgz
+574 http 200 https://registry.npmjs.org/adm-zip/-/adm-zip-0.4.4.tgz
+575 silly lockFile 03c4f3c6-js-org-adm-zip-adm-zip-0-4-4-tgz https://registry.npmjs.org/adm-zip/-/adm-zip-0.4.4.tgz
+576 silly lockFile 03c4f3c6-js-org-adm-zip-adm-zip-0-4-4-tgz https://registry.npmjs.org/adm-zip/-/adm-zip-0.4.4.tgz
+577 silly lockFile 54f7ada5-adm-zip-0-4-4 adm-zip@0.4.4
+578 silly lockFile 54f7ada5-adm-zip-0-4-4 adm-zip@0.4.4
+579 http 200 https://registry.npmjs.org/q
+580 silly registry.get cb [ 200,
+580 silly registry.get   { date: 'Mon, 14 Jul 2014 04:37:42 GMT',
+580 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+580 silly registry.get     etag: '"RXMRUFYAJY0HZZLWGHWUU1SF"',
+580 silly registry.get     'content-type': 'application/json',
+580 silly registry.get     'cache-control': 'max-age=30',
+580 silly registry.get     'content-length': '127207',
+580 silly registry.get     'accept-ranges': 'bytes',
+580 silly registry.get     via: '1.1 varnish',
+580 silly registry.get     age: '509',
+580 silly registry.get     'x-served-by': 'cache-sjc3135-SJC',
+580 silly registry.get     'x-cache': 'HIT',
+580 silly registry.get     'x-cache-hits': '2',
+580 silly registry.get     'x-timer': 'S1405312662.811612,VS0,VE0',
+580 silly registry.get     vary: 'Accept',
+580 silly registry.get     'keep-alive': 'timeout=10, max=46',
+580 silly registry.get     connection: 'Keep-Alive' } ]
+581 silly lockFile 79ddd665-registry-npmjs-org-q-q-1-0-0-tgz https://registry.npmjs.org/q/-/q-1.0.0.tgz
+582 verbose lock https://registry.npmjs.org/q/-/q-1.0.0.tgz /Users/jonniespratley/.npm/79ddd665-registry-npmjs-org-q-q-1-0-0-tgz.lock
+583 verbose addRemoteTarball [ 'https://registry.npmjs.org/q/-/q-1.0.0.tgz',
+583 verbose addRemoteTarball   'dc1f92c4587be54f7853b29dc28e6d243a88498d' ]
+584 info retry fetch attempt 1 at 21:37:45
+585 verbose fetch to= /var/folders/mz/45_gqj796617htnbqlxzk4440000gn/T/npm-31158-P5IxhkU3/registry.npmjs.org/q/-/q-1.0.0.tgz
+586 http GET https://registry.npmjs.org/q/-/q-1.0.0.tgz
+587 http 200 https://registry.npmjs.org/q/-/q-1.0.0.tgz
+588 silly lockFile 79ddd665-registry-npmjs-org-q-q-1-0-0-tgz https://registry.npmjs.org/q/-/q-1.0.0.tgz
+589 silly lockFile 79ddd665-registry-npmjs-org-q-q-1-0-0-tgz https://registry.npmjs.org/q/-/q-1.0.0.tgz
+590 silly lockFile 4a267efb-q-1-0-0 q@1.0.0
+591 silly lockFile 4a267efb-q-1-0-0 q@1.0.0
+592 silly lockFile 1c2b9210-er-selenium-webdriver-2-42-1-tgz https://registry.npmjs.org/selenium-webdriver/-/selenium-webdriver-2.42.1.tgz
+593 silly lockFile 1c2b9210-er-selenium-webdriver-2-42-1-tgz https://registry.npmjs.org/selenium-webdriver/-/selenium-webdriver-2.42.1.tgz
+594 silly lockFile afd5c8d8-selenium-webdriver-2-42-1 selenium-webdriver@2.42.1
+595 silly lockFile afd5c8d8-selenium-webdriver-2-42-1 selenium-webdriver@2.42.1
+596 verbose about to build /WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules/protractor
+597 verbose node_modules/protractor unbuild
+598 info preuninstall protractor@1.0.0-rc4
+599 info uninstall protractor@1.0.0-rc4
+600 verbose true,/WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules,/WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules unbuild protractor@1.0.0-rc4
+601 verbose /WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules/.bin,[object Object] binRoot
+602 info postuninstall protractor@1.0.0-rc4
+603 verbose node_modules/grunt-protractor-webdriver unbuild
+604 info preuninstall grunt-protractor-webdriver@0.1.8
+605 info uninstall grunt-protractor-webdriver@0.1.8
+606 verbose true,/WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules,/WWW/Learning_Yeoman/learning-yeoman-ch3/node_modules unbuild grunt-protractor-webdriver@0.1.8
+607 info postuninstall grunt-protractor-webdriver@0.1.8
+608 error Error: EACCES, open '/Users/jonniespratley/.npm/selenium-webdriver/2.42.1/package.tgz'
+608 error  { [Error: EACCES, open '/Users/jonniespratley/.npm/selenium-webdriver/2.42.1/package.tgz']
+608 error   errno: 3,
+608 error   code: 'EACCES',
+608 error   path: '/Users/jonniespratley/.npm/selenium-webdriver/2.42.1/package.tgz',
+608 error   parent: 'protractor' }
+609 error Please try running this command again as root/Administrator.
+610 error System Darwin 13.2.0
+611 error command "node" "/usr/local/bin/npm" "install" "grunt-protractor-webdriver" "--save-dev"
+612 error cwd /WWW/Learning_Yeoman/learning-yeoman-ch3
+613 error node -v v0.10.24
+614 error npm -v 1.4.16
+615 error path /Users/jonniespratley/.npm/selenium-webdriver/2.42.1/package.tgz
+616 error code EACCES
+617 error errno 3
+618 error stack Error: EACCES, open '/Users/jonniespratley/.npm/selenium-webdriver/2.42.1/package.tgz'
+619 verbose exit [ 3, true ]
