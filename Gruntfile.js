@@ -444,11 +444,12 @@ module.exports = function (grunt) {
 			},
 			e2e: {
 				options: {
-					configFile: "e2e.conf.js",
+					configFile: 'e2e.conf.js',
 					args: {}
 				}
 			}
 		},
+        /* jslint ignore: start */
 		protractor_webdriver: {
 			options: {
 				command: 'webdriver-manager start'
@@ -457,6 +458,7 @@ module.exports = function (grunt) {
 
 			}
 		}
+        /* jslint ignore: end */
 	});
 
 	grunt.registerTask('serve', function (target) {
