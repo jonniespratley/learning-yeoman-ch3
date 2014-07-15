@@ -1,6 +1,6 @@
 {
   "name": "learning-yeoman-ch3",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Completed tutorial for Learning Yeoman Chapter 3",
    "repository": {
      "type" : "git",
@@ -57,10 +57,11 @@
   },
   "scripts": {
     "start": "node server",
-    "test": "grunt test"
+    "test": "grunt"
   },
   "main": "Gruntfile.js",
   "directories": {
+    "dist" : "dist",
     "test": "test"
   }
 }

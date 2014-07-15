@@ -44,18 +44,3 @@ angular.module('learningYeomanCh3App', [
 
 			.otherwise
 				redirectTo: '/'
-
-
-#App Controller
-angular.module('learningYeomanCh3App').controller 'AppCtrl', ($scope, $rootScope, $log, $route, $location, $routeParams, $cookieStore, Config) ->
-	$scope.name = 'chapter3App'
-
-	App = angular.copy(Config)
-	App.session = $cookieStore.get('App.session')
-	App.location = $location
-	App.routeParams = $routeParams
-
-	window.App = $scope.App = $rootScope.App = App
-
-	$log.info $rootScope
-
